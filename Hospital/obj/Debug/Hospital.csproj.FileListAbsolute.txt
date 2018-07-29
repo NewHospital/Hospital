@@ -7,3 +7,12 @@ D:\Hospital\Hospital\obj\Debug\Hospital.csproj.GenerateResource.cache
 D:\Hospital\Hospital\obj\Debug\Hospital.csproj.CoreCompileInputs.cache
 D:\Hospital\Hospital\obj\Debug\Hospital.exe
 D:\Hospital\Hospital\obj\Debug\Hospital.pdb
+C:\Users\must3\Desktop\Hospital\Hospital\bin\Debug\Hospital.exe.config
+C:\Users\must3\Desktop\Hospital\Hospital\obj\Debug\Hospital.exe
+C:\Users\must3\Desktop\Hospital\Hospital\obj\Debug\Hospital.pdb
+C:\Users\must3\Desktop\Hospital\Hospital\bin\Debug\Hospital.exe
+C:\Users\must3\Desktop\Hospital\Hospital\bin\Debug\Hospital.pdb
+C:\Users\must3\Desktop\Hospital\Hospital\obj\Debug\Hospital.csprojResolveAssemblyReference.cache
+C:\Users\must3\Desktop\Hospital\Hospital\obj\Debug\Hospital.Form1.resources
+C:\Users\must3\Desktop\Hospital\Hospital\obj\Debug\Hospital.Properties.Resources.resources
+C:\Users\must3\Desktop\Hospital\Hospital\obj\Debug\Hospital.csproj.GenerateResource.Cache
