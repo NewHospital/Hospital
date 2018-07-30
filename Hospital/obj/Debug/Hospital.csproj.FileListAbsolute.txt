@@ -1,0 +1,9 @@
+D:\Hospital\Hospital\bin\Debug\Hospital.exe.config
+D:\Hospital\Hospital\bin\Debug\Hospital.exe
+D:\Hospital\Hospital\bin\Debug\Hospital.pdb
+D:\Hospital\Hospital\obj\Debug\Hospital.csprojAssemblyReference.cache
+D:\Hospital\Hospital\obj\Debug\Hospital.Properties.Resources.resources
+D:\Hospital\Hospital\obj\Debug\Hospital.csproj.GenerateResource.cache
+D:\Hospital\Hospital\obj\Debug\Hospital.csproj.CoreCompileInputs.cache
+D:\Hospital\Hospital\obj\Debug\Hospital.exe
+D:\Hospital\Hospital\obj\Debug\Hospital.pdb
