@@ -1,0 +1,22 @@
+c:\users\pcm\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+c:\users\pcm\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\Properties\Settings.Designer.cs
+c:\users\pcm\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\Properties\Settings.settings
+c:\users\pcm\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+c:\users\pcm\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+c:\users\pcm\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+c:\users\pcm\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form1.resources
+c:\users\pcm\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+c:\users\pcm\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+c:\users\pcm\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+c:\users\pcm\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\must3\Desktop\Hospital Form\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\must3\Desktop\Hospital Form\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\must3\Desktop\Hospital Form\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\must3\Desktop\Hospital Form\WindowsFormsApplication2\bin\Debug\Properties\Settings.Designer.cs
+C:\Users\must3\Desktop\Hospital Form\WindowsFormsApplication2\bin\Debug\Properties\Settings.settings
+C:\Users\must3\Desktop\Hospital Form\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\must3\Desktop\Hospital Form\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\must3\Desktop\Hospital Form\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+C:\Users\must3\Desktop\Hospital Form\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form1.resources
+C:\Users\must3\Desktop\Hospital Form\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\must3\Desktop\Hospital Form\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache

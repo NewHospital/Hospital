@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2042
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital", "Hospital\Hospital.csproj", "{6EE51C69-C7E0-4237-B765-281F1F633EEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital", "WindowsFormsApplication2\Hospital.csproj", "{7F196DD6-044C-4F2A-9017-52695CE40FEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6EE51C69-C7E0-4237-B765-281F1F633EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6EE51C69-C7E0-4237-B765-281F1F633EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6EE51C69-C7E0-4237-B765-281F1F633EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6EE51C69-C7E0-4237-B765-281F1F633EEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F196DD6-044C-4F2A-9017-52695CE40FEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F196DD6-044C-4F2A-9017-52695CE40FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F196DD6-044C-4F2A-9017-52695CE40FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F196DD6-044C-4F2A-9017-52695CE40FEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {882261BE-EA1C-428A-BAE5-78A581F42BD2}
 	EndGlobalSection
 EndGlobal
