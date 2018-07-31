@@ -12,3 +12,14 @@ C:\Users\must3\Desktop\Hospital Form\WindowsFormsApplication2\obj\Debug\WindowsF
 C:\Users\must3\Desktop\Hospital\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
 C:\Users\must3\Desktop\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
 C:\Users\must3\Desktop\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\bin\Debug\Properties\Settings.Designer.cs
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\bin\Debug\Properties\Settings.settings
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csprojResolveAssemblyReference.cache
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.Form1.resources
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csproj.GenerateResource.Cache
