@@ -132,7 +132,7 @@
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.button1.Location = new System.Drawing.Point(4, 86);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 34);
+            this.button1.Size = new System.Drawing.Size(196, 34);
             this.button1.TabIndex = 16;
             this.button1.Text = "الصيدلية";
             this.button1.UseVisualStyleBackColor = true;
