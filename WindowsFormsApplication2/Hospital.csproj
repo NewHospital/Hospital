@@ -58,6 +58,12 @@
     <Compile Include="AddDrugUnits.Designer.cs">
       <DependentUpon>AddDrugUnits.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddSpecialization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSpecialization.Designer.cs">
+      <DependentUpon>AddSpecialization.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddSuppliers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="BillsType.Designer.cs">
       <DependentUpon>BillsType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocDegree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocDegree.Designer.cs">
+      <DependentUpon>DocDegree.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -90,11 +102,17 @@
     <EmbeddedResource Include="AddDrugUnits.resx">
       <DependentUpon>AddDrugUnits.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddSpecialization.resx">
+      <DependentUpon>AddSpecialization.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddSuppliers.resx">
       <DependentUpon>AddSuppliers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BillsType.resx">
       <DependentUpon>BillsType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocDegree.resx">
+      <DependentUpon>DocDegree.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
