@@ -36,7 +36,7 @@
             // But_AddDiseases
             // 
             this.But_AddDiseases.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.But_AddDiseases.Location = new System.Drawing.Point(56, 124);
+            this.But_AddDiseases.Location = new System.Drawing.Point(55, 124);
             this.But_AddDiseases.Name = "But_AddDiseases";
             this.But_AddDiseases.Size = new System.Drawing.Size(141, 23);
             this.But_AddDiseases.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             this.Lbl_AddDiseases.AutoSize = true;
             this.Lbl_AddDiseases.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_AddDiseases.Location = new System.Drawing.Point(180, 55);
+            this.Lbl_AddDiseases.Location = new System.Drawing.Point(180, 57);
             this.Lbl_AddDiseases.Name = "Lbl_AddDiseases";
             this.Lbl_AddDiseases.Size = new System.Drawing.Size(94, 19);
             this.Lbl_AddDiseases.TabIndex = 2;
