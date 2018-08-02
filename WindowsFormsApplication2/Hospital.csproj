@@ -52,6 +52,18 @@
     <Compile Include="AddDiseases.Designer.cs">
       <DependentUpon>AddDiseases.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddDrugUnits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDrugUnits.Designer.cs">
+      <DependentUpon>AddDrugUnits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSuppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSuppliers.Designer.cs">
+      <DependentUpon>AddSuppliers.cs</DependentUpon>
+    </Compile>
     <Compile Include="BillsType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +86,12 @@
     </Compile>
     <EmbeddedResource Include="AddDiseases.resx">
       <DependentUpon>AddDiseases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDrugUnits.resx">
+      <DependentUpon>AddDrugUnits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSuppliers.resx">
+      <DependentUpon>AddSuppliers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BillsType.resx">
       <DependentUpon>BillsType.cs</DependentUpon>
