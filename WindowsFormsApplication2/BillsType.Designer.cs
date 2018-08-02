@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Txt_AddBillsType = new System.Windows.Forms.TextBox();
+            this.But_AddBillsType = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // Txt_AddBillsType
             // 
-            this.textBox1.Location = new System.Drawing.Point(77, 74);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 20);
-            this.textBox1.TabIndex = 0;
+            this.Txt_AddBillsType.Location = new System.Drawing.Point(77, 74);
+            this.Txt_AddBillsType.Name = "Txt_AddBillsType";
+            this.Txt_AddBillsType.Size = new System.Drawing.Size(124, 20);
+            this.Txt_AddBillsType.TabIndex = 0;
             // 
-            // button1
+            // But_AddBillsType
             // 
-            this.button1.Location = new System.Drawing.Point(83, 145);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 47);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "إضافة نوع الفاتوره";
-            this.button1.UseVisualStyleBackColor = true;
+            this.But_AddBillsType.Location = new System.Drawing.Point(83, 145);
+            this.But_AddBillsType.Name = "But_AddBillsType";
+            this.But_AddBillsType.Size = new System.Drawing.Size(115, 47);
+            this.But_AddBillsType.TabIndex = 1;
+            this.But_AddBillsType.Text = "إضافة نوع الفاتوره";
+            this.But_AddBillsType.UseVisualStyleBackColor = true;
             // 
             // BillsType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.But_AddBillsType);
+            this.Controls.Add(this.Txt_AddBillsType);
             this.Name = "BillsType";
             this.Text = "نوع الفاتورة";
             this.ResumeLayout(false);
@@ -64,7 +64,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox Txt_AddBillsType;
+        private System.Windows.Forms.Button But_AddBillsType;
     }
 }
