@@ -16,10 +16,5 @@ namespace WindowsFormsApplication2
         {
             InitializeComponent();
         }
-
-        private void Add_Diseases_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
