@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.Txt_AddNameDegree = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Lbl_AddNameDegree = new System.Windows.Forms.Label();
+            this.Lbl_AddFeesPerDay = new System.Windows.Forms.Label();
+            this.Lbl_AddDiscription = new System.Windows.Forms.Label();
             this.But_AddRoomDegree = new System.Windows.Forms.Button();
             this.Txt_AddFeesPerDay = new System.Windows.Forms.TextBox();
             this.Txt_AddDiscription = new System.Windows.Forms.TextBox();
@@ -44,33 +44,33 @@
             this.Txt_AddNameDegree.Size = new System.Drawing.Size(100, 20);
             this.Txt_AddNameDegree.TabIndex = 0;
             // 
-            // label1
+            // Lbl_AddNameDegree
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(209, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "درجة الغرفة";
+            this.Lbl_AddNameDegree.AutoSize = true;
+            this.Lbl_AddNameDegree.Location = new System.Drawing.Point(209, 43);
+            this.Lbl_AddNameDegree.Name = "Lbl_AddNameDegree";
+            this.Lbl_AddNameDegree.Size = new System.Drawing.Size(60, 13);
+            this.Lbl_AddNameDegree.TabIndex = 1;
+            this.Lbl_AddNameDegree.Text = "درجة الغرفة";
             // 
-            // label2
+            // Lbl_AddFeesPerDay
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(209, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "السعر لليوم";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.Lbl_AddFeesPerDay.AutoSize = true;
+            this.Lbl_AddFeesPerDay.Location = new System.Drawing.Point(209, 78);
+            this.Lbl_AddFeesPerDay.Name = "Lbl_AddFeesPerDay";
+            this.Lbl_AddFeesPerDay.Size = new System.Drawing.Size(57, 13);
+            this.Lbl_AddFeesPerDay.TabIndex = 2;
+            this.Lbl_AddFeesPerDay.Text = "السعر لليوم";
+            this.Lbl_AddFeesPerDay.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // Lbl_AddDiscription
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(209, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "الوصف";
+            this.Lbl_AddDiscription.AutoSize = true;
+            this.Lbl_AddDiscription.Location = new System.Drawing.Point(209, 110);
+            this.Lbl_AddDiscription.Name = "Lbl_AddDiscription";
+            this.Lbl_AddDiscription.Size = new System.Drawing.Size(37, 13);
+            this.Lbl_AddDiscription.TabIndex = 3;
+            this.Lbl_AddDiscription.Text = "الوصف";
             // 
             // But_AddRoomDegree
             // 
@@ -104,9 +104,9 @@
             this.Controls.Add(this.Txt_AddDiscription);
             this.Controls.Add(this.Txt_AddFeesPerDay);
             this.Controls.Add(this.But_AddRoomDegree);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Lbl_AddDiscription);
+            this.Controls.Add(this.Lbl_AddFeesPerDay);
+            this.Controls.Add(this.Lbl_AddNameDegree);
             this.Controls.Add(this.Txt_AddNameDegree);
             this.Name = "RoomDegrees";
             this.Text = "إضافة غرفه";
@@ -118,9 +118,9 @@
         #endregion
 
         private System.Windows.Forms.TextBox Txt_AddNameDegree;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Lbl_AddNameDegree;
+        private System.Windows.Forms.Label Lbl_AddFeesPerDay;
+        private System.Windows.Forms.Label Lbl_AddDiscription;
         private System.Windows.Forms.Button But_AddRoomDegree;
         private System.Windows.Forms.TextBox Txt_AddFeesPerDay;
         private System.Windows.Forms.TextBox Txt_AddDiscription;
