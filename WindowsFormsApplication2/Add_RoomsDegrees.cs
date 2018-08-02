@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication2
 {
-    public partial class Add_Diseases : Form
+    public partial class Add_RoomsDegrees : Form
     {
-        public Add_Diseases()
+        public Add_RoomsDegrees()
         {
             InitializeComponent();
-        }
-
-        private void Add_Diseases_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
