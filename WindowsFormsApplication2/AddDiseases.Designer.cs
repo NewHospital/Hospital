@@ -50,6 +50,7 @@
             this.Txt_AddDiseases.Name = "Txt_AddDiseases";
             this.Txt_AddDiseases.Size = new System.Drawing.Size(162, 23);
             this.Txt_AddDiseases.TabIndex = 4;
+            this.Txt_AddDiseases.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // But_AddDiseases
             // 

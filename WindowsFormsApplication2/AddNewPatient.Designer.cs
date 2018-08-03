@@ -71,6 +71,7 @@
             this.Txt_PatientName.Name = "Txt_PatientName";
             this.Txt_PatientName.Size = new System.Drawing.Size(251, 20);
             this.Txt_PatientName.TabIndex = 0;
+            this.Txt_PatientName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Lbl_PatientName
             // 
@@ -149,6 +150,7 @@
             this.Txt_SoSeNo.Name = "Txt_SoSeNo";
             this.Txt_SoSeNo.Size = new System.Drawing.Size(200, 20);
             this.Txt_SoSeNo.TabIndex = 5;
+            this.Txt_SoSeNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Txt_Mobile
             // 
@@ -156,6 +158,7 @@
             this.Txt_Mobile.Name = "Txt_Mobile";
             this.Txt_Mobile.Size = new System.Drawing.Size(100, 20);
             this.Txt_Mobile.TabIndex = 6;
+            this.Txt_Mobile.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Lbl_Address
             // 
@@ -163,6 +166,7 @@
             this.Lbl_Address.Name = "Lbl_Address";
             this.Lbl_Address.Size = new System.Drawing.Size(361, 20);
             this.Lbl_Address.TabIndex = 7;
+            this.Lbl_Address.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Com_BloodGroups
             // 

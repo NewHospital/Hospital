@@ -43,6 +43,7 @@
             this.Txt_AddNameDegree.Name = "Txt_AddNameDegree";
             this.Txt_AddNameDegree.Size = new System.Drawing.Size(100, 20);
             this.Txt_AddNameDegree.TabIndex = 0;
+            this.Txt_AddNameDegree.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Lbl_AddNameDegree
             // 
@@ -87,6 +88,7 @@
             this.Txt_AddFeesPerDay.Name = "Txt_AddFeesPerDay";
             this.Txt_AddFeesPerDay.Size = new System.Drawing.Size(100, 20);
             this.Txt_AddFeesPerDay.TabIndex = 5;
+            this.Txt_AddFeesPerDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Txt_AddDiscription
             // 
@@ -95,6 +97,7 @@
             this.Txt_AddDiscription.Name = "Txt_AddDiscription";
             this.Txt_AddDiscription.Size = new System.Drawing.Size(191, 71);
             this.Txt_AddDiscription.TabIndex = 6;
+            this.Txt_AddDiscription.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // RoomDegrees
             // 

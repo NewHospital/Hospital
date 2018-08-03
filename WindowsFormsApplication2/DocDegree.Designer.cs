@@ -51,6 +51,7 @@
             this.Txt_AddDocDegree.Name = "Txt_AddDocDegree";
             this.Txt_AddDocDegree.Size = new System.Drawing.Size(199, 20);
             this.Txt_AddDocDegree.TabIndex = 4;
+            this.Txt_AddDocDegree.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lbl_AddDocDegree
             // 

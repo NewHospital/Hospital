@@ -39,6 +39,7 @@
             this.Txt_AddBillsType.Name = "Txt_AddBillsType";
             this.Txt_AddBillsType.Size = new System.Drawing.Size(124, 20);
             this.Txt_AddBillsType.TabIndex = 0;
+            this.Txt_AddBillsType.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // But_AddBillsType
             // 

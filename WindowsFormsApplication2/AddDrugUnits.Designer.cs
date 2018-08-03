@@ -50,6 +50,7 @@
             this.Txt_AddDrugUnits.Name = "Txt_AddDrugUnits";
             this.Txt_AddDrugUnits.Size = new System.Drawing.Size(190, 26);
             this.Txt_AddDrugUnits.TabIndex = 1;
+            this.Txt_AddDrugUnits.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // But_AddDrugUnits
             // 

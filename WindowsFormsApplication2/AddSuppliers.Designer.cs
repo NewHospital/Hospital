@@ -50,6 +50,7 @@
             this.Txt_AddSuppliers.Name = "Txt_AddSuppliers";
             this.Txt_AddSuppliers.Size = new System.Drawing.Size(190, 26);
             this.Txt_AddSuppliers.TabIndex = 2;
+            this.Txt_AddSuppliers.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // But_AddSuppliers
             // 

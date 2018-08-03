@@ -50,6 +50,7 @@
             this.Txt_AddSpecialization.Name = "Txt_AddSpecialization";
             this.Txt_AddSpecialization.Size = new System.Drawing.Size(218, 20);
             this.Txt_AddSpecialization.TabIndex = 1;
+            this.Txt_AddSpecialization.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // But_AddSpecialization
             // 
