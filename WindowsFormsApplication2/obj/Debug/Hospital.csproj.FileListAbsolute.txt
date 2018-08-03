@@ -42,3 +42,4 @@ E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Windows
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.DocDegree.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.RoomDegrees.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.MainForm.resources
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddNewPatient.resources
