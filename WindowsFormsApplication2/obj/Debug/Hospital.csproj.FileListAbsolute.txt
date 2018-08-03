@@ -20,7 +20,6 @@ E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\bin\Debug\Propert
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csprojResolveAssemblyReference.cache
-E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.Form1.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csproj.GenerateResource.Cache
 C:\Users\must3\Desktop\Hospital\WindowsFormsApplication2\bin\Debug\Properties\Settings.Designer.cs
@@ -35,3 +34,11 @@ C:\Users\must3\Desktop\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.cspr
 C:\Users\must3\Downloads\Hospital-66704179efa818814c62fe21d29b85409da04471\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
 C:\Users\must3\Downloads\Hospital-66704179efa818814c62fe21d29b85409da04471\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
 C:\Users\must3\Downloads\Hospital-66704179efa818814c62fe21d29b85409da04471\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddDiseases.resources
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddDrugUnits.resources
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddSpecialization.resources
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddSuppliers.resources
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.BillsType.resources
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.DocDegree.resources
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.RoomDegrees.resources
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.MainForm.resources
