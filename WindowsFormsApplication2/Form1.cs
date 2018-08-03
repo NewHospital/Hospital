@@ -109,9 +109,8 @@ namespace Hospital
 
         private void إضافةمريضToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form AddNewPatient = new Form();
-            AddNewPatient.Show();
 
+           
 
         }
     }
