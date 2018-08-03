@@ -106,5 +106,10 @@ namespace Hospital
         {
 
         }
+
+        private void إضافةمريضToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

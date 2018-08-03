@@ -29,239 +29,177 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.المشترياتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حجزغرفةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.الحجوزاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حجزمريضToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تعديلبياناتالصيدليةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.إضافةصيدليةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.الصيدليةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تعديلالغرفةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.إضافةدرجةالغرفةToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.إضافةدرجةالغرفةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.الغرفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تعديلبياناتطبيبToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.إضافةدرجةعلميةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.إضافةطبيبToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.الأطباءToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حدفمريضToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تعديلمريضToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.إضافةمريضToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.المرضىToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel2
+            // المشترياتToolStripMenuItem
             // 
-            this.tableLayoutPanel2.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
-            this.tableLayoutPanel2.AutoScroll = true;
-            this.tableLayoutPanel2.AutoSize = true;
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.button3, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.button2, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button6, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.button5, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.button7, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.button13, 0, 7);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(668, 66);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 8;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(204, 329);
-            this.tableLayoutPanel2.TabIndex = 1;
-            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
+            this.المشترياتToolStripMenuItem.Name = "المشترياتToolStripMenuItem";
+            this.المشترياتToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.المشترياتToolStripMenuItem.Text = "المشتريات";
             // 
-            // button3
+            // حجزغرفةToolStripMenuItem
             // 
-            this.button3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button3.Location = new System.Drawing.Point(4, 250);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(195, 34);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "المشتريات";
-            this.button3.UseVisualStyleBackColor = true;
+            this.حجزغرفةToolStripMenuItem.Name = "حجزغرفةToolStripMenuItem";
+            this.حجزغرفةToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.حجزغرفةToolStripMenuItem.Text = "حجز غرفة";
             // 
-            // button2
+            // الحجوزاتToolStripMenuItem
             // 
-            this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(4, 209);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(195, 34);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "الاستضافة";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.الحجوزاتToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.حجزغرفةToolStripMenuItem,
+            this.حجزمريضToolStripMenuItem});
+            this.الحجوزاتToolStripMenuItem.Name = "الحجوزاتToolStripMenuItem";
+            this.الحجوزاتToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.الحجوزاتToolStripMenuItem.Text = "الحجوزات";
             // 
-            // textBox1
+            // حجزمريضToolStripMenuItem
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(4, 4);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 34);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "الأقسام";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.حجزمريضToolStripMenuItem.Name = "حجزمريضToolStripMenuItem";
+            this.حجزمريضToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.حجزمريضToolStripMenuItem.Text = "حجز مريض";
             // 
-            // button6
+            // تعديلبياناتالصيدليةToolStripMenuItem
             // 
-            this.button6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button6.Location = new System.Drawing.Point(4, 45);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(195, 34);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "الأطباء";
-            this.button6.UseVisualStyleBackColor = true;
+            this.تعديلبياناتالصيدليةToolStripMenuItem.Name = "تعديلبياناتالصيدليةToolStripMenuItem";
+            this.تعديلبياناتالصيدليةToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.تعديلبياناتالصيدليةToolStripMenuItem.Text = "تعديل بيانات الصيدلية";
             // 
-            // button1
+            // إضافةصيدليةToolStripMenuItem
             // 
-            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(4, 86);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 34);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "الصيدلية";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.إضافةصيدليةToolStripMenuItem.Name = "إضافةصيدليةToolStripMenuItem";
+            this.إضافةصيدليةToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.إضافةصيدليةToolStripMenuItem.Text = "إضافة صيدلية";
             // 
-            // button5
+            // الصيدليةToolStripMenuItem
             // 
-            this.button5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button5.Location = new System.Drawing.Point(4, 127);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(195, 34);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "المرضى";
-            this.button5.UseVisualStyleBackColor = true;
+            this.الصيدليةToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.إضافةصيدليةToolStripMenuItem,
+            this.تعديلبياناتالصيدليةToolStripMenuItem});
+            this.الصيدليةToolStripMenuItem.Name = "الصيدليةToolStripMenuItem";
+            this.الصيدليةToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.الصيدليةToolStripMenuItem.Text = "الصيدلية";
             // 
-            // button7
+            // تعديلالغرفةToolStripMenuItem
             // 
-            this.button7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button7.Location = new System.Drawing.Point(4, 168);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(195, 34);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "الغرف";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.تعديلالغرفةToolStripMenuItem.Name = "تعديلالغرفةToolStripMenuItem";
+            this.تعديلالغرفةToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.تعديلالغرفةToolStripMenuItem.Text = "تعديل الغرفة";
             // 
-            // button13
+            // إضافةدرجةالغرفةToolStripMenuItem1
             // 
-            this.button13.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button13.Location = new System.Drawing.Point(4, 291);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(190, 34);
-            this.button13.TabIndex = 11;
-            this.button13.Text = "الحسابات";
-            this.button13.UseVisualStyleBackColor = true;
+            this.إضافةدرجةالغرفةToolStripMenuItem1.Name = "إضافةدرجةالغرفةToolStripMenuItem1";
+            this.إضافةدرجةالغرفةToolStripMenuItem1.Size = new System.Drawing.Size(164, 22);
+            this.إضافةدرجةالغرفةToolStripMenuItem1.Text = "إضافة درجة الغرفة";
             // 
-            // tableLayoutPanel3
+            // إضافةدرجةالغرفةToolStripMenuItem
             // 
-            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel3.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Controls.Add(this.textBox5, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox4, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.textBox3, 2, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(14, 12);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(858, 39);
-            this.tableLayoutPanel3.TabIndex = 3;
-            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
+            this.إضافةدرجةالغرفةToolStripMenuItem.Name = "إضافةدرجةالغرفةToolStripMenuItem";
+            this.إضافةدرجةالغرفةToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.إضافةدرجةالغرفةToolStripMenuItem.Text = "إضافة غرفة";
             // 
-            // textBox5
+            // الغرفToolStripMenuItem
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.BackColor = System.Drawing.Color.Orange;
-            this.textBox5.Location = new System.Drawing.Point(289, 4);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(278, 31);
-            this.textBox5.TabIndex = 3;
-            this.textBox5.Text = "الصفحة الرئيسية";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.الغرفToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.إضافةدرجةالغرفةToolStripMenuItem,
+            this.إضافةدرجةالغرفةToolStripMenuItem1,
+            this.تعديلالغرفةToolStripMenuItem});
+            this.الغرفToolStripMenuItem.Name = "الغرفToolStripMenuItem";
+            this.الغرفToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.الغرفToolStripMenuItem.Text = "الغرف";
             // 
-            // textBox4
+            // تعديلبياناتطبيبToolStripMenuItem
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox4.Location = new System.Drawing.Point(4, 4);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(278, 31);
-            this.textBox4.TabIndex = 2;
-            this.textBox4.Text = "إصدار البرنامج : V 1";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.تعديلبياناتطبيبToolStripMenuItem.Name = "تعديلبياناتطبيبToolStripMenuItem";
+            this.تعديلبياناتطبيبToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.تعديلبياناتطبيبToolStripMenuItem.Text = "تعديل بيانات طبيب";
             // 
-            // textBox3
+            // إضافةدرجةعلميةToolStripMenuItem
             // 
-            this.textBox3.AcceptsReturn = true;
-            this.textBox3.AcceptsTab = true;
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.HideSelection = false;
-            this.textBox3.Location = new System.Drawing.Point(574, 4);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(280, 31);
-            this.textBox3.TabIndex = 1;
-            this.textBox3.TabStop = false;
-            this.textBox3.Text = "المستشفى";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox3.UseWaitCursor = true;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged_1);
+            this.إضافةدرجةعلميةToolStripMenuItem.Name = "إضافةدرجةعلميةToolStripMenuItem";
+            this.إضافةدرجةعلميةToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.إضافةدرجةعلميةToolStripMenuItem.Text = "إضافة درجة علمية";
             // 
-            // button16
+            // إضافةطبيبToolStripMenuItem
             // 
-            this.button16.Location = new System.Drawing.Point(19, 292);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(279, 31);
-            this.button16.TabIndex = 2;
-            this.button16.Text = "التقارير";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.إضافةطبيبToolStripMenuItem.Name = "إضافةطبيبToolStripMenuItem";
+            this.إضافةطبيبToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.إضافةطبيبToolStripMenuItem.Text = "إضافة طبيب";
             // 
-            // button14
+            // الأطباءToolStripMenuItem
             // 
-            this.button14.Location = new System.Drawing.Point(18, 144);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(280, 31);
-            this.button14.TabIndex = 0;
-            this.button14.Text = "الأشعة";
-            this.button14.UseVisualStyleBackColor = true;
+            this.الأطباءToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.إضافةطبيبToolStripMenuItem,
+            this.إضافةدرجةعلميةToolStripMenuItem,
+            this.تعديلبياناتطبيبToolStripMenuItem});
+            this.الأطباءToolStripMenuItem.Name = "الأطباءToolStripMenuItem";
+            this.الأطباءToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.الأطباءToolStripMenuItem.Text = "الأطباء";
             // 
-            // button15
+            // حدفمريضToolStripMenuItem
             // 
-            this.button15.Location = new System.Drawing.Point(19, 210);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(279, 31);
-            this.button15.TabIndex = 1;
-            this.button15.Text = "التحاليل";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.حدفمريضToolStripMenuItem.Name = "حدفمريضToolStripMenuItem";
+            this.حدفمريضToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.حدفمريضToolStripMenuItem.Text = "حدف مريض";
+            // 
+            // تعديلمريضToolStripMenuItem
+            // 
+            this.تعديلمريضToolStripMenuItem.Name = "تعديلمريضToolStripMenuItem";
+            this.تعديلمريضToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.تعديلمريضToolStripMenuItem.Text = "تعديل مريض";
+            // 
+            // إضافةمريضToolStripMenuItem
+            // 
+            this.إضافةمريضToolStripMenuItem.Name = "إضافةمريضToolStripMenuItem";
+            this.إضافةمريضToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.إضافةمريضToolStripMenuItem.Text = "إضافة مريض";
+            this.إضافةمريضToolStripMenuItem.Click += new System.EventHandler(this.إضافةمريضToolStripMenuItem_Click);
+            // 
+            // المرضىToolStripMenuItem
+            // 
+            this.المرضىToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.إضافةمريضToolStripMenuItem,
+            this.تعديلمريضToolStripMenuItem,
+            this.حدفمريضToolStripMenuItem});
+            this.المرضىToolStripMenuItem.Name = "المرضىToolStripMenuItem";
+            this.المرضىToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.المرضىToolStripMenuItem.Text = "المرضى";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.المرضىToolStripMenuItem,
+            this.الأطباءToolStripMenuItem,
+            this.الغرفToolStripMenuItem,
+            this.الصيدليةToolStripMenuItem,
+            this.الحجوزاتToolStripMenuItem,
+            this.المشترياتToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menuStrip1.Size = new System.Drawing.Size(884, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // Form1
             // 
@@ -272,11 +210,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(884, 457);
-            this.Controls.Add(this.button16);
-            this.Controls.Add(this.button15);
-            this.Controls.Add(this.button14);
-            this.Controls.Add(this.tableLayoutPanel3);
-            this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.Enabled = false;
             this.Font = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Bold);
@@ -288,32 +222,35 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Hospital Project";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        public System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+
+        private System.Windows.Forms.ToolStripMenuItem المشترياتToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem حجزغرفةToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem الحجوزاتToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem حجزمريضToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem تعديلبياناتالصيدليةToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem إضافةصيدليةToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem الصيدليةToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem تعديلالغرفةToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem إضافةدرجةالغرفةToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem إضافةدرجةالغرفةToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem الغرفToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem تعديلبياناتطبيبToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem إضافةدرجةعلميةToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem إضافةطبيبToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem الأطباءToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem حدفمريضToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem تعديلمريضToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem إضافةمريضToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem المرضىToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 
