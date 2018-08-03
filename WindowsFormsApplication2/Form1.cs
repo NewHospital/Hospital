@@ -110,7 +110,8 @@ namespace Hospital
         private void إضافةمريضToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-           
+            AddNewPatient addPatient = new AddNewPatient();
+            addPatient.Show();
 
         }
     }
