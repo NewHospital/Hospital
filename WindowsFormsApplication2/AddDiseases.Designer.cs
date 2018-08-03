@@ -71,6 +71,7 @@
             this.Controls.Add(this.But_AddDiseases);
             this.Name = "AddDiseases";
             this.Text = "AddDiseases";
+            this.Load += new System.EventHandler(this.AddDiseases_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

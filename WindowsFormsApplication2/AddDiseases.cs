@@ -16,5 +16,10 @@ namespace Hospital
         {
             InitializeComponent();
         }
+
+        private void AddDiseases_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
