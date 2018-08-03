@@ -61,7 +61,7 @@
             // حجزغرفةToolStripMenuItem
             // 
             this.حجزغرفةToolStripMenuItem.Name = "حجزغرفةToolStripMenuItem";
-            this.حجزغرفةToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.حجزغرفةToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.حجزغرفةToolStripMenuItem.Text = "حجز غرفة";
             // 
             // الحجوزاتToolStripMenuItem
@@ -76,7 +76,7 @@
             // حجزمريضToolStripMenuItem
             // 
             this.حجزمريضToolStripMenuItem.Name = "حجزمريضToolStripMenuItem";
-            this.حجزمريضToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.حجزمريضToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.حجزمريضToolStripMenuItem.Text = "حجز مريض";
             // 
             // تعديلبياناتالصيدليةToolStripMenuItem
@@ -167,6 +167,7 @@
             this.تعديلمريضToolStripMenuItem.Name = "تعديلمريضToolStripMenuItem";
             this.تعديلمريضToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.تعديلمريضToolStripMenuItem.Text = "تعديل مريض";
+            this.تعديلمريضToolStripMenuItem.Click += new System.EventHandler(this.تعديلمريضToolStripMenuItem_Click);
             // 
             // إضافةمريضToolStripMenuItem
             // 

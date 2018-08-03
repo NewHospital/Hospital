@@ -37,11 +37,11 @@
             // 
             this.Lbl_AddDrugUnits.AutoSize = true;
             this.Lbl_AddDrugUnits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_AddDrugUnits.Location = new System.Drawing.Point(265, 62);
+            this.Lbl_AddDrugUnits.Location = new System.Drawing.Point(212, 62);
             this.Lbl_AddDrugUnits.Name = "Lbl_AddDrugUnits";
-            this.Lbl_AddDrugUnits.Size = new System.Drawing.Size(90, 20);
+            this.Lbl_AddDrugUnits.Size = new System.Drawing.Size(68, 20);
             this.Lbl_AddDrugUnits.TabIndex = 0;
-            this.Lbl_AddDrugUnits.Text = "اسم وحدة الدواء";
+            this.Lbl_AddDrugUnits.Text = "وحدة الدواء";
             // 
             // Txt_AddDrugUnits
             // 
@@ -54,7 +54,7 @@
             // But_AddDrugUnits
             // 
             this.But_AddDrugUnits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.But_AddDrugUnits.Location = new System.Drawing.Point(175, 147);
+            this.But_AddDrugUnits.Location = new System.Drawing.Point(99, 140);
             this.But_AddDrugUnits.Name = "But_AddDrugUnits";
             this.But_AddDrugUnits.Size = new System.Drawing.Size(75, 27);
             this.But_AddDrugUnits.TabIndex = 2;
@@ -65,12 +65,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 218);
+            this.ClientSize = new System.Drawing.Size(287, 216);
             this.Controls.Add(this.But_AddDrugUnits);
             this.Controls.Add(this.Txt_AddDrugUnits);
             this.Controls.Add(this.Lbl_AddDrugUnits);
             this.Name = "AddDrugUnits";
-            this.Text = "AddDrugUnits";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "إضافة وحدات الدواء";
             this.ResumeLayout(false);
             this.PerformLayout();
 

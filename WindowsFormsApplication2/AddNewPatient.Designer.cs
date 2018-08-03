@@ -421,7 +421,8 @@
             this.Controls.Add(this.Lbl_PatientName);
             this.Controls.Add(this.Txt_PatientName);
             this.Name = "AddNewPatient";
-            this.Text = "AddNewPatient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "إضافة مريض جديد";
             this.Load += new System.EventHandler(this.AddNewPatient_Load);
             this.GenderGroup.ResumeLayout(false);
             this.GenderGroup.PerformLayout();

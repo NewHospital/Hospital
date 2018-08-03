@@ -39,7 +39,7 @@
             // 
             // Txt_AddNameDegree
             // 
-            this.Txt_AddNameDegree.Location = new System.Drawing.Point(103, 40);
+            this.Txt_AddNameDegree.Location = new System.Drawing.Point(120, 40);
             this.Txt_AddNameDegree.Name = "Txt_AddNameDegree";
             this.Txt_AddNameDegree.Size = new System.Drawing.Size(100, 20);
             this.Txt_AddNameDegree.TabIndex = 0;
@@ -47,7 +47,7 @@
             // Lbl_AddNameDegree
             // 
             this.Lbl_AddNameDegree.AutoSize = true;
-            this.Lbl_AddNameDegree.Location = new System.Drawing.Point(209, 43);
+            this.Lbl_AddNameDegree.Location = new System.Drawing.Point(226, 43);
             this.Lbl_AddNameDegree.Name = "Lbl_AddNameDegree";
             this.Lbl_AddNameDegree.Size = new System.Drawing.Size(60, 13);
             this.Lbl_AddNameDegree.TabIndex = 1;
@@ -56,9 +56,9 @@
             // Lbl_AddFeesPerDay
             // 
             this.Lbl_AddFeesPerDay.AutoSize = true;
-            this.Lbl_AddFeesPerDay.Location = new System.Drawing.Point(209, 78);
+            this.Lbl_AddFeesPerDay.Location = new System.Drawing.Point(226, 78);
             this.Lbl_AddFeesPerDay.Name = "Lbl_AddFeesPerDay";
-            this.Lbl_AddFeesPerDay.Size = new System.Drawing.Size(57, 13);
+            this.Lbl_AddFeesPerDay.Size = new System.Drawing.Size(62, 13);
             this.Lbl_AddFeesPerDay.TabIndex = 2;
             this.Lbl_AddFeesPerDay.Text = "السعر لليوم";
             this.Lbl_AddFeesPerDay.Click += new System.EventHandler(this.label2_Click);
@@ -66,7 +66,7 @@
             // Lbl_AddDiscription
             // 
             this.Lbl_AddDiscription.AutoSize = true;
-            this.Lbl_AddDiscription.Location = new System.Drawing.Point(209, 110);
+            this.Lbl_AddDiscription.Location = new System.Drawing.Point(226, 110);
             this.Lbl_AddDiscription.Name = "Lbl_AddDiscription";
             this.Lbl_AddDiscription.Size = new System.Drawing.Size(37, 13);
             this.Lbl_AddDiscription.TabIndex = 3;
@@ -83,17 +83,17 @@
             // 
             // Txt_AddFeesPerDay
             // 
-            this.Txt_AddFeesPerDay.Location = new System.Drawing.Point(103, 75);
+            this.Txt_AddFeesPerDay.Location = new System.Drawing.Point(120, 75);
             this.Txt_AddFeesPerDay.Name = "Txt_AddFeesPerDay";
             this.Txt_AddFeesPerDay.Size = new System.Drawing.Size(100, 20);
             this.Txt_AddFeesPerDay.TabIndex = 5;
             // 
             // Txt_AddDiscription
             // 
-            this.Txt_AddDiscription.Location = new System.Drawing.Point(52, 110);
+            this.Txt_AddDiscription.Location = new System.Drawing.Point(29, 110);
             this.Txt_AddDiscription.Multiline = true;
             this.Txt_AddDiscription.Name = "Txt_AddDiscription";
-            this.Txt_AddDiscription.Size = new System.Drawing.Size(151, 71);
+            this.Txt_AddDiscription.Size = new System.Drawing.Size(191, 71);
             this.Txt_AddDiscription.TabIndex = 6;
             // 
             // RoomDegrees
@@ -109,7 +109,8 @@
             this.Controls.Add(this.Lbl_AddNameDegree);
             this.Controls.Add(this.Txt_AddNameDegree);
             this.Name = "RoomDegrees";
-            this.Text = "إضافة غرفه";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "إضافة درجات الغرف";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -114,5 +114,10 @@ namespace Hospital
             addPatient.Show();
 
         }
+
+        private void تعديلمريضToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

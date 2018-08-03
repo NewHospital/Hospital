@@ -36,40 +36,44 @@
             // But_AddDocDegree
             // 
             this.But_AddDocDegree.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.But_AddDocDegree.Location = new System.Drawing.Point(328, 247);
+            this.But_AddDocDegree.Location = new System.Drawing.Point(68, 107);
+            this.But_AddDocDegree.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.But_AddDocDegree.Name = "But_AddDocDegree";
-            this.But_AddDocDegree.Size = new System.Drawing.Size(213, 50);
+            this.But_AddDocDegree.Size = new System.Drawing.Size(158, 35);
             this.But_AddDocDegree.TabIndex = 5;
             this.But_AddDocDegree.Text = "اضافة الدرجه العلميه";
             this.But_AddDocDegree.UseVisualStyleBackColor = true;
             // 
             // Txt_AddDocDegree
             // 
-            this.Txt_AddDocDegree.Location = new System.Drawing.Point(160, 167);
+            this.Txt_AddDocDegree.Location = new System.Drawing.Point(12, 53);
+            this.Txt_AddDocDegree.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_AddDocDegree.Name = "Txt_AddDocDegree";
-            this.Txt_AddDocDegree.Size = new System.Drawing.Size(254, 24);
+            this.Txt_AddDocDegree.Size = new System.Drawing.Size(199, 20);
             this.Txt_AddDocDegree.TabIndex = 4;
             // 
             // lbl_AddDocDegree
             // 
             this.lbl_AddDocDegree.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.lbl_AddDocDegree.Location = new System.Drawing.Point(502, 154);
+            this.lbl_AddDocDegree.Location = new System.Drawing.Point(222, 48);
             this.lbl_AddDocDegree.Name = "lbl_AddDocDegree";
-            this.lbl_AddDocDegree.Size = new System.Drawing.Size(138, 45);
+            this.lbl_AddDocDegree.Size = new System.Drawing.Size(118, 30);
             this.lbl_AddDocDegree.TabIndex = 3;
             this.lbl_AddDocDegree.Text = "الدرجه العلميه";
             this.lbl_AddDocDegree.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DocDegree
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(328, 182);
             this.Controls.Add(this.But_AddDocDegree);
             this.Controls.Add(this.Txt_AddDocDegree);
             this.Controls.Add(this.lbl_AddDocDegree);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DocDegree";
-            this.Text = "DocDegree";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "إضافة الدرجات العلمية";
             this.ResumeLayout(false);
             this.PerformLayout();
 

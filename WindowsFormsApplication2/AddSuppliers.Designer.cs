@@ -37,7 +37,7 @@
             // 
             this.Lbl_AddSuppliers.AutoSize = true;
             this.Lbl_AddSuppliers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_AddSuppliers.Location = new System.Drawing.Point(272, 69);
+            this.Lbl_AddSuppliers.Location = new System.Drawing.Point(221, 72);
             this.Lbl_AddSuppliers.Name = "Lbl_AddSuppliers";
             this.Lbl_AddSuppliers.Size = new System.Drawing.Size(63, 20);
             this.Lbl_AddSuppliers.TabIndex = 1;
@@ -54,7 +54,7 @@
             // But_AddSuppliers
             // 
             this.But_AddSuppliers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.But_AddSuppliers.Location = new System.Drawing.Point(166, 149);
+            this.But_AddSuppliers.Location = new System.Drawing.Point(95, 130);
             this.But_AddSuppliers.Name = "But_AddSuppliers";
             this.But_AddSuppliers.Size = new System.Drawing.Size(75, 27);
             this.But_AddSuppliers.TabIndex = 3;
@@ -65,12 +65,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 214);
+            this.ClientSize = new System.Drawing.Size(288, 190);
             this.Controls.Add(this.But_AddSuppliers);
             this.Controls.Add(this.Txt_AddSuppliers);
             this.Controls.Add(this.Lbl_AddSuppliers);
             this.Name = "AddSuppliers";
-            this.Text = "AddSuppliers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "إضافة مورد";
             this.ResumeLayout(false);
             this.PerformLayout();
 

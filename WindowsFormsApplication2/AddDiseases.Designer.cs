@@ -65,12 +65,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(269, 228);
+            this.ClientSize = new System.Drawing.Size(269, 190);
             this.Controls.Add(this.Lbl_AddDiseases);
             this.Controls.Add(this.Txt_AddDiseases);
             this.Controls.Add(this.But_AddDiseases);
             this.Name = "AddDiseases";
-            this.Text = "AddDiseases";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "إضافة الأمراض";
             this.Load += new System.EventHandler(this.AddDiseases_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
