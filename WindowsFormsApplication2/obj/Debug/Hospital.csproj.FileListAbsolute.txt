@@ -50,3 +50,26 @@ E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospita
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.BillsType.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.DocDegree.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.RoomDegrees.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\bin\Debug\Properties\Settings.Designer.cs
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\bin\Debug\Properties\Settings.settings
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csprojAssemblyReference.cache
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddDiseases.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddDrugUnits.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddNewPatient.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddSpecialization.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddSuppliers.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.BillsType.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.DocDegree.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.MainForm.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.RoomDegrees.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csproj.GenerateResource.cache
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csproj.CoreCompileInputs.cache
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddDrug.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddFellow.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddRooms.resources

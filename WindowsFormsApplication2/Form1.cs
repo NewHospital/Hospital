@@ -111,7 +111,7 @@ namespace Hospital
         {
 
             AddNewPatient addPatient = new AddNewPatient();
-            addPatient.Show();
+            addPatient.ShowDialog();
 
         }
 
