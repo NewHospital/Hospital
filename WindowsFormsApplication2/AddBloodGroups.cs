@@ -18,7 +18,7 @@ namespace WindowsFormsApplication2
         {
             InitializeComponent();
 
-            ConnectionClass.Connection("Data Source=.;Initial Catalog=hospital;Integrated Security=True");
+            
 
 
 
@@ -33,7 +33,7 @@ namespace WindowsFormsApplication2
         {
            
             ConnectionClass.parameters(new  SqlParameter ("@BloodGroupName", Txt_AddBloodGroup.Text));
-            ConnectionClass.SQLCommand("Cproc_AddBloodGroup", MyCommandtype.storedProcedure, ExecuteReaderOrNonQuery.executeNonQuery);
+            ConnectionClass.SQLCommand("Cproc_AddBloodGroup", CommandType.StoredProcedure, ExecuteReaderOrNonQuery.executeNonQuery);
             Txt_AddBloodGroup.Clear();
             MessageBox.Show("تم إضافة الفصيلة بنجاح");
         }

@@ -46,7 +46,7 @@ namespace WindowsFormsApplication2
             decimal value = 0;
             decimal.TryParse(Txt_pricePerUnit.Text, out value);
             ConnectionClass.parameters(new SqlParameter("@DrugName", txt_Drugname.Text), new SqlParameter("@DrugUnit", Com_DrugUnit.SelectedValue), new SqlParameter("@PricePerUnit", value));
-            ConnectionClass.SQLCommand("Cproc_AddDrug", MyCommandtype.storedProcedure, ExecuteReaderOrNonQuery.executeNonQuery);
+            ConnectionClass.SQLCommand("Cproc_AddDrug", CommandType.StoredProcedure, ExecuteReaderOrNonQuery.executeNonQuery);
             MessageBox.Show("تم إضافة الدواء بنجاح");
             txt_Drugname.Clear();
             Txt_pricePerUnit.Clear();

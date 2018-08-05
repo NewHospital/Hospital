@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using System.Data;
 
 namespace Hospital
-{   public enum MyCommandtype { text= 1, storedProcedure= 2}; 
+{   
     public enum ExecuteReaderOrNonQuery { executeReader= 1, executeNonQuery= 2};
 
 
@@ -38,13 +38,13 @@ namespace Hospital
         }
 
 
-        public static void SQLCommand (string CommandText, MyCommandtype CT, ExecuteReaderOrNonQuery Ex)
+        public static void SQLCommand (string CommandText, CommandType CT, ExecuteReaderOrNonQuery Ex)
         {
             ConnectMe.Open();
             SqlCommand MyCommand = new SqlCommand(CommandText, ConnectMe); 
             switch (CT)
             {
-                case MyCommandtype.text:
+                case CommandType.Text:
                     MyCommand.CommandType = CommandType.Text; 
                     
                         switch (Ex)
@@ -64,7 +64,7 @@ namespace Hospital
                         }
                         break;
 
-                case MyCommandtype.storedProcedure:
+                case CommandType.StoredProcedure:
                     {
                         MyCommand.CommandType = CommandType.StoredProcedure; 
                         switch (Ex)
