@@ -29,6 +29,7 @@ namespace Hospital
         {
             ConnectionClass.Parameters(new SqlParameter("@DtugUnitName", Txt_AddDrugUnits.Text));
             ConnectionClass.SQLCommand("Cproc_AddDrugUnits", CommandType.StoredProcedure, ExecuteReaderOrNonQuery.executeNonQuery);
+            
             MessageBox.Show("تم إضافة وحدة الدواء بنجاح");
             Txt_AddDrugUnits.Clear();
 

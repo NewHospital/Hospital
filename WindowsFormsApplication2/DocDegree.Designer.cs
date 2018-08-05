@@ -43,6 +43,7 @@
             this.But_AddDocDegree.TabIndex = 5;
             this.But_AddDocDegree.Text = "اضافة الدرجه العلميه";
             this.But_AddDocDegree.UseVisualStyleBackColor = true;
+            this.But_AddDocDegree.Click += new System.EventHandler(this.But_AddDocDegree_Click);
             // 
             // Txt_AddDocDegree
             // 
@@ -75,6 +76,7 @@
             this.Name = "DocDegree";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "إضافة الدرجات العلمية";
+            this.Load += new System.EventHandler(this.DocDegree_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

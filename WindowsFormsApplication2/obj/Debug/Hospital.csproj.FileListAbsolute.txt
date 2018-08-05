@@ -103,7 +103,6 @@ D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csproj.CoreCompileInputs
 D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csproj.CopyComplete
 D:\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
 D:\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
-E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddBloodGroups.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddDrug.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddFellow.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddRooms.resources

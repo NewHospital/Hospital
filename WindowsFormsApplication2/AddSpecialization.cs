@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Hospital
 {
@@ -15,6 +16,16 @@ namespace Hospital
         public AddSpecialization()
         {
             InitializeComponent();
+        }
+
+        private void But_AddSpecialization_Click(object sender, EventArgs e)
+        {
+            ConnectionClass.Parameters(new SqlParameter("@SpecificationName", Txt_AddSpecialization.Text));
+            ConnectionClass.SQLCommand("Cproc_AddSpecialization", CommandType.StoredProcedure, ExecuteReaderOrNonQuery.executeNonQuery);
+            MessageBox.Show("تم إضافة تخصص طبي");
+            Txt_AddSpecialization.Clear();
+
+
         }
     }
 }

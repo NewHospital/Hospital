@@ -55,19 +55,20 @@
             // But_AddSpecialization
             // 
             this.But_AddSpecialization.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.But_AddSpecialization.Location = new System.Drawing.Point(100, 125);
+            this.But_AddSpecialization.Location = new System.Drawing.Point(85, 105);
             this.But_AddSpecialization.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.But_AddSpecialization.Name = "But_AddSpecialization";
             this.But_AddSpecialization.Size = new System.Drawing.Size(117, 36);
             this.But_AddSpecialization.TabIndex = 2;
             this.But_AddSpecialization.Text = "اضافة التخصص";
             this.But_AddSpecialization.UseVisualStyleBackColor = true;
+            this.But_AddSpecialization.Click += new System.EventHandler(this.But_AddSpecialization_Click);
             // 
             // AddSpecialization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 200);
+            this.ClientSize = new System.Drawing.Size(333, 181);
             this.Controls.Add(this.But_AddSpecialization);
             this.Controls.Add(this.Txt_AddSpecialization);
             this.Controls.Add(this.lbl_AddSpecialization);

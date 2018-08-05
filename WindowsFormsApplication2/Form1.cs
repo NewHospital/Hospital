@@ -130,6 +130,16 @@ namespace Hospital
             DrugUnits.ShowDialog();
         }
 
-       
+        private void AddSpecializationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DocDegree Degree    = new DocDegree();
+            Degree.ShowDialog();
+        }
+
+        private void SpecializationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddSpecialization Specialization = new AddSpecialization();
+            Specialization.ShowDialog();
+        }
     }
 }
