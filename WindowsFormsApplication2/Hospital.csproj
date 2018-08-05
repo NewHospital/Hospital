@@ -57,12 +57,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddBloodGroups.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddBloodGroups.Designer.cs">
-      <DependentUpon>AddBloodGroups.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddDiseases.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,9 +219,6 @@
     <Compile Include="Suppliers.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddBloodGroups.resx">
-      <DependentUpon>AddBloodGroups.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddDiseases.resx">
       <DependentUpon>AddDiseases.cs</DependentUpon>
     </EmbeddedResource>
