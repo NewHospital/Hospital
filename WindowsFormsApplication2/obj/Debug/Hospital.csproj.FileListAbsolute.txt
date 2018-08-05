@@ -115,3 +115,9 @@ E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hos
 E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddFellow.resources
 E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddRooms.resources
 E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csproj.CopyComplete
+C:\Users\must3\Downloads\Hospital-fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\must3\Downloads\Hospital-fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\must3\Downloads\Hospital-fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+E:\Hospital\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+E:\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+E:\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
