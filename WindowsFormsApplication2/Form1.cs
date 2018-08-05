@@ -19,7 +19,7 @@ namespace Hospital
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ConnectionClass.Connection("Data Source=.;Initial Catalog=hospital;Integrated Security=True");
+            ConnectionClass.Connection(@"Data Source=DESKTOP-P82BOAD\MOSTAFASQL;Initial Catalog=hospital;Integrated Security=True");
 
         }
 
