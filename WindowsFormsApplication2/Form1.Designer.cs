@@ -57,7 +57,11 @@
             // 
             this.المشترياتToolStripMenuItem.Name = "المشترياتToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.المشترياتToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+=======
+            this.المشترياتToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.المشترياتToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -67,7 +71,11 @@
             // 
             this.حجزغرفةToolStripMenuItem.Name = "حجزغرفةToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.حجزغرفةToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+=======
+            this.حجزغرفةToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.حجزغرفةToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -80,7 +88,11 @@
             this.حجزمريضToolStripMenuItem});
             this.الحجوزاتToolStripMenuItem.Name = "الحجوزاتToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.الحجوزاتToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+=======
+            this.الحجوزاتToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.الحجوزاتToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -90,7 +102,11 @@
             // 
             this.حجزمريضToolStripMenuItem.Name = "حجزمريضToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.حجزمريضToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+=======
+            this.حجزمريضToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.حجزمريضToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -103,7 +119,11 @@
             this.إضافةصنفدواءToolStripMenuItem});
             this.الصيدليةToolStripMenuItem.Name = "الصيدليةToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.الصيدليةToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+=======
+            this.الصيدليةToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.الصيدليةToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -113,7 +133,11 @@
             // 
             this.إضافةوحداتالدواءToolStripMenuItem.Name = "إضافةوحداتالدواءToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.إضافةوحداتالدواءToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+=======
+            this.إضافةوحداتالدواءToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.إضافةوحداتالدواءToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -124,7 +148,11 @@
             // 
             this.إضافةصنفدواءToolStripMenuItem.Name = "إضافةصنفدواءToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.إضافةصنفدواءToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+=======
+            this.إضافةصنفدواءToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.إضافةصنفدواءToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -135,7 +163,11 @@
             // 
             this.تعديلالغرفةToolStripMenuItem.Name = "تعديلالغرفةToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.تعديلالغرفةToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+=======
+            this.تعديلالغرفةToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.تعديلالغرفةToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -145,7 +177,11 @@
             // 
             this.إضافةدرجةالغرفةToolStripMenuItem1.Name = "إضافةدرجةالغرفةToolStripMenuItem1";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.إضافةدرجةالغرفةToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
+=======
+            this.إضافةدرجةالغرفةToolStripMenuItem1.Size = new System.Drawing.Size(201, 26);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.إضافةدرجةالغرفةToolStripMenuItem1.Size = new System.Drawing.Size(201, 26);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -155,7 +191,11 @@
             // 
             this.إضافةدرجةالغرفةToolStripMenuItem.Name = "إضافةدرجةالغرفةToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.إضافةدرجةالغرفةToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+=======
+            this.إضافةدرجةالغرفةToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.إضافةدرجةالغرفةToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -169,7 +209,11 @@
             this.تعديلالغرفةToolStripMenuItem});
             this.الغرفToolStripMenuItem.Name = "الغرفToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.الغرفToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+=======
+            this.الغرفToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.الغرفToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -179,7 +223,11 @@
             // 
             this.تعديلبياناتطبيبToolStripMenuItem.Name = "تعديلبياناتطبيبToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.تعديلبياناتطبيبToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+=======
+            this.تعديلبياناتطبيبToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.تعديلبياناتطبيبToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -189,7 +237,11 @@
             // 
             this.إضافةدرجةعلميةToolStripMenuItem.Name = "إضافةدرجةعلميةToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.إضافةدرجةعلميةToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+=======
+            this.إضافةدرجةعلميةToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.إضافةدرجةعلميةToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -199,7 +251,11 @@
             // 
             this.إضافةطبيبToolStripMenuItem.Name = "إضافةطبيبToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.إضافةطبيبToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+=======
+            this.إضافةطبيبToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.إضافةطبيبToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -213,7 +269,11 @@
             this.تعديلبياناتطبيبToolStripMenuItem});
             this.الأطباءToolStripMenuItem.Name = "الأطباءToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.الأطباءToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+=======
+            this.الأطباءToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.الأطباءToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -223,7 +283,11 @@
             // 
             this.حدفمريضToolStripMenuItem.Name = "حدفمريضToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.حدفمريضToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+=======
+            this.حدفمريضToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.حدفمريضToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -233,7 +297,11 @@
             // 
             this.تعديلمريضToolStripMenuItem.Name = "تعديلمريضToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.تعديلمريضToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+=======
+            this.تعديلمريضToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.تعديلمريضToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -244,7 +312,11 @@
             // 
             this.إضافةمريضToolStripMenuItem.Name = "إضافةمريضToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.إضافةمريضToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+=======
+            this.إضافةمريضToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.إضافةمريضToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
@@ -266,7 +338,11 @@
             // 
             this.البياناتالأساسيةToolStripMenuItem.Name = "البياناتالأساسيةToolStripMenuItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.البياناتالأساسيةToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+=======
+            this.البياناتالأساسيةToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+>>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
 =======
             this.البياناتالأساسيةToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
 >>>>>>> fcfdf952c5a7d57408e0fef9f3c2ae3db3e2eaf6
