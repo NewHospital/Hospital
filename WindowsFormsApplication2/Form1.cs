@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication2;
 
 namespace Hospital
 {
@@ -118,6 +119,25 @@ namespace Hospital
         private void تعديلمريضToolStripMenuItem_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void إضافةفصائلالدمToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddBloodGroups BloodGroups = new AddBloodGroups();
+            BloodGroups.ShowDialog();
+            
+        }
+
+        private void إضافةوحداتالدواءToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddDrugUnits DrugUnits = new AddDrugUnits();
+            DrugUnits.ShowDialog();
+        }
+
+        private void إضافةصنفدواءToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddDrug Drug = new AddDrug();
+            Drug.ShowDialog();
         }
     }
 }

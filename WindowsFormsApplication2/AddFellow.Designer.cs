@@ -41,10 +41,11 @@
             // 
             // Txt_FellowName
             // 
-            this.Txt_FellowName.Location = new System.Drawing.Point(48, 46);
+            this.Txt_FellowName.Location = new System.Drawing.Point(41, 37);
+            this.Txt_FellowName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_FellowName.Name = "Txt_FellowName";
             this.Txt_FellowName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Txt_FellowName.Size = new System.Drawing.Size(284, 24);
+            this.Txt_FellowName.Size = new System.Drawing.Size(244, 20);
             this.Txt_FellowName.TabIndex = 0;
             // 
             // contextMenuStrip1
@@ -55,61 +56,65 @@
             // 
             // Txt_FellowSoSeNo
             // 
-            this.Txt_FellowSoSeNo.Location = new System.Drawing.Point(120, 121);
+            this.Txt_FellowSoSeNo.Location = new System.Drawing.Point(103, 98);
+            this.Txt_FellowSoSeNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_FellowSoSeNo.Name = "Txt_FellowSoSeNo";
             this.Txt_FellowSoSeNo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Txt_FellowSoSeNo.Size = new System.Drawing.Size(212, 24);
+            this.Txt_FellowSoSeNo.Size = new System.Drawing.Size(182, 20);
             this.Txt_FellowSoSeNo.TabIndex = 2;
             // 
             // Txt_FellowPhone
             // 
-            this.Txt_FellowPhone.Location = new System.Drawing.Point(218, 190);
+            this.Txt_FellowPhone.Location = new System.Drawing.Point(187, 154);
+            this.Txt_FellowPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_FellowPhone.Name = "Txt_FellowPhone";
             this.Txt_FellowPhone.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Txt_FellowPhone.Size = new System.Drawing.Size(114, 24);
+            this.Txt_FellowPhone.Size = new System.Drawing.Size(98, 20);
             this.Txt_FellowPhone.TabIndex = 3;
             // 
             // But_AddFellow
             // 
-            this.But_AddFellow.Location = new System.Drawing.Point(146, 264);
+            this.But_AddFellow.Location = new System.Drawing.Point(125, 214);
+            this.But_AddFellow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.But_AddFellow.Name = "But_AddFellow";
-            this.But_AddFellow.Size = new System.Drawing.Size(135, 35);
+            this.But_AddFellow.Size = new System.Drawing.Size(116, 28);
             this.But_AddFellow.TabIndex = 4;
             this.But_AddFellow.Text = "إضافة مرافق ";
             this.But_AddFellow.UseVisualStyleBackColor = true;
+            this.But_AddFellow.Click += new System.EventHandler(this.But_AddFellow_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(371, 46);
+            this.label1.Location = new System.Drawing.Point(318, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 17);
+            this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "اسم المرافق";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(371, 121);
+            this.label2.Location = new System.Drawing.Point(318, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 17);
+            this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "الرقم القومي";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(384, 190);
+            this.label3.Location = new System.Drawing.Point(329, 154);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 17);
+            this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "رقم الهاتف";
             // 
             // AddFellow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 351);
+            this.ClientSize = new System.Drawing.Size(413, 285);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -117,6 +122,7 @@
             this.Controls.Add(this.Txt_FellowPhone);
             this.Controls.Add(this.Txt_FellowSoSeNo);
             this.Controls.Add(this.Txt_FellowName);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddFellow";
             this.Text = "AddFellow";
             this.Load += new System.EventHandler(this.AddFellow_Load);

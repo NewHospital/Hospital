@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="hospitalModelStoreContainer" CdmEntityContainer="hospitalEntities">
+    <EntitySetMapping Name="Bills">
+      <EntityTypeMapping TypeName="hospitalModel.Bills">
+        <MappingFragment StoreEntitySet="Bills">
+          <ScalarProperty Name="BillId" ColumnName="BillId" />
+          <ScalarProperty Name="ReservationID" ColumnName="ReservationID" />
+          <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+          <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Discription" ColumnName="Discription" />
+          <ScalarProperty Name="BillType" ColumnName="BillType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BillsTypes">
+      <EntityTypeMapping TypeName="hospitalModel.BillsTypes">
+        <MappingFragment StoreEntitySet="BillsTypes">
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="hospitalModel.Payments">
+        <MappingFragment StoreEntitySet="Payments">
+          <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+          <ScalarProperty Name="paymentDate" ColumnName="paymentDate" />
+          <ScalarProperty Name="ReservationId" ColumnName="ReservationId" />
+          <ScalarProperty Name="ReceiptSerial" ColumnName="ReceiptSerial" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Discription" ColumnName="Discription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BuyingInvoice">
+      <EntityTypeMapping TypeName="hospitalModel.BuyingInvoice">
+        <MappingFragment StoreEntitySet="BuyingInvoice">
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BuyingInvoiceDetail">
+      <EntityTypeMapping TypeName="hospitalModel.BuyingInvoiceDetail">
+        <MappingFragment StoreEntitySet="BuyingInvoiceDetail">
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="DrugId" ColumnName="DrugId" />
+          <ScalarProperty Name="Qnty" ColumnName="Qnty" />
+          <ScalarProperty Name="pricePerUnit" ColumnName="pricePerUnit" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierAddress">
+      <EntityTypeMapping TypeName="hospitalModel.SupplierAddress">
+        <MappingFragment StoreEntitySet="SupplierAddress">
+          <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="SupplierAdress" ColumnName="SupplierAdress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierContact">
+      <EntityTypeMapping TypeName="hospitalModel.SupplierContact">
+        <MappingFragment StoreEntitySet="SupplierContact">
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="ContactPhone" ColumnName="ContactPhone" />
+          <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="hospitalModel.Suppliers">
+        <MappingFragment StoreEntitySet="Suppliers">
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rooms">
+      <EntityTypeMapping TypeName="hospitalModel.Rooms">
+        <MappingFragment StoreEntitySet="Rooms">
+          <ScalarProperty Name="RoomId" ColumnName="RoomId" />
+          <ScalarProperty Name="RoomNo" ColumnName="RoomNo" />
+          <ScalarProperty Name="RoomFloor" ColumnName="RoomFloor" />
+          <ScalarProperty Name="RoomDegree" ColumnName="RoomDegree" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoomsDegree">
+      <EntityTypeMapping TypeName="hospitalModel.RoomsDegree">
+        <MappingFragment StoreEntitySet="RoomsDegree">
+          <ScalarProperty Name="RoomDegreeID" ColumnName="RoomDegreeID" />
+          <ScalarProperty Name="DegreeName" ColumnName="DegreeName" />
+          <ScalarProperty Name="FeesPerDay" ColumnName="FeesPerDay" />
+          <ScalarProperty Name="Discription" ColumnName="Discription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doctors">
+      <EntityTypeMapping TypeName="hospitalModel.Doctors">
+        <MappingFragment StoreEntitySet="Doctors">
+          <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
+          <ScalarProperty Name="DocName" ColumnName="DocName" />
+          <ScalarProperty Name="DocAddress" ColumnName="DocAddress" />
+          <ScalarProperty Name="DocPhone" ColumnName="DocPhone" />
+          <ScalarProperty Name="DocDegree" ColumnName="DocDegree" />
+          <ScalarProperty Name="DocSpecification" ColumnName="DocSpecification" />
+          <ScalarProperty Name="MagId" ColumnName="MagId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScientificDegree">
+      <EntityTypeMapping TypeName="hospitalModel.ScientificDegree">
+        <MappingFragment StoreEntitySet="ScientificDegree">
+          <ScalarProperty Name="ScientificDegreeId" ColumnName="ScientificDegreeId" />
+          <ScalarProperty Name="ScientificDegreeName" ColumnName="ScientificDegreeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Specification">
+      <EntityTypeMapping TypeName="hospitalModel.Specification">
+        <MappingFragment StoreEntitySet="Specification">
+          <ScalarProperty Name="SpecificationId" ColumnName="SpecificationId" />
+          <ScalarProperty Name="SpecificationName" ColumnName="SpecificationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bloodGroups">
+      <EntityTypeMapping TypeName="hospitalModel.bloodGroups">
+        <MappingFragment StoreEntitySet="bloodGroups">
+          <ScalarProperty Name="BloodID" ColumnName="BloodID" />
+          <ScalarProperty Name="BloodGroupName" ColumnName="BloodGroupName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Diseases">
+      <EntityTypeMapping TypeName="hospitalModel.Diseases">
+        <MappingFragment StoreEntitySet="Diseases">
+          <ScalarProperty Name="DiseaseId" ColumnName="DiseaseId" />
+          <ScalarProperty Name="DiseaseName" ColumnName="DiseaseName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocfollowUp">
+      <EntityTypeMapping TypeName="hospitalModel.DocfollowUp">
+        <MappingFragment StoreEntitySet="DocfollowUp">
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+          <ScalarProperty Name="ReservationID" ColumnName="ReservationID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fellow">
+      <EntityTypeMapping TypeName="hospitalModel.Fellow">
+        <MappingFragment StoreEntitySet="Fellow">
+          <ScalarProperty Name="FellowID" ColumnName="FellowID" />
+          <ScalarProperty Name="FellowName" ColumnName="FellowName" />
+          <ScalarProperty Name="SoSecNo" ColumnName="SoSecNo" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PatientId" ColumnName="PatientId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patient">
+      <EntityTypeMapping TypeName="hospitalModel.Patient">
+        <MappingFragment StoreEntitySet="Patient">
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="PatientName" ColumnName="PatientName" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="SoSecNo" ColumnName="SoSecNo" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PatientMeasures">
+      <EntityTypeMapping TypeName="hospitalModel.PatientMeasures">
+        <MappingFragment StoreEntitySet="PatientMeasures">
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="DiseaseID" ColumnName="DiseaseID" />
+          <ScalarProperty Name="MeasureResult" ColumnName="MeasureResult" />
+          <ScalarProperty Name="TimeOfMeasure" ColumnName="TimeOfMeasure" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reservations">
+      <EntityTypeMapping TypeName="hospitalModel.Reservations">
+        <MappingFragment StoreEntitySet="Reservations">
+          <ScalarProperty Name="ReservationID" ColumnName="ReservationID" />
+          <ScalarProperty Name="patientId" ColumnName="patientId" />
+          <ScalarProperty Name="RoomID" ColumnName="RoomID" />
+          <ScalarProperty Name="ArriveDate" ColumnName="ArriveDate" />
+          <ScalarProperty Name="LeaveDate" ColumnName="LeaveDate" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Discription" ColumnName="Discription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Drugs">
+      <EntityTypeMapping TypeName="hospitalModel.Drugs">
+        <MappingFragment StoreEntitySet="Drugs">
+          <ScalarProperty Name="DrugId" ColumnName="DrugId" />
+          <ScalarProperty Name="DrugName" ColumnName="DrugName" />
+          <ScalarProperty Name="DrugUnit" ColumnName="DrugUnit" />
+          <ScalarProperty Name="PricePerUnit" ColumnName="PricePerUnit" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DrugUnits">
+      <EntityTypeMapping TypeName="hospitalModel.DrugUnits">
+        <MappingFragment StoreEntitySet="DrugUnits">
+          <ScalarProperty Name="DrugUnitId" ColumnName="DrugUnitId" />
+          <ScalarProperty Name="DrugUnitName" ColumnName="DrugUnitName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prescription">
+      <EntityTypeMapping TypeName="hospitalModel.Prescription">
+        <MappingFragment StoreEntitySet="Prescription">
+          <ScalarProperty Name="PrescriptionId" ColumnName="PrescriptionId" />
+          <ScalarProperty Name="prescriptionDate" ColumnName="prescriptionDate" />
+          <ScalarProperty Name="DocId" ColumnName="DocId" />
+          <ScalarProperty Name="ReservationID" ColumnName="ReservationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrescriptionDetail">
+      <EntityTypeMapping TypeName="hospitalModel.PrescriptionDetail">
+        <MappingFragment StoreEntitySet="PrescriptionDetail">
+          <ScalarProperty Name="PrescriptionId" ColumnName="PrescriptionId" />
+          <ScalarProperty Name="DrugId" ColumnName="DrugId" />
+          <ScalarProperty Name="Qnty" ColumnName="Qnty" />
+          <ScalarProperty Name="IsReceived" ColumnName="IsReceived" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="medicalHistory" TypeName="hospitalModel.medicalHistory" StoreEntitySet="medicalHistory">
+      <EndProperty Name="Diseases">
+        <ScalarProperty Name="DiseaseId" ColumnName="DiseaseID" />
+      </EndProperty>
+      <EndProperty Name="Patient">
+        <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

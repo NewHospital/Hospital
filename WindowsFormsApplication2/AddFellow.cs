@@ -21,5 +21,10 @@ namespace WindowsFormsApplication2
         {
 
         }
+
+        private void But_AddFellow_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
