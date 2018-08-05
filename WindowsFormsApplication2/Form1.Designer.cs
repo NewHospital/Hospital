@@ -49,7 +49,6 @@
             this.إضافةمريضToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.المرضىToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.البياناتالأساسيةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.إضافةفصائلالدمToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -57,13 +56,13 @@
             // المشترياتToolStripMenuItem
             // 
             this.المشترياتToolStripMenuItem.Name = "المشترياتToolStripMenuItem";
-            this.المشترياتToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.المشترياتToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.المشترياتToolStripMenuItem.Text = "المشتريات";
             // 
             // حجزغرفةToolStripMenuItem
             // 
             this.حجزغرفةToolStripMenuItem.Name = "حجزغرفةToolStripMenuItem";
-            this.حجزغرفةToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.حجزغرفةToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.حجزغرفةToolStripMenuItem.Text = "حجز غرفة";
             // 
             // الحجوزاتToolStripMenuItem
@@ -72,13 +71,13 @@
             this.حجزغرفةToolStripMenuItem,
             this.حجزمريضToolStripMenuItem});
             this.الحجوزاتToolStripMenuItem.Name = "الحجوزاتToolStripMenuItem";
-            this.الحجوزاتToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.الحجوزاتToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.الحجوزاتToolStripMenuItem.Text = "الحجوزات";
             // 
             // حجزمريضToolStripMenuItem
             // 
             this.حجزمريضToolStripMenuItem.Name = "حجزمريضToolStripMenuItem";
-            this.حجزمريضToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.حجزمريضToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.حجزمريضToolStripMenuItem.Text = "حجز مريض";
             // 
             // الصيدليةToolStripMenuItem
@@ -87,39 +86,39 @@
             this.إضافةوحداتالدواءToolStripMenuItem,
             this.إضافةصنفدواءToolStripMenuItem});
             this.الصيدليةToolStripMenuItem.Name = "الصيدليةToolStripMenuItem";
-            this.الصيدليةToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.الصيدليةToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.الصيدليةToolStripMenuItem.Text = "الصيدلية";
             // 
             // إضافةوحداتالدواءToolStripMenuItem
             // 
             this.إضافةوحداتالدواءToolStripMenuItem.Name = "إضافةوحداتالدواءToolStripMenuItem";
-            this.إضافةوحداتالدواءToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.إضافةوحداتالدواءToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.إضافةوحداتالدواءToolStripMenuItem.Text = "إضافة وحدات الدواء";
             this.إضافةوحداتالدواءToolStripMenuItem.Click += new System.EventHandler(this.AddDrugUnitsToolStripMenuItem_Click);
             // 
             // إضافةصنفدواءToolStripMenuItem
             // 
             this.إضافةصنفدواءToolStripMenuItem.Name = "إضافةصنفدواءToolStripMenuItem";
-            this.إضافةصنفدواءToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.إضافةصنفدواءToolStripMenuItem.Size = new System.Drawing.Size(209, 26);
             this.إضافةصنفدواءToolStripMenuItem.Text = "إضافة صنف دواء ";
             this.إضافةصنفدواءToolStripMenuItem.Click += new System.EventHandler(this.AddDrugToolStripMenuItem_Click);
             // 
             // تعديلالغرفةToolStripMenuItem
             // 
             this.تعديلالغرفةToolStripMenuItem.Name = "تعديلالغرفةToolStripMenuItem";
-            this.تعديلالغرفةToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.تعديلالغرفةToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
             this.تعديلالغرفةToolStripMenuItem.Text = "تعديل الغرفة";
             // 
             // إضافةدرجةالغرفةToolStripMenuItem1
             // 
             this.إضافةدرجةالغرفةToolStripMenuItem1.Name = "إضافةدرجةالغرفةToolStripMenuItem1";
-            this.إضافةدرجةالغرفةToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.إضافةدرجةالغرفةToolStripMenuItem1.Size = new System.Drawing.Size(201, 26);
             this.إضافةدرجةالغرفةToolStripMenuItem1.Text = "إضافة درجة الغرفة";
             // 
             // إضافةدرجةالغرفةToolStripMenuItem
             // 
             this.إضافةدرجةالغرفةToolStripMenuItem.Name = "إضافةدرجةالغرفةToolStripMenuItem";
-            this.إضافةدرجةالغرفةToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.إضافةدرجةالغرفةToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
             this.إضافةدرجةالغرفةToolStripMenuItem.Text = "إضافة غرفة";
             // 
             // الغرفToolStripMenuItem
@@ -129,25 +128,25 @@
             this.إضافةدرجةالغرفةToolStripMenuItem1,
             this.تعديلالغرفةToolStripMenuItem});
             this.الغرفToolStripMenuItem.Name = "الغرفToolStripMenuItem";
-            this.الغرفToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.الغرفToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.الغرفToolStripMenuItem.Text = "الغرف";
             // 
             // تعديلبياناتطبيبToolStripMenuItem
             // 
             this.تعديلبياناتطبيبToolStripMenuItem.Name = "تعديلبياناتطبيبToolStripMenuItem";
-            this.تعديلبياناتطبيبToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.تعديلبياناتطبيبToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
             this.تعديلبياناتطبيبToolStripMenuItem.Text = "تعديل بيانات طبيب";
             // 
             // إضافةدرجةعلميةToolStripMenuItem
             // 
             this.إضافةدرجةعلميةToolStripMenuItem.Name = "إضافةدرجةعلميةToolStripMenuItem";
-            this.إضافةدرجةعلميةToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.إضافةدرجةعلميةToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
             this.إضافةدرجةعلميةToolStripMenuItem.Text = "إضافة درجة علمية";
             // 
             // إضافةطبيبToolStripMenuItem
             // 
             this.إضافةطبيبToolStripMenuItem.Name = "إضافةطبيبToolStripMenuItem";
-            this.إضافةطبيبToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.إضافةطبيبToolStripMenuItem.Size = new System.Drawing.Size(203, 26);
             this.إضافةطبيبToolStripMenuItem.Text = "إضافة طبيب";
             // 
             // الأطباءToolStripMenuItem
@@ -157,26 +156,26 @@
             this.إضافةدرجةعلميةToolStripMenuItem,
             this.تعديلبياناتطبيبToolStripMenuItem});
             this.الأطباءToolStripMenuItem.Name = "الأطباءToolStripMenuItem";
-            this.الأطباءToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.الأطباءToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.الأطباءToolStripMenuItem.Text = "الأطباء";
             // 
             // حدفمريضToolStripMenuItem
             // 
             this.حدفمريضToolStripMenuItem.Name = "حدفمريضToolStripMenuItem";
-            this.حدفمريضToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.حدفمريضToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.حدفمريضToolStripMenuItem.Text = "حدف مريض";
             // 
             // تعديلمريضToolStripMenuItem
             // 
             this.تعديلمريضToolStripMenuItem.Name = "تعديلمريضToolStripMenuItem";
-            this.تعديلمريضToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.تعديلمريضToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.تعديلمريضToolStripMenuItem.Text = "تعديل مريض";
             this.تعديلمريضToolStripMenuItem.Click += new System.EventHandler(this.ModifyPatientToolStripMenuItem_Click);
             // 
             // إضافةمريضToolStripMenuItem
             // 
             this.إضافةمريضToolStripMenuItem.Name = "إضافةمريضToolStripMenuItem";
-            this.إضافةمريضToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.إضافةمريضToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.إضافةمريضToolStripMenuItem.Text = "إضافة مريض";
             this.إضافةمريضToolStripMenuItem.Click += new System.EventHandler(this.AddPatientToolStripMenuItem_Click);
             // 
@@ -188,26 +187,18 @@
             this.تعديلمريضToolStripMenuItem,
             this.حدفمريضToolStripMenuItem});
             this.المرضىToolStripMenuItem.Name = "المرضىToolStripMenuItem";
-            this.المرضىToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.المرضىToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.المرضىToolStripMenuItem.Text = "المرضى";
             // 
             // البياناتالأساسيةToolStripMenuItem
             // 
-            this.البياناتالأساسيةToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.إضافةفصائلالدمToolStripMenuItem});
             this.البياناتالأساسيةToolStripMenuItem.Name = "البياناتالأساسيةToolStripMenuItem";
-            this.البياناتالأساسيةToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.البياناتالأساسيةToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.البياناتالأساسيةToolStripMenuItem.Text = "البيانات الأساسية";
-            // 
-            // إضافةفصائلالدمToolStripMenuItem
-            // 
-            this.إضافةفصائلالدمToolStripMenuItem.Name = "إضافةفصائلالدمToolStripMenuItem";
-            this.إضافةفصائلالدمToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.إضافةفصائلالدمToolStripMenuItem.Text = "إضافة فصائل الدم";
-            this.إضافةفصائلالدمToolStripMenuItem.Click += new System.EventHandler(this.AddBloodTypeToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.المرضىToolStripMenuItem,
             this.الأطباءToolStripMenuItem,
@@ -218,7 +209,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip1.Size = new System.Drawing.Size(839, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(839, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -271,7 +262,6 @@
         private System.Windows.Forms.ToolStripMenuItem المرضىToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem البياناتالأساسيةToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem إضافةفصائلالدمToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem إضافةوحداتالدواءToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem إضافةصنفدواءToolStripMenuItem;
     }

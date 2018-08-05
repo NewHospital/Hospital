@@ -70,9 +70,6 @@ E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hos
 E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csproj.CoreCompileInputs.cache
 E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
 E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
-E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddDrug.resources
-E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddFellow.resources
-E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddRooms.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.dll
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.SqlServer.dll
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.xml
@@ -110,3 +107,12 @@ E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospita
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddDrug.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddFellow.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddRooms.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.dll
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.SqlServer.dll
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.xml
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.SqlServer.xml
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddBloodGroups.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddDrug.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddFellow.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddRooms.resources
+E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csproj.CopyComplete
