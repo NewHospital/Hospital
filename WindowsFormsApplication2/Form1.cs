@@ -118,12 +118,6 @@ namespace Hospital
 
         }
 
-        private void AddBloodTypeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AddBloodGroups BloodGroups = new AddBloodGroups();
-            BloodGroups.ShowDialog();
-        }
-
         private void AddDrugToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddDrug Drug = new AddDrug();

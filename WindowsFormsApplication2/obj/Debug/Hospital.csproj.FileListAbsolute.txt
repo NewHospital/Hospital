@@ -111,7 +111,6 @@ E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\bin\Debug\Ent
 E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.SqlServer.dll
 E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.xml
 E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.SqlServer.xml
-E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddBloodGroups.resources
 E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddDrug.resources
 E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddFellow.resources
 E:\C# Work\Visual studio Program\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddRooms.resources
