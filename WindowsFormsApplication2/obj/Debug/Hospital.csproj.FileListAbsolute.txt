@@ -81,3 +81,32 @@ E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Windows
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddFellow.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddRooms.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddBloodGroups.resources
+D:\Hospital\WindowsFormsApplication2\bin\Debug\Properties\Settings.Designer.cs
+D:\Hospital\WindowsFormsApplication2\bin\Debug\Properties\Settings.settings
+D:\Hospital\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+D:\Hospital\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+D:\Hospital\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+D:\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.dll
+D:\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.SqlServer.dll
+D:\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.xml
+D:\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.SqlServer.xml
+D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csprojAssemblyReference.cache
+D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddBloodGroups.resources
+D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddDiseases.resources
+D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddDrug.resources
+D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddDrugUnits.resources
+D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddFellow.resources
+D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddNewPatient.resources
+D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddRooms.resources
+D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddSpecialization.resources
+D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddSuppliers.resources
+D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.BillsType.resources
+D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.DocDegree.resources
+D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.MainForm.resources
+D:\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.RoomDegrees.resources
+D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csproj.GenerateResource.cache
+D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csproj.CoreCompileInputs.cache
+D:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csproj.CopyComplete
+D:\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+D:\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb

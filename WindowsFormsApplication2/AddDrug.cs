@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Hospital;
 using System.Data.SqlClient;
 
-namespace WindowsFormsApplication2
+namespace Hospital
 {
     public partial class AddDrug : Form
     {
@@ -22,7 +22,6 @@ namespace WindowsFormsApplication2
 
         private void AddDrug_Load(object sender, EventArgs e)
         {
-            ConnectionClass.Connection("Data Source=.;Initial Catalog=hospital;Integrated Security=True");
             hospitalEntities HosPital = new hospitalEntities();
 
             List<DrugUnits> DrugUnitList = HosPital.DrugUnits.ToList();
@@ -45,7 +44,7 @@ namespace WindowsFormsApplication2
         {
             decimal value = 0;
             decimal.TryParse(Txt_pricePerUnit.Text, out value);
-            ConnectionClass.parameters(new SqlParameter("@DrugName", txt_Drugname.Text), new SqlParameter("@DrugUnit", Com_DrugUnit.SelectedValue), new SqlParameter("@PricePerUnit", value));
+            ConnectionClass.Parameters(new SqlParameter("@DrugName", txt_Drugname.Text), new SqlParameter("@DrugUnit", Com_DrugUnit.SelectedValue), new SqlParameter("@PricePerUnit", value));
             ConnectionClass.SQLCommand("Cproc_AddDrug", CommandType.StoredProcedure, ExecuteReaderOrNonQuery.executeNonQuery);
             MessageBox.Show("تم إضافة الدواء بنجاح");
             txt_Drugname.Clear();

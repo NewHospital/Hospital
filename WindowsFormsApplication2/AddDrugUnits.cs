@@ -27,7 +27,7 @@ namespace Hospital
 
         private void But_AddDrugUnits_Click(object sender, EventArgs e)
         {
-            ConnectionClass.parameters(new SqlParameter("@DtugUnitName", Txt_AddDrugUnits.Text));
+            ConnectionClass.Parameters(new SqlParameter("@DtugUnitName", Txt_AddDrugUnits.Text));
             ConnectionClass.SQLCommand("Cproc_AddDrugUnits", CommandType.StoredProcedure, ExecuteReaderOrNonQuery.executeNonQuery);
             MessageBox.Show("تم إضافة وحدة الدواء بنجاح");
             Txt_AddDrugUnits.Clear();
