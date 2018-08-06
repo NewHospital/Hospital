@@ -29,199 +29,199 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.المشترياتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.حجزغرفةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.الحجوزاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.حجزمريضToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.الصيدليةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.إضافةوحداتالدواءToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.إضافةصنفدواءToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تعديلالغرفةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.إضافةدرجةالغرفةToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.إضافةدرجةالغرفةToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.الغرفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تعديلبياناتطبيبToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PurchasingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RoomReservationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReservationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PatientReservationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PharmacyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddDrugUnitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddDrugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ModigyRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddRoomDegreeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RoomsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ModifyDoctorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddSpecializationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.إضافةطبيبToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.الأطباءToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.حدفمريضToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تعديلمريضToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.إضافةمريضToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.المرضىToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddDoctorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DoctorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SpecializationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeletePatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ModifyPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PatientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.SpecializationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // المشترياتToolStripMenuItem
+            // PurchasingToolStripMenuItem
             // 
-            this.المشترياتToolStripMenuItem.Name = "المشترياتToolStripMenuItem";
-            this.المشترياتToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.المشترياتToolStripMenuItem.Text = "المشتريات";
+            this.PurchasingToolStripMenuItem.Name = "PurchasingToolStripMenuItem";
+            this.PurchasingToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.PurchasingToolStripMenuItem.Text = "المشتريات";
             // 
-            // حجزغرفةToolStripMenuItem
+            // RoomReservationToolStripMenuItem
             // 
-            this.حجزغرفةToolStripMenuItem.Name = "حجزغرفةToolStripMenuItem";
-            this.حجزغرفةToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.حجزغرفةToolStripMenuItem.Text = "حجز غرفة";
+            this.RoomReservationToolStripMenuItem.Name = "RoomReservationToolStripMenuItem";
+            this.RoomReservationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.RoomReservationToolStripMenuItem.Text = "حجز غرفة";
             // 
-            // الحجوزاتToolStripMenuItem
+            // ReservationsToolStripMenuItem
             // 
-            this.الحجوزاتToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.حجزغرفةToolStripMenuItem,
-            this.حجزمريضToolStripMenuItem});
-            this.الحجوزاتToolStripMenuItem.Name = "الحجوزاتToolStripMenuItem";
-            this.الحجوزاتToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.الحجوزاتToolStripMenuItem.Text = "الحجوزات";
+            this.ReservationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RoomReservationToolStripMenuItem,
+            this.PatientReservationToolStripMenuItem});
+            this.ReservationsToolStripMenuItem.Name = "ReservationsToolStripMenuItem";
+            this.ReservationsToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.ReservationsToolStripMenuItem.Text = "الحجوزات";
             // 
-            // حجزمريضToolStripMenuItem
+            // PatientReservationToolStripMenuItem
             // 
-            this.حجزمريضToolStripMenuItem.Name = "حجزمريضToolStripMenuItem";
-            this.حجزمريضToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.حجزمريضToolStripMenuItem.Text = "حجز مريض";
+            this.PatientReservationToolStripMenuItem.Name = "PatientReservationToolStripMenuItem";
+            this.PatientReservationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.PatientReservationToolStripMenuItem.Text = "حجز مريض";
             // 
-            // الصيدليةToolStripMenuItem
+            // PharmacyToolStripMenuItem
             // 
-            this.الصيدليةToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.إضافةوحداتالدواءToolStripMenuItem,
-            this.إضافةصنفدواءToolStripMenuItem});
-            this.الصيدليةToolStripMenuItem.Name = "الصيدليةToolStripMenuItem";
-            this.الصيدليةToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.الصيدليةToolStripMenuItem.Text = "الصيدلية";
+            this.PharmacyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddDrugUnitToolStripMenuItem,
+            this.AddDrugToolStripMenuItem});
+            this.PharmacyToolStripMenuItem.Name = "PharmacyToolStripMenuItem";
+            this.PharmacyToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.PharmacyToolStripMenuItem.Text = "الصيدلية";
             // 
-            // إضافةوحداتالدواءToolStripMenuItem
+            // AddDrugUnitToolStripMenuItem
             // 
-            this.إضافةوحداتالدواءToolStripMenuItem.Name = "إضافةوحداتالدواءToolStripMenuItem";
-            this.إضافةوحداتالدواءToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.إضافةوحداتالدواءToolStripMenuItem.Text = "إضافة وحدات الدواء";
-            this.إضافةوحداتالدواءToolStripMenuItem.Click += new System.EventHandler(this.AddDrugUnitsToolStripMenuItem_Click);
+            this.AddDrugUnitToolStripMenuItem.Name = "AddDrugUnitToolStripMenuItem";
+            this.AddDrugUnitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AddDrugUnitToolStripMenuItem.Text = "إضافة وحدات الدواء";
+            this.AddDrugUnitToolStripMenuItem.Click += new System.EventHandler(this.AddDrugUnitsToolStripMenuItem_Click);
             // 
-            // إضافةصنفدواءToolStripMenuItem
+            // AddDrugToolStripMenuItem
             // 
-            this.إضافةصنفدواءToolStripMenuItem.Name = "إضافةصنفدواءToolStripMenuItem";
-            this.إضافةصنفدواءToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.إضافةصنفدواءToolStripMenuItem.Text = "إضافة صنف دواء ";
-            this.إضافةصنفدواءToolStripMenuItem.Click += new System.EventHandler(this.AddDrugToolStripMenuItem_Click);
+            this.AddDrugToolStripMenuItem.Name = "AddDrugToolStripMenuItem";
+            this.AddDrugToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AddDrugToolStripMenuItem.Text = "إضافة صنف دواء ";
+            this.AddDrugToolStripMenuItem.Click += new System.EventHandler(this.AddDrugToolStripMenuItem_Click);
             // 
-            // تعديلالغرفةToolStripMenuItem
+            // ModigyRoomToolStripMenuItem
             // 
-            this.تعديلالغرفةToolStripMenuItem.Name = "تعديلالغرفةToolStripMenuItem";
-            this.تعديلالغرفةToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.تعديلالغرفةToolStripMenuItem.Text = "تعديل الغرفة";
+            this.ModigyRoomToolStripMenuItem.Name = "ModigyRoomToolStripMenuItem";
+            this.ModigyRoomToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ModigyRoomToolStripMenuItem.Text = "تعديل الغرفة";
             // 
-            // إضافةدرجةالغرفةToolStripMenuItem1
+            // AddRoomDegreeToolStripMenuItem1
             // 
-            this.إضافةدرجةالغرفةToolStripMenuItem1.Name = "إضافةدرجةالغرفةToolStripMenuItem1";
-            this.إضافةدرجةالغرفةToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
-            this.إضافةدرجةالغرفةToolStripMenuItem1.Text = "إضافة درجة الغرفة";
+            this.AddRoomDegreeToolStripMenuItem1.Name = "AddRoomDegreeToolStripMenuItem1";
+            this.AddRoomDegreeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.AddRoomDegreeToolStripMenuItem1.Text = "إضافة درجة الغرفة";
             // 
-            // إضافةدرجةالغرفةToolStripMenuItem
+            // AddRoomToolStripMenuItem
             // 
-            this.إضافةدرجةالغرفةToolStripMenuItem.Name = "إضافةدرجةالغرفةToolStripMenuItem";
-            this.إضافةدرجةالغرفةToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.إضافةدرجةالغرفةToolStripMenuItem.Text = "إضافة غرفة";
+            this.AddRoomToolStripMenuItem.Name = "AddRoomToolStripMenuItem";
+            this.AddRoomToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AddRoomToolStripMenuItem.Text = "إضافة غرفة";
             // 
-            // الغرفToolStripMenuItem
+            // RoomsToolStripMenuItem
             // 
-            this.الغرفToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.إضافةدرجةالغرفةToolStripMenuItem,
-            this.إضافةدرجةالغرفةToolStripMenuItem1,
-            this.تعديلالغرفةToolStripMenuItem});
-            this.الغرفToolStripMenuItem.Name = "الغرفToolStripMenuItem";
-            this.الغرفToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.الغرفToolStripMenuItem.Text = "الغرف";
+            this.RoomsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddRoomToolStripMenuItem,
+            this.AddRoomDegreeToolStripMenuItem1,
+            this.ModigyRoomToolStripMenuItem});
+            this.RoomsToolStripMenuItem.Name = "RoomsToolStripMenuItem";
+            this.RoomsToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.RoomsToolStripMenuItem.Text = "الغرف";
             // 
-            // تعديلبياناتطبيبToolStripMenuItem
+            // ModifyDoctorToolStripMenuItem
             // 
-            this.تعديلبياناتطبيبToolStripMenuItem.Name = "تعديلبياناتطبيبToolStripMenuItem";
-            this.تعديلبياناتطبيبToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.تعديلبياناتطبيبToolStripMenuItem.Text = "تعديل بيانات طبيب";
+            this.ModifyDoctorToolStripMenuItem.Name = "ModifyDoctorToolStripMenuItem";
+            this.ModifyDoctorToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.ModifyDoctorToolStripMenuItem.Text = "تعديل بيانات طبيب";
             // 
             // AddSpecializationToolStripMenuItem
             // 
             this.AddSpecializationToolStripMenuItem.Name = "AddSpecializationToolStripMenuItem";
-            this.AddSpecializationToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.AddSpecializationToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.AddSpecializationToolStripMenuItem.Text = "إضافة درجة علمية";
             this.AddSpecializationToolStripMenuItem.Click += new System.EventHandler(this.AddSpecializationToolStripMenuItem_Click);
             // 
-            // إضافةطبيبToolStripMenuItem
+            // AddDoctorsToolStripMenuItem
             // 
-            this.إضافةطبيبToolStripMenuItem.Name = "إضافةطبيبToolStripMenuItem";
-            this.إضافةطبيبToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.إضافةطبيبToolStripMenuItem.Text = "إضافة طبيب";
+            this.AddDoctorsToolStripMenuItem.Name = "AddDoctorsToolStripMenuItem";
+            this.AddDoctorsToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.AddDoctorsToolStripMenuItem.Text = "إضافة طبيب";
             // 
-            // الأطباءToolStripMenuItem
+            // DoctorsToolStripMenuItem
             // 
-            this.الأطباءToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.إضافةطبيبToolStripMenuItem,
-            this.تعديلبياناتطبيبToolStripMenuItem,
+            this.DoctorsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddDoctorsToolStripMenuItem,
+            this.ModifyDoctorToolStripMenuItem,
             this.AddSpecializationToolStripMenuItem,
             this.SpecializationToolStripMenuItem});
-            this.الأطباءToolStripMenuItem.Name = "الأطباءToolStripMenuItem";
-            this.الأطباءToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.الأطباءToolStripMenuItem.Text = "الأطباء";
+            this.DoctorsToolStripMenuItem.Name = "DoctorsToolStripMenuItem";
+            this.DoctorsToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.DoctorsToolStripMenuItem.Text = "الأطباء";
             // 
-            // حدفمريضToolStripMenuItem
+            // SpecializationToolStripMenuItem
             // 
-            this.حدفمريضToolStripMenuItem.Name = "حدفمريضToolStripMenuItem";
-            this.حدفمريضToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.حدفمريضToolStripMenuItem.Text = "حدف مريض";
+            this.SpecializationToolStripMenuItem.Name = "SpecializationToolStripMenuItem";
+            this.SpecializationToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.SpecializationToolStripMenuItem.Text = "إضافة التخصصات الطبية";
+            this.SpecializationToolStripMenuItem.Click += new System.EventHandler(this.SpecializationToolStripMenuItem_Click);
             // 
-            // تعديلمريضToolStripMenuItem
+            // DeletePatientToolStripMenuItem
             // 
-            this.تعديلمريضToolStripMenuItem.Name = "تعديلمريضToolStripMenuItem";
-            this.تعديلمريضToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.تعديلمريضToolStripMenuItem.Text = "تعديل مريض";
-            this.تعديلمريضToolStripMenuItem.Click += new System.EventHandler(this.ModifyPatientToolStripMenuItem_Click);
+            this.DeletePatientToolStripMenuItem.Name = "DeletePatientToolStripMenuItem";
+            this.DeletePatientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.DeletePatientToolStripMenuItem.Text = "حدف مريض";
             // 
-            // إضافةمريضToolStripMenuItem
+            // ModifyPatientToolStripMenuItem
             // 
-            this.إضافةمريضToolStripMenuItem.Name = "إضافةمريضToolStripMenuItem";
-            this.إضافةمريضToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.إضافةمريضToolStripMenuItem.Text = "إضافة مريض";
-            this.إضافةمريضToolStripMenuItem.Click += new System.EventHandler(this.AddPatientToolStripMenuItem_Click);
+            this.ModifyPatientToolStripMenuItem.Name = "ModifyPatientToolStripMenuItem";
+            this.ModifyPatientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ModifyPatientToolStripMenuItem.Text = "تعديل مريض";
+            this.ModifyPatientToolStripMenuItem.Click += new System.EventHandler(this.ModifyPatientToolStripMenuItem_Click);
             // 
-            // المرضىToolStripMenuItem
+            // AddPatientToolStripMenuItem
             // 
-            this.المرضىToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddPatientToolStripMenuItem.Name = "AddPatientToolStripMenuItem";
+            this.AddPatientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AddPatientToolStripMenuItem.Text = "إضافة مريض";
+            this.AddPatientToolStripMenuItem.Click += new System.EventHandler(this.AddPatientToolStripMenuItem_Click);
+            // 
+            // PatientsToolStripMenuItem
+            // 
+            this.PatientsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MainDataToolStripMenuItem,
-            this.إضافةمريضToolStripMenuItem,
-            this.تعديلمريضToolStripMenuItem,
-            this.حدفمريضToolStripMenuItem});
-            this.المرضىToolStripMenuItem.Name = "المرضىToolStripMenuItem";
-            this.المرضىToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.المرضىToolStripMenuItem.Text = "المرضى";
+            this.AddPatientToolStripMenuItem,
+            this.ModifyPatientToolStripMenuItem,
+            this.DeletePatientToolStripMenuItem});
+            this.PatientsToolStripMenuItem.Name = "PatientsToolStripMenuItem";
+            this.PatientsToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.PatientsToolStripMenuItem.Text = "المرضى";
             // 
             // MainDataToolStripMenuItem
             // 
             this.MainDataToolStripMenuItem.Name = "MainDataToolStripMenuItem";
-            this.MainDataToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.MainDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.MainDataToolStripMenuItem.Text = "البيانات الأساسية";
             // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.المرضىToolStripMenuItem,
-            this.الأطباءToolStripMenuItem,
-            this.الغرفToolStripMenuItem,
-            this.الصيدليةToolStripMenuItem,
-            this.الحجوزاتToolStripMenuItem,
-            this.المشترياتToolStripMenuItem});
+            this.PatientsToolStripMenuItem,
+            this.DoctorsToolStripMenuItem,
+            this.RoomsToolStripMenuItem,
+            this.PharmacyToolStripMenuItem,
+            this.ReservationsToolStripMenuItem,
+            this.PurchasingToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.menuStrip1.Size = new System.Drawing.Size(839, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // SpecializationToolStripMenuItem
-            // 
-            this.SpecializationToolStripMenuItem.Name = "SpecializationToolStripMenuItem";
-            this.SpecializationToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.SpecializationToolStripMenuItem.Text = "إضافة التخصصات الطبية";
-            this.SpecializationToolStripMenuItem.Click += new System.EventHandler(this.SpecializationToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -253,27 +253,27 @@
 
         #endregion
 
-        private System.Windows.Forms.ToolStripMenuItem المشترياتToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem حجزغرفةToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem الحجوزاتToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem حجزمريضToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem الصيدليةToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem تعديلالغرفةToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem إضافةدرجةالغرفةToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem إضافةدرجةالغرفةToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem الغرفToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem تعديلبياناتطبيبToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PurchasingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RoomReservationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ReservationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PatientReservationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PharmacyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ModigyRoomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddRoomDegreeToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem AddRoomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RoomsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ModifyDoctorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddSpecializationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem إضافةطبيبToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem الأطباءToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem حدفمريضToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem تعديلمريضToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem إضافةمريضToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem المرضىToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddDoctorsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DoctorsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DeletePatientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ModifyPatientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddPatientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PatientsToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem MainDataToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem إضافةوحداتالدواءToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem إضافةصنفدواءToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddDrugUnitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddDrugToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SpecializationToolStripMenuItem;
     }
 }
