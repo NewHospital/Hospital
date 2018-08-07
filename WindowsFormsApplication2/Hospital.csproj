@@ -81,6 +81,12 @@
     <Compile Include="AddFellow.Designer.cs">
       <DependentUpon>AddFellow.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddNewDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewDoctor.Designer.cs">
+      <DependentUpon>AddNewDoctor.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddNewPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddFellow.resx">
       <DependentUpon>AddFellow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewDoctor.resx">
+      <DependentUpon>AddNewDoctor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddNewPatient.resx">
       <DependentUpon>AddNewPatient.cs</DependentUpon>

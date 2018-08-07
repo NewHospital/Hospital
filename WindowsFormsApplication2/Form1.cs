@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication2; 
 
 namespace Hospital
 {
@@ -20,6 +21,7 @@ namespace Hospital
         private void Form1_Load(object sender, EventArgs e)
         {
             ConnectionClass.Connection(@"Data Source=.;Initial Catalog=hospital;Integrated Security=True");
+            hospitalEntities Hospital = new hospitalEntities();
 
         }
 
@@ -140,6 +142,13 @@ namespace Hospital
         {
             AddSpecialization Specialization = new AddSpecialization();
             Specialization.ShowDialog();
+        }
+
+        private void AddDoctorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddNewDoctor NewDoc = new AddNewDoctor();
+            NewDoc.ShowDialog();
+
         }
     }
 }

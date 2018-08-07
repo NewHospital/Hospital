@@ -143,3 +143,4 @@ E:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.MainForm.resources
 E:\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
 E:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.RoomDegrees.resources
 E:\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csproj.GenerateResource.Cache
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddNewDoctor.resources

@@ -57,13 +57,13 @@
             // PurchasingToolStripMenuItem
             // 
             this.PurchasingToolStripMenuItem.Name = "PurchasingToolStripMenuItem";
-            this.PurchasingToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.PurchasingToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.PurchasingToolStripMenuItem.Text = "المشتريات";
             // 
             // RoomReservationToolStripMenuItem
             // 
             this.RoomReservationToolStripMenuItem.Name = "RoomReservationToolStripMenuItem";
-            this.RoomReservationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.RoomReservationToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.RoomReservationToolStripMenuItem.Text = "حجز غرفة";
             // 
             // ReservationsToolStripMenuItem
@@ -72,13 +72,13 @@
             this.RoomReservationToolStripMenuItem,
             this.PatientReservationToolStripMenuItem});
             this.ReservationsToolStripMenuItem.Name = "ReservationsToolStripMenuItem";
-            this.ReservationsToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.ReservationsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.ReservationsToolStripMenuItem.Text = "الحجوزات";
             // 
             // PatientReservationToolStripMenuItem
             // 
             this.PatientReservationToolStripMenuItem.Name = "PatientReservationToolStripMenuItem";
-            this.PatientReservationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.PatientReservationToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.PatientReservationToolStripMenuItem.Text = "حجز مريض";
             // 
             // PharmacyToolStripMenuItem
@@ -87,39 +87,39 @@
             this.AddDrugUnitToolStripMenuItem,
             this.AddDrugToolStripMenuItem});
             this.PharmacyToolStripMenuItem.Name = "PharmacyToolStripMenuItem";
-            this.PharmacyToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.PharmacyToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.PharmacyToolStripMenuItem.Text = "الصيدلية";
             // 
             // AddDrugUnitToolStripMenuItem
             // 
             this.AddDrugUnitToolStripMenuItem.Name = "AddDrugUnitToolStripMenuItem";
-            this.AddDrugUnitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AddDrugUnitToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.AddDrugUnitToolStripMenuItem.Text = "إضافة وحدات الدواء";
             this.AddDrugUnitToolStripMenuItem.Click += new System.EventHandler(this.AddDrugUnitsToolStripMenuItem_Click);
             // 
             // AddDrugToolStripMenuItem
             // 
             this.AddDrugToolStripMenuItem.Name = "AddDrugToolStripMenuItem";
-            this.AddDrugToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AddDrugToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.AddDrugToolStripMenuItem.Text = "إضافة صنف دواء ";
             this.AddDrugToolStripMenuItem.Click += new System.EventHandler(this.AddDrugToolStripMenuItem_Click);
             // 
             // ModigyRoomToolStripMenuItem
             // 
             this.ModigyRoomToolStripMenuItem.Name = "ModigyRoomToolStripMenuItem";
-            this.ModigyRoomToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ModigyRoomToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.ModigyRoomToolStripMenuItem.Text = "تعديل الغرفة";
             // 
             // AddRoomDegreeToolStripMenuItem1
             // 
             this.AddRoomDegreeToolStripMenuItem1.Name = "AddRoomDegreeToolStripMenuItem1";
-            this.AddRoomDegreeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.AddRoomDegreeToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
             this.AddRoomDegreeToolStripMenuItem1.Text = "إضافة درجة الغرفة";
             // 
             // AddRoomToolStripMenuItem
             // 
             this.AddRoomToolStripMenuItem.Name = "AddRoomToolStripMenuItem";
-            this.AddRoomToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AddRoomToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.AddRoomToolStripMenuItem.Text = "إضافة غرفة";
             // 
             // RoomsToolStripMenuItem
@@ -129,27 +129,28 @@
             this.AddRoomDegreeToolStripMenuItem1,
             this.ModigyRoomToolStripMenuItem});
             this.RoomsToolStripMenuItem.Name = "RoomsToolStripMenuItem";
-            this.RoomsToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.RoomsToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.RoomsToolStripMenuItem.Text = "الغرف";
             // 
             // ModifyDoctorToolStripMenuItem
             // 
             this.ModifyDoctorToolStripMenuItem.Name = "ModifyDoctorToolStripMenuItem";
-            this.ModifyDoctorToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.ModifyDoctorToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.ModifyDoctorToolStripMenuItem.Text = "تعديل بيانات طبيب";
             // 
             // AddSpecializationToolStripMenuItem
             // 
             this.AddSpecializationToolStripMenuItem.Name = "AddSpecializationToolStripMenuItem";
-            this.AddSpecializationToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.AddSpecializationToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.AddSpecializationToolStripMenuItem.Text = "إضافة درجة علمية";
             this.AddSpecializationToolStripMenuItem.Click += new System.EventHandler(this.AddSpecializationToolStripMenuItem_Click);
             // 
             // AddDoctorsToolStripMenuItem
             // 
             this.AddDoctorsToolStripMenuItem.Name = "AddDoctorsToolStripMenuItem";
-            this.AddDoctorsToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.AddDoctorsToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.AddDoctorsToolStripMenuItem.Text = "إضافة طبيب";
+            this.AddDoctorsToolStripMenuItem.Click += new System.EventHandler(this.AddDoctorsToolStripMenuItem_Click);
             // 
             // DoctorsToolStripMenuItem
             // 
@@ -159,33 +160,33 @@
             this.AddSpecializationToolStripMenuItem,
             this.SpecializationToolStripMenuItem});
             this.DoctorsToolStripMenuItem.Name = "DoctorsToolStripMenuItem";
-            this.DoctorsToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.DoctorsToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.DoctorsToolStripMenuItem.Text = "الأطباء";
             // 
             // SpecializationToolStripMenuItem
             // 
             this.SpecializationToolStripMenuItem.Name = "SpecializationToolStripMenuItem";
-            this.SpecializationToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.SpecializationToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.SpecializationToolStripMenuItem.Text = "إضافة التخصصات الطبية";
             this.SpecializationToolStripMenuItem.Click += new System.EventHandler(this.SpecializationToolStripMenuItem_Click);
             // 
             // DeletePatientToolStripMenuItem
             // 
             this.DeletePatientToolStripMenuItem.Name = "DeletePatientToolStripMenuItem";
-            this.DeletePatientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.DeletePatientToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.DeletePatientToolStripMenuItem.Text = "حدف مريض";
             // 
             // ModifyPatientToolStripMenuItem
             // 
             this.ModifyPatientToolStripMenuItem.Name = "ModifyPatientToolStripMenuItem";
-            this.ModifyPatientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ModifyPatientToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.ModifyPatientToolStripMenuItem.Text = "تعديل مريض";
             this.ModifyPatientToolStripMenuItem.Click += new System.EventHandler(this.ModifyPatientToolStripMenuItem_Click);
             // 
             // AddPatientToolStripMenuItem
             // 
             this.AddPatientToolStripMenuItem.Name = "AddPatientToolStripMenuItem";
-            this.AddPatientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AddPatientToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.AddPatientToolStripMenuItem.Text = "إضافة مريض";
             this.AddPatientToolStripMenuItem.Click += new System.EventHandler(this.AddPatientToolStripMenuItem_Click);
             // 
@@ -203,7 +204,7 @@
             // MainDataToolStripMenuItem
             // 
             this.MainDataToolStripMenuItem.Name = "MainDataToolStripMenuItem";
-            this.MainDataToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.MainDataToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.MainDataToolStripMenuItem.Text = "البيانات الأساسية";
             // 
             // menuStrip1
