@@ -36,7 +36,7 @@ namespace WindowsFormsApplication2
 
             List <ScientificDegree> DocDegreeList = Hospital.ScientificDegree.ToList();
             DataTable DT1 = new DataTable();
-            DT1.Columns.Add("SpecificationName");
+            DT1.Columns.Add("ScientificDegreeId");
             DT1.Columns.Add("ScientificDegreeName");
             foreach (var item in DocDegreeList)
             {

@@ -25,8 +25,8 @@ namespace Hospital
 
         private void But_AddDocDegree_Click(object sender, EventArgs e)
         {
-            ConnectionClass.Parameters(new SqlParameter("@SpecificationName", Txt_AddDocDegree.Text));
-            ConnectionClass.SQLCommand("Cproc_AddSpecialization", CommandType.StoredProcedure, ExecuteReaderOrNonQuery.executeNonQuery);
+            ConnectionClass.Parameters(new SqlParameter("@ScientificDegreeName", Txt_AddDocDegree.Text));
+            ConnectionClass.SQLCommand("Cproc_DocDegrees", CommandType.StoredProcedure, ExecuteReaderOrNonQuery.executeNonQuery);
             MessageBox.Show("تم اضافة تخصص طبي بنجاح");
             Txt_AddDocDegree.Clear();            
 
