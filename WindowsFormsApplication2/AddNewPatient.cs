@@ -31,5 +31,11 @@ namespace Hospital
         {
 
         }
+
+        private void But_AddFellow_Click(object sender, EventArgs e)
+        {
+            AddFellow AdFellow = new AddFellow();
+            AdFellow.ShowDialog();
+        }
     }
 }
