@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hospital
+namespace WindowsFormsApplication2
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class Bills
     {
         public int BillId { get; set; }

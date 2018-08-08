@@ -116,7 +116,7 @@
     <Property Name="DoctorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="DocName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="DocAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="DocPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DocPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="DocDegree" Type="Int32" Nullable="false" />
     <Property Name="DocSpecification" Type="Int32" Nullable="false" />
     <Property Name="MagId" Type="Int32" />
@@ -126,6 +126,8 @@
     <NavigationProperty Name="Prescription" Relationship="Self.FK_Doctors_Prescription" FromRole="Doctors" ToRole="Prescription" />
     <NavigationProperty Name="ScientificDegree" Relationship="Self.Fk_ScientificDegreeId_Doctors" FromRole="Doctors" ToRole="ScientificDegree" />
     <NavigationProperty Name="Specification" Relationship="Self.FK_Specification_Doctors" FromRole="Doctors" ToRole="Specification" />
+    <Property Name="Gender" Type="Boolean" />
+    <NavigationProperty Name="PatientMeasures" Relationship="hospitalModel.FK_Doctors_PatientMeasures" FromRole="Doctors" ToRole="PatientMeasures" />
   </EntityType>
   <EntityType Name="ScientificDegree">
     <Key>
@@ -213,6 +215,8 @@
     <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Diseases" Relationship="Self.Fk_Diseases_PatientMeasures" FromRole="PatientMeasures" ToRole="Diseases" />
     <NavigationProperty Name="Patient" Relationship="Self.Fk_Patient_PatientMeasures" FromRole="PatientMeasures" ToRole="Patient" />
+    <Property Name="DoctorID" Type="Int32" />
+    <NavigationProperty Name="Doctors" Relationship="hospitalModel.FK_Doctors_PatientMeasures" FromRole="PatientMeasures" ToRole="Doctors" />
   </EntityType>
   <EntityType Name="Reservations">
     <Key>
@@ -710,5 +714,131 @@
       <End Role="Diseases" EntitySet="Diseases" />
       <End Role="Patient" EntitySet="Patient" />
     </AssociationSet>
+    <AssociationSet Name="FK_Doctors_PatientMeasures" Association="hospitalModel.FK_Doctors_PatientMeasures">
+      <End Role="Doctors" EntitySet="Doctors" />
+      <End Role="PatientMeasures" EntitySet="PatientMeasures" />
+    </AssociationSet>
+    <FunctionImport Name="Cproc_AddBillsType">
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Cproc_AddBloodGroup">
+      <Parameter Name="BloodGroupName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Cproc_AddDiseases">
+      <Parameter Name="DiseaseName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Cproc_AddDrug">
+      <Parameter Name="DrugName" Mode="In" Type="String" />
+      <Parameter Name="DrugUnit" Mode="In" Type="Int32" />
+      <Parameter Name="PricePerUnit" Mode="In" Type="Decimal" />
+      <Parameter Name="balance" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Cproc_AddDrugUnits">
+      <Parameter Name="DtugUnitName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Cproc_AddFellow">
+      <Parameter Name="Fellowname" Mode="In" Type="String" />
+      <Parameter Name="SoSeNo" Mode="In" Type="String" />
+      <Parameter Name="phoneNumber" Mode="In" Type="String" />
+      <Parameter Name="patientId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Cproc_AddNewDoc">
+      <Parameter Name="DocName" Mode="In" Type="String" />
+      <Parameter Name="DocAddress" Mode="In" Type="String" />
+      <Parameter Name="Docphone" Mode="In" Type="String" />
+      <Parameter Name="DocDegree" Mode="In" Type="Int32" />
+      <Parameter Name="DocSpecification" Mode="In" Type="Int32" />
+      <Parameter Name="gender" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Cproc_AddPatientMeasure">
+      <Parameter Name="patientId" Mode="In" Type="Int32" />
+      <Parameter Name="DiseaseId" Mode="In" Type="Int32" />
+      <Parameter Name="MeasureResult" Mode="In" Type="String" />
+      <Parameter Name="TimeOfMeasure" Mode="In" Type="DateTime" />
+      <Parameter Name="remarks" Mode="In" Type="String" />
+      <Parameter Name="DoctorId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="cproc_AddRooms">
+      <Parameter Name="RoomDegree" Mode="In" Type="Int32" />
+      <Parameter Name="Roomfloor" Mode="In" Type="String" />
+      <Parameter Name="RoomNo" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Cproc_AddRoomsDegree">
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="FeesDay" Mode="In" Type="Decimal" />
+      <Parameter Name="Discription" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Cproc_AddSpecialization">
+      <Parameter Name="SpecificationName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Cproc_AddSupplierAddress">
+      <Parameter Name="supplierID" Mode="In" Type="Int32" />
+      <Parameter Name="supplierAddress" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Cproc_AddSupplierContact">
+      <Parameter Name="contactName" Mode="In" Type="String" />
+      <Parameter Name="jobtitle" Mode="In" Type="String" />
+      <Parameter Name="telephone" Mode="In" Type="String" />
+      <Parameter Name="addressId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Cproc_AddSuppliers">
+      <Parameter Name="SupplierName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Cproc_DocDegrees">
+      <Parameter Name="ScientificDegreeName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(hospitalModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(hospitalModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
+  <Association Name="FK_Doctors_PatientMeasures">
+    <End Type="hospitalModel.Doctors" Role="Doctors" Multiplicity="0..1" />
+    <End Type="hospitalModel.PatientMeasures" Role="PatientMeasures" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctors">
+        <PropertyRef Name="DoctorId" />
+      </Principal>
+      <Dependent Role="PatientMeasures">
+        <PropertyRef Name="DoctorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
 </Schema>

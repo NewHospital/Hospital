@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hospital
+namespace WindowsFormsApplication2
 {
     using System;
     using System.Collections.Generic;
@@ -20,6 +20,7 @@ namespace Hospital
             this.Doctors1 = new HashSet<Doctors>();
             this.DocfollowUp = new HashSet<DocfollowUp>();
             this.Prescription = new HashSet<Prescription>();
+            this.PatientMeasures = new HashSet<PatientMeasures>();
         }
     
         public int DoctorId { get; set; }
@@ -29,6 +30,7 @@ namespace Hospital
         public int DocDegree { get; set; }
         public int DocSpecification { get; set; }
         public Nullable<int> MagId { get; set; }
+        public Nullable<bool> Gender { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Doctors> Doctors1 { get; set; }
@@ -39,5 +41,7 @@ namespace Hospital
         public virtual ICollection<Prescription> Prescription { get; set; }
         public virtual ScientificDegree ScientificDegree { get; set; }
         public virtual Specification Specification { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PatientMeasures> PatientMeasures { get; set; }
     }
 }

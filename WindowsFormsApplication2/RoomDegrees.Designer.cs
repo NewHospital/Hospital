@@ -41,9 +41,9 @@
             // 
             this.Txt_AddNameDegree.Location = new System.Drawing.Point(120, 40);
             this.Txt_AddNameDegree.Name = "Txt_AddNameDegree";
+            this.Txt_AddNameDegree.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Txt_AddNameDegree.Size = new System.Drawing.Size(100, 20);
             this.Txt_AddNameDegree.TabIndex = 0;
-            this.Txt_AddNameDegree.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Lbl_AddNameDegree
             // 
@@ -81,23 +81,24 @@
             this.But_AddRoomDegree.TabIndex = 4;
             this.But_AddRoomDegree.Text = "إضافه";
             this.But_AddRoomDegree.UseVisualStyleBackColor = true;
+            this.But_AddRoomDegree.Click += new System.EventHandler(this.But_AddRoomDegree_Click);
             // 
             // Txt_AddFeesPerDay
             // 
             this.Txt_AddFeesPerDay.Location = new System.Drawing.Point(120, 75);
             this.Txt_AddFeesPerDay.Name = "Txt_AddFeesPerDay";
+            this.Txt_AddFeesPerDay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Txt_AddFeesPerDay.Size = new System.Drawing.Size(100, 20);
             this.Txt_AddFeesPerDay.TabIndex = 5;
-            this.Txt_AddFeesPerDay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Txt_AddDiscription
             // 
             this.Txt_AddDiscription.Location = new System.Drawing.Point(29, 110);
             this.Txt_AddDiscription.Multiline = true;
             this.Txt_AddDiscription.Name = "Txt_AddDiscription";
+            this.Txt_AddDiscription.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Txt_AddDiscription.Size = new System.Drawing.Size(191, 71);
             this.Txt_AddDiscription.TabIndex = 6;
-            this.Txt_AddDiscription.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // RoomDegrees
             // 

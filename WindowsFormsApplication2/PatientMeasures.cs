@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hospital
+namespace WindowsFormsApplication2
 {
     using System;
     using System.Collections.Generic;
@@ -19,8 +19,10 @@ namespace Hospital
         public string MeasureResult { get; set; }
         public System.DateTime TimeOfMeasure { get; set; }
         public string Remarks { get; set; }
+        public Nullable<int> DoctorID { get; set; }
     
         public virtual Diseases Diseases { get; set; }
         public virtual Patient Patient { get; set; }
+        public virtual Doctors Doctors { get; set; }
     }
 }

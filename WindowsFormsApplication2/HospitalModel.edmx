@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="hospitalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="hospitalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Bills">
           <Key>
             <PropertyRef Name="BillId" />
@@ -105,10 +105,11 @@
           <Property Name="DoctorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DocName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="DocAddress" Type="nvarchar" MaxLength="50" />
-          <Property Name="DocPhone" Type="nvarchar" MaxLength="20" />
+          <Property Name="DocPhone" Type="nvarchar" MaxLength="50" />
           <Property Name="DocDegree" Type="int" Nullable="false" />
           <Property Name="DocSpecification" Type="int" Nullable="false" />
           <Property Name="MagId" Type="int" />
+          <Property Name="Gender" Type="bit" />
         </EntityType>
         <EntityType Name="ScientificDegree">
           <Key>
@@ -128,7 +129,7 @@
           <Key>
             <PropertyRef Name="BloodID" />
           </Key>
-          <Property Name="BloodID" Type="int" Nullable="false" />
+          <Property Name="BloodID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="BloodGroupName" Type="nvarchar" MaxLength="5" Nullable="false" />
         </EntityType>
         <EntityType Name="Diseases">
@@ -189,6 +190,7 @@
           <Property Name="MeasureResult" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="TimeOfMeasure" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="Remarks" Type="nvarchar" MaxLength="50" />
+          <Property Name="DoctorID" Type="int" />
         </EntityType>
         <EntityType Name="Reservations">
           <Key>
@@ -318,6 +320,18 @@
               <PropertyRef Name="DoctorId" />
             </Principal>
             <Dependent Role="DocfollowUp">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Doctors_PatientMeasures">
+          <End Role="Doctors" Type="Self.Doctors" Multiplicity="0..1" />
+          <End Role="PatientMeasures" Type="Self.PatientMeasures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctors">
+              <PropertyRef Name="DoctorId" />
+            </Principal>
+            <Dependent Role="PatientMeasures">
               <PropertyRef Name="DoctorID" />
             </Dependent>
           </ReferentialConstraint>
@@ -562,6 +576,109 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="Cproc_AddBillsType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Cproc_AddBloodGroup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="BloodGroupName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Cproc_AddDiseases" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DiseaseName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Cproc_AddDrug" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DrugName" Type="nvarchar" Mode="In" />
+          <Parameter Name="DrugUnit" Type="int" Mode="In" />
+          <Parameter Name="PricePerUnit" Type="decimal" Mode="In" />
+          <Parameter Name="balance" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Cproc_AddDrugUnits" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DtugUnitName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Cproc_AddFellow" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Fellowname" Type="nvarchar" Mode="In" />
+          <Parameter Name="SoSeNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="phoneNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="patientId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Cproc_AddNewDoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DocName" Type="nvarchar" Mode="In" />
+          <Parameter Name="DocAddress" Type="nvarchar" Mode="In" />
+          <Parameter Name="Docphone" Type="nvarchar" Mode="In" />
+          <Parameter Name="DocDegree" Type="int" Mode="In" />
+          <Parameter Name="DocSpecification" Type="int" Mode="In" />
+          <Parameter Name="gender" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="Cproc_AddPatientMeasure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="patientId" Type="int" Mode="In" />
+          <Parameter Name="DiseaseId" Type="int" Mode="In" />
+          <Parameter Name="MeasureResult" Type="nvarchar" Mode="In" />
+          <Parameter Name="TimeOfMeasure" Type="datetime2" Mode="In" />
+          <Parameter Name="remarks" Type="nvarchar" Mode="In" />
+          <Parameter Name="DoctorId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="cproc_AddRooms" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RoomDegree" Type="int" Mode="In" />
+          <Parameter Name="Roomfloor" Type="nvarchar" Mode="In" />
+          <Parameter Name="RoomNo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Cproc_AddRoomsDegree" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name" Type="nvarchar" Mode="In" />
+          <Parameter Name="FeesDay" Type="decimal" Mode="In" />
+          <Parameter Name="Discription" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Cproc_AddSpecialization" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SpecificationName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Cproc_AddSupplierAddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="supplierID" Type="int" Mode="In" />
+          <Parameter Name="supplierAddress" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Cproc_AddSupplierContact" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="contactName" Type="nvarchar" Mode="In" />
+          <Parameter Name="jobtitle" Type="nvarchar" Mode="In" />
+          <Parameter Name="telephone" Type="nvarchar" Mode="In" />
+          <Parameter Name="addressId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Cproc_AddSuppliers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SupplierName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Cproc_DocDegrees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ScientificDegreeName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="CalculateHostingFees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="publicSchema" ReturnType="int">
+          <Parameter Name="ReservationId" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="hospitalModelStoreContainer">
           <EntitySet Name="Bills" EntityType="Self.Bills" Schema="Accounts" store:Type="Tables" />
           <EntitySet Name="BillsTypes" EntityType="Self.BillsTypes" Schema="Accounts" store:Type="Tables" />
@@ -615,6 +732,10 @@
           <AssociationSet Name="Fk_Doctors_DocfollowUp" Association="Self.Fk_Doctors_DocfollowUp">
             <End Role="Doctors" EntitySet="Doctors" />
             <End Role="DocfollowUp" EntitySet="DocfollowUp" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Doctors_PatientMeasures" Association="Self.FK_Doctors_PatientMeasures">
+            <End Role="Doctors" EntitySet="Doctors" />
+            <End Role="PatientMeasures" EntitySet="PatientMeasures" />
           </AssociationSet>
           <AssociationSet Name="FK_Doctors_Prescription" Association="Self.FK_Doctors_Prescription">
             <End Role="Doctors" EntitySet="Doctors" />
@@ -697,8 +818,7 @@
             <End Role="SupplierAddress" EntitySet="SupplierAddress" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="hospitalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -818,7 +938,7 @@
           <Property Name="DoctorId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DocName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DocAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DocPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DocPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DocDegree" Type="Int32" Nullable="false" />
           <Property Name="DocSpecification" Type="Int32" Nullable="false" />
           <Property Name="MagId" Type="Int32" />
@@ -828,6 +948,8 @@
           <NavigationProperty Name="Prescription" Relationship="Self.FK_Doctors_Prescription" FromRole="Doctors" ToRole="Prescription" />
           <NavigationProperty Name="ScientificDegree" Relationship="Self.Fk_ScientificDegreeId_Doctors" FromRole="Doctors" ToRole="ScientificDegree" />
           <NavigationProperty Name="Specification" Relationship="Self.FK_Specification_Doctors" FromRole="Doctors" ToRole="Specification" />
+          <Property Name="Gender" Type="Boolean" />
+          <NavigationProperty Name="PatientMeasures" Relationship="hospitalModel.FK_Doctors_PatientMeasures" FromRole="Doctors" ToRole="PatientMeasures" />
         </EntityType>
         <EntityType Name="ScientificDegree">
           <Key>
@@ -915,6 +1037,8 @@
           <Property Name="Remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Diseases" Relationship="Self.Fk_Diseases_PatientMeasures" FromRole="PatientMeasures" ToRole="Diseases" />
           <NavigationProperty Name="Patient" Relationship="Self.Fk_Patient_PatientMeasures" FromRole="PatientMeasures" ToRole="Patient" />
+          <Property Name="DoctorID" Type="Int32" />
+          <NavigationProperty Name="Doctors" Relationship="hospitalModel.FK_Doctors_PatientMeasures" FromRole="PatientMeasures" ToRole="Doctors" />
         </EntityType>
         <EntityType Name="Reservations">
           <Key>
@@ -1412,7 +1536,133 @@
             <End Role="Diseases" EntitySet="Diseases" />
             <End Role="Patient" EntitySet="Patient" />
           </AssociationSet>
+          <AssociationSet Name="FK_Doctors_PatientMeasures" Association="hospitalModel.FK_Doctors_PatientMeasures">
+            <End Role="Doctors" EntitySet="Doctors" />
+            <End Role="PatientMeasures" EntitySet="PatientMeasures" />
+          </AssociationSet>
+          <FunctionImport Name="Cproc_AddBillsType">
+            <Parameter Name="Name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Cproc_AddBloodGroup">
+            <Parameter Name="BloodGroupName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Cproc_AddDiseases">
+            <Parameter Name="DiseaseName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Cproc_AddDrug">
+            <Parameter Name="DrugName" Mode="In" Type="String" />
+            <Parameter Name="DrugUnit" Mode="In" Type="Int32" />
+            <Parameter Name="PricePerUnit" Mode="In" Type="Decimal" />
+            <Parameter Name="balance" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Cproc_AddDrugUnits">
+            <Parameter Name="DtugUnitName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Cproc_AddFellow">
+            <Parameter Name="Fellowname" Mode="In" Type="String" />
+            <Parameter Name="SoSeNo" Mode="In" Type="String" />
+            <Parameter Name="phoneNumber" Mode="In" Type="String" />
+            <Parameter Name="patientId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Cproc_AddNewDoc">
+            <Parameter Name="DocName" Mode="In" Type="String" />
+            <Parameter Name="DocAddress" Mode="In" Type="String" />
+            <Parameter Name="Docphone" Mode="In" Type="String" />
+            <Parameter Name="DocDegree" Mode="In" Type="Int32" />
+            <Parameter Name="DocSpecification" Mode="In" Type="Int32" />
+            <Parameter Name="gender" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="Cproc_AddPatientMeasure">
+            <Parameter Name="patientId" Mode="In" Type="Int32" />
+            <Parameter Name="DiseaseId" Mode="In" Type="Int32" />
+            <Parameter Name="MeasureResult" Mode="In" Type="String" />
+            <Parameter Name="TimeOfMeasure" Mode="In" Type="DateTime" />
+            <Parameter Name="remarks" Mode="In" Type="String" />
+            <Parameter Name="DoctorId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="cproc_AddRooms">
+            <Parameter Name="RoomDegree" Mode="In" Type="Int32" />
+            <Parameter Name="Roomfloor" Mode="In" Type="String" />
+            <Parameter Name="RoomNo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Cproc_AddRoomsDegree">
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="FeesDay" Mode="In" Type="Decimal" />
+            <Parameter Name="Discription" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Cproc_AddSpecialization">
+            <Parameter Name="SpecificationName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Cproc_AddSupplierAddress">
+            <Parameter Name="supplierID" Mode="In" Type="Int32" />
+            <Parameter Name="supplierAddress" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Cproc_AddSupplierContact">
+            <Parameter Name="contactName" Mode="In" Type="String" />
+            <Parameter Name="jobtitle" Mode="In" Type="String" />
+            <Parameter Name="telephone" Mode="In" Type="String" />
+            <Parameter Name="addressId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Cproc_AddSuppliers">
+            <Parameter Name="SupplierName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Cproc_DocDegrees">
+            <Parameter Name="ScientificDegreeName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(hospitalModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(hospitalModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
         </EntityContainer>
+        <Association Name="FK_Doctors_PatientMeasures">
+          <End Type="hospitalModel.Doctors" Role="Doctors" Multiplicity="0..1" />
+          <End Type="hospitalModel.PatientMeasures" Role="PatientMeasures" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctors">
+              <PropertyRef Name="DoctorId" />
+            </Principal>
+            <Dependent Role="PatientMeasures">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1523,6 +1773,7 @@
           <EntitySetMapping Name="Doctors">
             <EntityTypeMapping TypeName="hospitalModel.Doctors">
               <MappingFragment StoreEntitySet="Doctors">
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
                 <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
                 <ScalarProperty Name="DocName" ColumnName="DocName" />
                 <ScalarProperty Name="DocAddress" ColumnName="DocAddress" />
@@ -1602,6 +1853,7 @@
           <EntitySetMapping Name="PatientMeasures">
             <EntityTypeMapping TypeName="hospitalModel.PatientMeasures">
               <MappingFragment StoreEntitySet="PatientMeasures">
+                <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
                 <ScalarProperty Name="PatientID" ColumnName="PatientID" />
                 <ScalarProperty Name="DiseaseID" ColumnName="DiseaseID" />
                 <ScalarProperty Name="MeasureResult" ColumnName="MeasureResult" />
@@ -1670,6 +1922,45 @@
               <ScalarProperty Name="PatientID" ColumnName="PatientID" />
             </EndProperty>
           </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="Cproc_AddBillsType" FunctionName="hospitalModel.Store.Cproc_AddBillsType" />
+          <FunctionImportMapping FunctionImportName="Cproc_AddBloodGroup" FunctionName="hospitalModel.Store.Cproc_AddBloodGroup" />
+          <FunctionImportMapping FunctionImportName="Cproc_AddDiseases" FunctionName="hospitalModel.Store.Cproc_AddDiseases" />
+          <FunctionImportMapping FunctionImportName="Cproc_AddDrug" FunctionName="hospitalModel.Store.Cproc_AddDrug" />
+          <FunctionImportMapping FunctionImportName="Cproc_AddDrugUnits" FunctionName="hospitalModel.Store.Cproc_AddDrugUnits" />
+          <FunctionImportMapping FunctionImportName="Cproc_AddFellow" FunctionName="hospitalModel.Store.Cproc_AddFellow" />
+          <FunctionImportMapping FunctionImportName="Cproc_AddNewDoc" FunctionName="hospitalModel.Store.Cproc_AddNewDoc" />
+          <FunctionImportMapping FunctionImportName="Cproc_AddPatientMeasure" FunctionName="hospitalModel.Store.Cproc_AddPatientMeasure" />
+          <FunctionImportMapping FunctionImportName="cproc_AddRooms" FunctionName="hospitalModel.Store.cproc_AddRooms" />
+          <FunctionImportMapping FunctionImportName="Cproc_AddRoomsDegree" FunctionName="hospitalModel.Store.Cproc_AddRoomsDegree" />
+          <FunctionImportMapping FunctionImportName="Cproc_AddSpecialization" FunctionName="hospitalModel.Store.Cproc_AddSpecialization" />
+          <FunctionImportMapping FunctionImportName="Cproc_AddSupplierAddress" FunctionName="hospitalModel.Store.Cproc_AddSupplierAddress" />
+          <FunctionImportMapping FunctionImportName="Cproc_AddSupplierContact" FunctionName="hospitalModel.Store.Cproc_AddSupplierContact" />
+          <FunctionImportMapping FunctionImportName="Cproc_AddSuppliers" FunctionName="hospitalModel.Store.Cproc_AddSuppliers" />
+          <FunctionImportMapping FunctionImportName="Cproc_DocDegrees" FunctionName="hospitalModel.Store.Cproc_DocDegrees" />
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="hospitalModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="hospitalModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="hospitalModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="hospitalModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="hospitalModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="hospitalModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="hospitalModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="hospitalModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="hospitalModel.Store.sp_upgraddiagrams" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

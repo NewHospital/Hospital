@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hospital;
 using System.Data.SqlClient;
+using WindowsFormsApplication2;
 
 namespace Hospital
 {
@@ -22,7 +23,7 @@ namespace Hospital
 
         private void AddDrug_Load(object sender, EventArgs e)
         {
-            hospitalEntities HosPital = new hospitalEntities();
+                hospitalEntities HosPital = new hospitalEntities();
 
             List<DrugUnits> DrugUnitList = HosPital.DrugUnits.ToList();
             DataTable Table = new DataTable();

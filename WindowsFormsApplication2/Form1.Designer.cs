@@ -115,18 +115,20 @@
             this.AddRoomDegreeToolStripMenuItem1.Name = "AddRoomDegreeToolStripMenuItem1";
             this.AddRoomDegreeToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
             this.AddRoomDegreeToolStripMenuItem1.Text = "إضافة درجة الغرفة";
+            this.AddRoomDegreeToolStripMenuItem1.Click += new System.EventHandler(this.AddRoomDegreeToolStripMenuItem1_Click);
             // 
             // AddRoomToolStripMenuItem
             // 
             this.AddRoomToolStripMenuItem.Name = "AddRoomToolStripMenuItem";
             this.AddRoomToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.AddRoomToolStripMenuItem.Text = "إضافة غرفة";
+            this.AddRoomToolStripMenuItem.Click += new System.EventHandler(this.AddRoomToolStripMenuItem_Click);
             // 
             // RoomsToolStripMenuItem
             // 
             this.RoomsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AddRoomToolStripMenuItem,
             this.AddRoomDegreeToolStripMenuItem1,
+            this.AddRoomToolStripMenuItem,
             this.ModigyRoomToolStripMenuItem});
             this.RoomsToolStripMenuItem.Name = "RoomsToolStripMenuItem";
             this.RoomsToolStripMenuItem.Size = new System.Drawing.Size(45, 20);

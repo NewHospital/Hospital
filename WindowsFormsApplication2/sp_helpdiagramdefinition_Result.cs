@@ -10,16 +10,10 @@
 namespace WindowsFormsApplication2
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class PrescriptionDetail
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int PrescriptionId { get; set; }
-        public int DrugId { get; set; }
-        public decimal Qnty { get; set; }
-        public bool IsReceived { get; set; }
-    
-        public virtual Drugs Drugs { get; set; }
-        public virtual Prescription Prescription { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

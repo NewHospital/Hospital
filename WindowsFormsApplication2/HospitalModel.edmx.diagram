@@ -55,6 +55,7 @@
         <AssociationConnector Association="hospitalModel.FK_DrugUnits_Drugs" ManuallyRouted="false" />
         <AssociationConnector Association="hospitalModel.FK_Prescription_PrescriptionDetail" ManuallyRouted="false" />
         <AssociationConnector Association="hospitalModel.medicalHistory" ManuallyRouted="false" />
+        <AssociationConnector Association="hospitalModel.FK_Doctors_PatientMeasures" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

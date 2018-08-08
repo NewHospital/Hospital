@@ -105,6 +105,7 @@
     <EntitySetMapping Name="Doctors">
       <EntityTypeMapping TypeName="hospitalModel.Doctors">
         <MappingFragment StoreEntitySet="Doctors">
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
           <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
           <ScalarProperty Name="DocName" ColumnName="DocName" />
           <ScalarProperty Name="DocAddress" ColumnName="DocAddress" />
@@ -184,6 +185,7 @@
     <EntitySetMapping Name="PatientMeasures">
       <EntityTypeMapping TypeName="hospitalModel.PatientMeasures">
         <MappingFragment StoreEntitySet="PatientMeasures">
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
           <ScalarProperty Name="PatientID" ColumnName="PatientID" />
           <ScalarProperty Name="DiseaseID" ColumnName="DiseaseID" />
           <ScalarProperty Name="MeasureResult" ColumnName="MeasureResult" />
@@ -252,5 +254,44 @@
         <ScalarProperty Name="PatientID" ColumnName="PatientID" />
       </EndProperty>
     </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="Cproc_AddBillsType" FunctionName="hospitalModel.Store.Cproc_AddBillsType" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddBloodGroup" FunctionName="hospitalModel.Store.Cproc_AddBloodGroup" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddDiseases" FunctionName="hospitalModel.Store.Cproc_AddDiseases" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddDrug" FunctionName="hospitalModel.Store.Cproc_AddDrug" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddDrugUnits" FunctionName="hospitalModel.Store.Cproc_AddDrugUnits" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddFellow" FunctionName="hospitalModel.Store.Cproc_AddFellow" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddNewDoc" FunctionName="hospitalModel.Store.Cproc_AddNewDoc" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddPatientMeasure" FunctionName="hospitalModel.Store.Cproc_AddPatientMeasure" />
+    <FunctionImportMapping FunctionImportName="cproc_AddRooms" FunctionName="hospitalModel.Store.cproc_AddRooms" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddRoomsDegree" FunctionName="hospitalModel.Store.Cproc_AddRoomsDegree" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddSpecialization" FunctionName="hospitalModel.Store.Cproc_AddSpecialization" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddSupplierAddress" FunctionName="hospitalModel.Store.Cproc_AddSupplierAddress" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddSupplierContact" FunctionName="hospitalModel.Store.Cproc_AddSupplierContact" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddSuppliers" FunctionName="hospitalModel.Store.Cproc_AddSuppliers" />
+    <FunctionImportMapping FunctionImportName="Cproc_DocDegrees" FunctionName="hospitalModel.Store.Cproc_DocDegrees" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="hospitalModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="hospitalModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="hospitalModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="hospitalModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="hospitalModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="hospitalModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="hospitalModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="hospitalModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="hospitalModel.Store.sp_upgraddiagrams" />
   </EntityContainerMapping>
 </Mapping>

@@ -216,6 +216,12 @@
     <Compile Include="Specification.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>HospitalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>HospitalModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="SupplierAddress.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>

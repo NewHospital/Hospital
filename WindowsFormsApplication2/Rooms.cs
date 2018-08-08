@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hospital
+namespace WindowsFormsApplication2
 {
     using System;
     using System.Collections.Generic;

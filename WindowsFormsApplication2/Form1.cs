@@ -150,5 +150,18 @@ namespace Hospital
             NewDoc.ShowDialog();
 
         }
+
+        private void AddRoomDegreeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            RoomDegrees Deg = new RoomDegrees();
+            Deg.ShowDialog();
+
+        }
+
+        private void AddRoomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddRooms Room = new AddRooms();
+            Room.ShowDialog();
+        }
     }
 }
