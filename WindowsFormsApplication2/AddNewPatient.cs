@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication2;
 
 namespace Hospital
 {
@@ -29,7 +30,18 @@ namespace Hospital
 
         private void AddNewPatient_Load(object sender, EventArgs e)
         {
-
+            hospitalEntities Hospital = new hospitalEntities();
+            List<bloodGroups> BloodList = Hospital.bloodGroups.ToList ();
+            DataTable D = new DataTable();
+            D.Columns.Add("BloodID");
+            D.Columns.Add ("BloodGroupName");
+            foreach (var item in BloodList)
+            {
+                D.Rows.Add(item.BloodID, item.BloodGroupName);
+            }
+            Com_BloodGroups.DataSource = D;
+            Com_BloodGroups.DisplayMember = D.Columns[1].ColumnName;
+            Com_BloodGroups.ValueMember = D.Columns[0].ColumnName;
         }
     }
 }
