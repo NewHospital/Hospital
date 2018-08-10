@@ -43,6 +43,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.Gro_AddDoc.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +60,7 @@
             // 
             // Txt_DocName
             // 
-            this.Txt_DocName.Location = new System.Drawing.Point(236, 78);
+            this.Txt_DocName.Location = new System.Drawing.Point(272, 78);
             this.Txt_DocName.Name = "Txt_DocName";
             this.Txt_DocName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Txt_DocName.Size = new System.Drawing.Size(207, 20);
@@ -66,7 +68,7 @@
             // 
             // Txt_DoCAddress
             // 
-            this.Txt_DoCAddress.Location = new System.Drawing.Point(158, 124);
+            this.Txt_DoCAddress.Location = new System.Drawing.Point(194, 124);
             this.Txt_DoCAddress.Name = "Txt_DoCAddress";
             this.Txt_DoCAddress.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Txt_DoCAddress.Size = new System.Drawing.Size(285, 20);
@@ -74,7 +76,7 @@
             // 
             // Txt_DocTel
             // 
-            this.Txt_DocTel.Location = new System.Drawing.Point(343, 170);
+            this.Txt_DocTel.Location = new System.Drawing.Point(379, 170);
             this.Txt_DocTel.Name = "Txt_DocTel";
             this.Txt_DocTel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Txt_DocTel.Size = new System.Drawing.Size(100, 20);
@@ -87,7 +89,7 @@
             this.Rad_Male.Location = new System.Drawing.Point(79, 18);
             this.Rad_Male.Name = "Rad_Male";
             this.Rad_Male.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Rad_Male.Size = new System.Drawing.Size(40, 17);
+            this.Rad_Male.Size = new System.Drawing.Size(42, 17);
             this.Rad_Male.TabIndex = 5;
             this.Rad_Male.TabStop = true;
             this.Rad_Male.Text = "ذكر";
@@ -99,7 +101,7 @@
             this.Rad_Female.Location = new System.Drawing.Point(6, 18);
             this.Rad_Female.Name = "Rad_Female";
             this.Rad_Female.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Rad_Female.Size = new System.Drawing.Size(46, 17);
+            this.Rad_Female.Size = new System.Drawing.Size(48, 17);
             this.Rad_Female.TabIndex = 6;
             this.Rad_Female.Text = "أنثى";
             this.Rad_Female.UseVisualStyleBackColor = true;
@@ -119,7 +121,7 @@
             // Com_Degree
             // 
             this.Com_Degree.FormattingEnabled = true;
-            this.Com_Degree.Location = new System.Drawing.Point(31, 216);
+            this.Com_Degree.Location = new System.Drawing.Point(52, 216);
             this.Com_Degree.Name = "Com_Degree";
             this.Com_Degree.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Com_Degree.Size = new System.Drawing.Size(121, 21);
@@ -128,7 +130,7 @@
             // Com_Specification
             // 
             this.Com_Specification.FormattingEnabled = true;
-            this.Com_Specification.Location = new System.Drawing.Point(268, 216);
+            this.Com_Specification.Location = new System.Drawing.Point(304, 216);
             this.Com_Specification.Name = "Com_Specification";
             this.Com_Specification.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Com_Specification.Size = new System.Drawing.Size(175, 21);
@@ -137,25 +139,25 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(477, 82);
+            this.label1.Location = new System.Drawing.Point(513, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "اسم الطبيب";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(477, 128);
+            this.label2.Location = new System.Drawing.Point(513, 128);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "عنوان الطبيب";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(477, 174);
+            this.label3.Location = new System.Drawing.Point(513, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 11;
@@ -164,18 +166,18 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(477, 220);
+            this.label4.Location = new System.Drawing.Point(513, 220);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
+            this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "التخصص";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(190, 220);
+            this.label5.Location = new System.Drawing.Point(187, 220);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 13);
+            this.label5.Size = new System.Drawing.Size(67, 13);
             this.label5.TabIndex = 13;
             this.label5.Text = "الدرجة العلمية";
             // 
@@ -189,11 +191,43 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "إضافة بيانات طبيب";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(272, 216);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(26, 23);
+            this.button2.TabIndex = 50;
+            this.button2.Text = "+";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(23, 216);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 21);
+            this.button1.TabIndex = 51;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AddNewDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 366);
+            this.ClientSize = new System.Drawing.Size(622, 366);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -235,5 +269,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

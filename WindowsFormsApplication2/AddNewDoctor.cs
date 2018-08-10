@@ -72,5 +72,17 @@ namespace WindowsFormsApplication2
             MessageBox.Show("تم إضافة طبيب");
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddSpecialization Specialization = new AddSpecialization();
+            Specialization.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DocDegree Degree = new DocDegree();
+            Degree.ShowDialog();
+        }
     }
 }

@@ -57,12 +57,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddDiseases.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddDiseases.Designer.cs">
-      <DependentUpon>AddDiseases.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddDrug.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,12 +107,6 @@
     </Compile>
     <Compile Include="Bills.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="BillsType.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BillsType.Designer.cs">
-      <DependentUpon>BillsType.cs</DependentUpon>
     </Compile>
     <Compile Include="BillsTypes.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
@@ -231,9 +219,6 @@
     <Compile Include="Suppliers.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddDiseases.resx">
-      <DependentUpon>AddDiseases.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddDrug.resx">
       <DependentUpon>AddDrug.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,9 +242,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddSuppliers.resx">
       <DependentUpon>AddSuppliers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BillsType.resx">
-      <DependentUpon>BillsType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DocDegree.resx">
       <DependentUpon>DocDegree.cs</DependentUpon>

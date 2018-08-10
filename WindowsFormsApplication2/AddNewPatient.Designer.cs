@@ -67,10 +67,9 @@
             // 
             // Txt_PatientName
             // 
-            this.Txt_PatientName.Location = new System.Drawing.Point(268, 76);
-            this.Txt_PatientName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Txt_PatientName.Location = new System.Drawing.Point(230, 62);
             this.Txt_PatientName.Name = "Txt_PatientName";
-            this.Txt_PatientName.Size = new System.Drawing.Size(292, 24);
+            this.Txt_PatientName.Size = new System.Drawing.Size(251, 20);
             this.Txt_PatientName.TabIndex = 0;
             this.Txt_PatientName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -78,9 +77,9 @@
             // 
             this.Lbl_PatientName.AutoSize = true;
             this.Lbl_PatientName.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_PatientName.Location = new System.Drawing.Point(591, 76);
+            this.Lbl_PatientName.Location = new System.Drawing.Point(507, 62);
             this.Lbl_PatientName.Name = "Lbl_PatientName";
-            this.Lbl_PatientName.Size = new System.Drawing.Size(104, 21);
+            this.Lbl_PatientName.Size = new System.Drawing.Size(80, 16);
             this.Lbl_PatientName.TabIndex = 1;
             this.Lbl_PatientName.Text = "اسم المريض ";
             // 
@@ -88,9 +87,9 @@
             // 
             this.Lbl_Gender.AutoSize = true;
             this.Lbl_Gender.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Gender.Location = new System.Drawing.Point(607, 133);
+            this.Lbl_Gender.Location = new System.Drawing.Point(520, 108);
             this.Lbl_Gender.Name = "Lbl_Gender";
-            this.Lbl_Gender.Size = new System.Drawing.Size(87, 21);
+            this.Lbl_Gender.Size = new System.Drawing.Size(68, 16);
             this.Lbl_Gender.TabIndex = 2;
             this.Lbl_Gender.Text = "نوع الجنس";
             this.Lbl_Gender.Click += new System.EventHandler(this.label2_Click);
@@ -99,21 +98,18 @@
             // 
             this.GenderGroup.Controls.Add(this.radioButton2);
             this.GenderGroup.Controls.Add(this.radioButton1);
-            this.GenderGroup.Location = new System.Drawing.Point(390, 116);
-            this.GenderGroup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.GenderGroup.Location = new System.Drawing.Point(334, 94);
             this.GenderGroup.Name = "GenderGroup";
-            this.GenderGroup.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.GenderGroup.Size = new System.Drawing.Size(171, 52);
+            this.GenderGroup.Size = new System.Drawing.Size(147, 42);
             this.GenderGroup.TabIndex = 3;
             this.GenderGroup.TabStop = false;
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(14, 20);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioButton2.Location = new System.Drawing.Point(12, 16);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(55, 21);
+            this.radioButton2.Size = new System.Drawing.Size(48, 17);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "أنثى";
@@ -122,10 +118,9 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(111, 20);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioButton1.Location = new System.Drawing.Point(95, 16);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(53, 21);
+            this.radioButton1.Size = new System.Drawing.Size(45, 17);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "ذكر ";
@@ -134,66 +129,61 @@
             // 
             // Pik_DOB
             // 
-            this.Pik_DOB.Location = new System.Drawing.Point(325, 198);
-            this.Pik_DOB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Pik_DOB.Location = new System.Drawing.Point(279, 161);
             this.Pik_DOB.Name = "Pik_DOB";
-            this.Pik_DOB.Size = new System.Drawing.Size(233, 24);
+            this.Pik_DOB.Size = new System.Drawing.Size(200, 20);
             this.Pik_DOB.TabIndex = 2;
             // 
             // Lbl_DOB
             // 
             this.Lbl_DOB.AutoSize = true;
             this.Lbl_DOB.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_DOB.Location = new System.Drawing.Point(601, 198);
+            this.Lbl_DOB.Location = new System.Drawing.Point(515, 161);
             this.Lbl_DOB.Name = "Lbl_DOB";
-            this.Lbl_DOB.Size = new System.Drawing.Size(93, 21);
+            this.Lbl_DOB.Size = new System.Drawing.Size(73, 16);
             this.Lbl_DOB.TabIndex = 4;
             this.Lbl_DOB.Text = "تاريخ الميلاد";
             // 
             // Txt_SoSeNo
             // 
-            this.Txt_SoSeNo.Location = new System.Drawing.Point(325, 252);
-            this.Txt_SoSeNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Txt_SoSeNo.Location = new System.Drawing.Point(279, 205);
             this.Txt_SoSeNo.Name = "Txt_SoSeNo";
-            this.Txt_SoSeNo.Size = new System.Drawing.Size(233, 24);
+            this.Txt_SoSeNo.Size = new System.Drawing.Size(200, 20);
             this.Txt_SoSeNo.TabIndex = 5;
             this.Txt_SoSeNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Txt_Mobile
             // 
-            this.Txt_Mobile.Location = new System.Drawing.Point(437, 364);
-            this.Txt_Mobile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Txt_Mobile.Location = new System.Drawing.Point(375, 296);
             this.Txt_Mobile.Name = "Txt_Mobile";
-            this.Txt_Mobile.Size = new System.Drawing.Size(116, 24);
+            this.Txt_Mobile.Size = new System.Drawing.Size(100, 20);
             this.Txt_Mobile.TabIndex = 6;
             this.Txt_Mobile.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Lbl_Address
             // 
-            this.Lbl_Address.Location = new System.Drawing.Point(133, 420);
-            this.Lbl_Address.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Lbl_Address.Location = new System.Drawing.Point(114, 341);
             this.Lbl_Address.Name = "Lbl_Address";
-            this.Lbl_Address.Size = new System.Drawing.Size(420, 24);
+            this.Lbl_Address.Size = new System.Drawing.Size(361, 20);
             this.Lbl_Address.TabIndex = 7;
             this.Lbl_Address.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Com_BloodGroups
             // 
             this.Com_BloodGroups.FormattingEnabled = true;
-            this.Com_BloodGroups.Location = new System.Drawing.Point(413, 308);
-            this.Com_BloodGroups.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Com_BloodGroups.Location = new System.Drawing.Point(354, 250);
             this.Com_BloodGroups.Name = "Com_BloodGroups";
             this.Com_BloodGroups.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Com_BloodGroups.Size = new System.Drawing.Size(140, 24);
+            this.Com_BloodGroups.Size = new System.Drawing.Size(121, 21);
             this.Com_BloodGroups.TabIndex = 8;
             // 
             // Lbl_SoSeNo
             // 
             this.Lbl_SoSeNo.AutoSize = true;
             this.Lbl_SoSeNo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_SoSeNo.Location = new System.Drawing.Point(593, 252);
+            this.Lbl_SoSeNo.Location = new System.Drawing.Point(508, 205);
             this.Lbl_SoSeNo.Name = "Lbl_SoSeNo";
-            this.Lbl_SoSeNo.Size = new System.Drawing.Size(102, 21);
+            this.Lbl_SoSeNo.Size = new System.Drawing.Size(78, 16);
             this.Lbl_SoSeNo.TabIndex = 9;
             this.Lbl_SoSeNo.Text = "الرقم القومي";
             // 
@@ -201,9 +191,9 @@
             // 
             this.Lbl_BloodGroup.AutoSize = true;
             this.Lbl_BloodGroup.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_BloodGroup.Location = new System.Drawing.Point(605, 310);
+            this.Lbl_BloodGroup.Location = new System.Drawing.Point(519, 252);
             this.Lbl_BloodGroup.Name = "Lbl_BloodGroup";
-            this.Lbl_BloodGroup.Size = new System.Drawing.Size(85, 21);
+            this.Lbl_BloodGroup.Size = new System.Drawing.Size(66, 16);
             this.Lbl_BloodGroup.TabIndex = 10;
             this.Lbl_BloodGroup.Text = "فصيلة الدم";
             // 
@@ -211,9 +201,9 @@
             // 
             this.Lbl_Tel.AutoSize = true;
             this.Lbl_Tel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Tel.Location = new System.Drawing.Point(631, 364);
+            this.Lbl_Tel.Location = new System.Drawing.Point(541, 296);
             this.Lbl_Tel.Name = "Lbl_Tel";
-            this.Lbl_Tel.Size = new System.Drawing.Size(54, 21);
+            this.Lbl_Tel.Size = new System.Drawing.Size(42, 16);
             this.Lbl_Tel.TabIndex = 11;
             this.Lbl_Tel.Text = "موبايل";
             // 
@@ -221,9 +211,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(628, 421);
+            this.label7.Location = new System.Drawing.Point(538, 342);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 21);
+            this.label7.Size = new System.Drawing.Size(44, 16);
             this.label7.TabIndex = 12;
             this.label7.Text = "العنوان";
             // 
@@ -231,9 +221,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(223, 15);
+            this.label8.Location = new System.Drawing.Point(191, 12);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(276, 35);
+            this.label8.Size = new System.Drawing.Size(233, 29);
             this.label8.TabIndex = 13;
             this.label8.Text = "البيانات الأساسية للمريض";
             // 
@@ -251,12 +241,10 @@
             this.DiseasesGroup.Controls.Add(this.checkBox3);
             this.DiseasesGroup.Controls.Add(this.checkBox2);
             this.DiseasesGroup.Controls.Add(this.checkBox1);
-            this.DiseasesGroup.Location = new System.Drawing.Point(14, 478);
-            this.DiseasesGroup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.DiseasesGroup.Location = new System.Drawing.Point(12, 388);
             this.DiseasesGroup.Name = "DiseasesGroup";
-            this.DiseasesGroup.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DiseasesGroup.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DiseasesGroup.Size = new System.Drawing.Size(688, 124);
+            this.DiseasesGroup.Size = new System.Drawing.Size(590, 101);
             this.DiseasesGroup.TabIndex = 14;
             this.DiseasesGroup.TabStop = false;
             this.DiseasesGroup.Text = "Popular Diseases";
@@ -265,10 +253,9 @@
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(195, 94);
-            this.checkBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox7.Location = new System.Drawing.Point(167, 76);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(171, 21);
+            this.checkBox7.Size = new System.Drawing.Size(138, 17);
             this.checkBox7.TabIndex = 15;
             this.checkBox7.Text = "hematopoietic Diseases";
             this.checkBox7.UseVisualStyleBackColor = true;
@@ -276,10 +263,9 @@
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(222, 58);
-            this.checkBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox8.Location = new System.Drawing.Point(190, 47);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(140, 21);
+            this.checkBox8.Size = new System.Drawing.Size(116, 17);
             this.checkBox8.TabIndex = 16;
             this.checkBox8.Text = "Digestive Diseases";
             this.checkBox8.UseVisualStyleBackColor = true;
@@ -287,10 +273,9 @@
             // checkBox9
             // 
             this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(254, 25);
-            this.checkBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox9.Location = new System.Drawing.Point(218, 20);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(105, 21);
+            this.checkBox9.Size = new System.Drawing.Size(87, 17);
             this.checkBox9.TabIndex = 17;
             this.checkBox9.Text = "Heart Diseas";
             this.checkBox9.UseVisualStyleBackColor = true;
@@ -298,10 +283,9 @@
             // checkBox10
             // 
             this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(7, 23);
-            this.checkBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox10.Location = new System.Drawing.Point(6, 19);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(181, 21);
+            this.checkBox10.Size = new System.Drawing.Size(143, 17);
             this.checkBox10.TabIndex = 18;
             this.checkBox10.Text = "nervous system diseases";
             this.checkBox10.UseVisualStyleBackColor = true;
@@ -309,10 +293,9 @@
             // checkBox11
             // 
             this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(28, 57);
-            this.checkBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox11.Location = new System.Drawing.Point(24, 46);
             this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(160, 21);
+            this.checkBox11.Size = new System.Drawing.Size(127, 17);
             this.checkBox11.TabIndex = 19;
             this.checkBox11.Text = "autoimmune diseases";
             this.checkBox11.UseVisualStyleBackColor = true;
@@ -320,10 +303,9 @@
             // checkBox12
             // 
             this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(65, 92);
-            this.checkBox12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox12.Location = new System.Drawing.Point(56, 75);
             this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(118, 21);
+            this.checkBox12.Size = new System.Drawing.Size(98, 17);
             this.checkBox12.TabIndex = 20;
             this.checkBox12.Text = "colon Diseases";
             this.checkBox12.UseVisualStyleBackColor = true;
@@ -331,10 +313,9 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(404, 92);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox6.Location = new System.Drawing.Point(346, 75);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(114, 21);
+            this.checkBox6.Size = new System.Drawing.Size(95, 17);
             this.checkBox6.TabIndex = 5;
             this.checkBox6.Text = "Liver Diseases";
             this.checkBox6.UseVisualStyleBackColor = true;
@@ -342,10 +323,9 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(399, 57);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox5.Location = new System.Drawing.Point(342, 46);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(120, 21);
+            this.checkBox5.Size = new System.Drawing.Size(99, 17);
             this.checkBox5.TabIndex = 4;
             this.checkBox5.Text = "Kidney Disease";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -353,10 +333,9 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(371, 23);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox4.Location = new System.Drawing.Point(318, 19);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(149, 21);
+            this.checkBox4.Size = new System.Drawing.Size(120, 17);
             this.checkBox4.TabIndex = 3;
             this.checkBox4.Text = "Respiratory Disease";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -364,10 +343,9 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(521, 91);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox3.Location = new System.Drawing.Point(447, 74);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(158, 21);
+            this.checkBox3.Size = new System.Drawing.Size(128, 17);
             this.checkBox3.TabIndex = 2;
             this.checkBox3.Text = "Pulse Rate Confusion";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -375,10 +353,9 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(568, 57);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox2.Location = new System.Drawing.Point(487, 46);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(111, 21);
+            this.checkBox2.Size = new System.Drawing.Size(88, 17);
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "Hypertension";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -386,10 +363,9 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(604, 23);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox1.Location = new System.Drawing.Point(518, 19);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(75, 21);
+            this.checkBox1.Size = new System.Drawing.Size(62, 17);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Diabtes";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -397,10 +373,9 @@
             // But_AddPatient
             // 
             this.But_AddPatient.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.But_AddPatient.Location = new System.Drawing.Point(479, 625);
-            this.But_AddPatient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.But_AddPatient.Location = new System.Drawing.Point(411, 508);
             this.But_AddPatient.Name = "But_AddPatient";
-            this.But_AddPatient.Size = new System.Drawing.Size(168, 44);
+            this.But_AddPatient.Size = new System.Drawing.Size(144, 36);
             this.But_AddPatient.TabIndex = 15;
             this.But_AddPatient.Text = "إضافة مريض";
             this.But_AddPatient.UseVisualStyleBackColor = true;
@@ -408,10 +383,9 @@
             // But_AddReservation
             // 
             this.But_AddReservation.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.But_AddReservation.Location = new System.Drawing.Point(278, 625);
-            this.But_AddReservation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.But_AddReservation.Location = new System.Drawing.Point(238, 508);
             this.But_AddReservation.Name = "But_AddReservation";
-            this.But_AddReservation.Size = new System.Drawing.Size(168, 44);
+            this.But_AddReservation.Size = new System.Drawing.Size(144, 36);
             this.But_AddReservation.TabIndex = 16;
             this.But_AddReservation.Text = "إضافة حجز";
             this.But_AddReservation.UseVisualStyleBackColor = true;
@@ -419,19 +393,19 @@
             // But_AddFellow
             // 
             this.But_AddFellow.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.But_AddFellow.Location = new System.Drawing.Point(68, 625);
-            this.But_AddFellow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.But_AddFellow.Location = new System.Drawing.Point(58, 508);
             this.But_AddFellow.Name = "But_AddFellow";
-            this.But_AddFellow.Size = new System.Drawing.Size(168, 44);
+            this.But_AddFellow.Size = new System.Drawing.Size(144, 36);
             this.But_AddFellow.TabIndex = 17;
             this.But_AddFellow.Text = "إضافة مرافق";
             this.But_AddFellow.UseVisualStyleBackColor = true;
+            this.But_AddFellow.Click += new System.EventHandler(this.But_AddFellow_Click);
             // 
             // AddNewPatient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 695);
+            this.ClientSize = new System.Drawing.Size(625, 565);
             this.Controls.Add(this.But_AddFellow);
             this.Controls.Add(this.But_AddReservation);
             this.Controls.Add(this.But_AddPatient);
@@ -451,7 +425,6 @@
             this.Controls.Add(this.Lbl_Gender);
             this.Controls.Add(this.Lbl_PatientName);
             this.Controls.Add(this.Txt_PatientName);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddNewPatient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "إضافة مريض جديد";

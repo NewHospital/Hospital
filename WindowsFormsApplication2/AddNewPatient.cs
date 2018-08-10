@@ -43,5 +43,11 @@ namespace Hospital
             Com_BloodGroups.DisplayMember = D.Columns[1].ColumnName;
             Com_BloodGroups.ValueMember = D.Columns[0].ColumnName;
         }
+
+        private void But_AddFellow_Click(object sender, EventArgs e)
+        {
+            AddFellow AdFellow = new AddFellow();
+            AdFellow.ShowDialog();
+        }
     }
 }
