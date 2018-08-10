@@ -45,7 +45,7 @@
             this.AddDoctorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DoctorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SpecializationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.DeletePatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddDiseasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ModifyPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PatientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -172,11 +172,12 @@
             this.SpecializationToolStripMenuItem.Text = "إضافة التخصصات الطبية";
             this.SpecializationToolStripMenuItem.Click += new System.EventHandler(this.SpecializationToolStripMenuItem_Click);
             // 
-            // DeletePatientToolStripMenuItem
+            // AddDiseasToolStripMenuItem
             // 
-            this.DeletePatientToolStripMenuItem.Name = "DeletePatientToolStripMenuItem";
-            this.DeletePatientToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.DeletePatientToolStripMenuItem.Text = "حدف مريض";
+            this.AddDiseasToolStripMenuItem.Name = "AddDiseasToolStripMenuItem";
+            this.AddDiseasToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.AddDiseasToolStripMenuItem.Text = "إضافة الأمراض";
+            this.AddDiseasToolStripMenuItem.Click += new System.EventHandler(this.AddDiseasToolStripMenuItem_Click);
             // 
             // ModifyPatientToolStripMenuItem
             // 
@@ -198,7 +199,7 @@
             this.MainDataToolStripMenuItem,
             this.AddPatientToolStripMenuItem,
             this.ModifyPatientToolStripMenuItem,
-            this.DeletePatientToolStripMenuItem});
+            this.AddDiseasToolStripMenuItem});
             this.PatientsToolStripMenuItem.Name = "PatientsToolStripMenuItem";
             this.PatientsToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.PatientsToolStripMenuItem.Text = "المرضى";
@@ -269,7 +270,7 @@
         private System.Windows.Forms.ToolStripMenuItem AddSpecializationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddDoctorsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem DoctorsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem DeletePatientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddDiseasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ModifyPatientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddPatientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem PatientsToolStripMenuItem;

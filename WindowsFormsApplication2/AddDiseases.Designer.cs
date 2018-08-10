@@ -61,6 +61,7 @@
             this.But_AddDiseases.TabIndex = 3;
             this.But_AddDiseases.Text = "إضافة";
             this.But_AddDiseases.UseVisualStyleBackColor = true;
+            this.But_AddDiseases.Click += new System.EventHandler(this.But_AddDiseases_Click);
             // 
             // AddDiseases
             // 

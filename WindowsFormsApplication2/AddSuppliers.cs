@@ -16,5 +16,10 @@ namespace Hospital
         {
             InitializeComponent();
         }
+
+        private void But_AddContact_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -163,5 +163,11 @@ namespace Hospital
             AddRooms Room = new AddRooms();
             Room.ShowDialog();
         }
+
+        private void AddDiseasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddDiseases Diseases = new AddDiseases();
+            Diseases.ShowDialog();
+        }
     }
 }
