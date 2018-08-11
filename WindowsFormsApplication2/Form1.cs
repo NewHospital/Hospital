@@ -166,8 +166,7 @@ namespace Hospital
 
         private void AddDiseasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddDiseases Diseases = new AddDiseases();
-            Diseases.ShowDialog();
+            
         }
     }
 }
