@@ -8,13 +8,15 @@ using System.Data;
 
 namespace Hospital
 {
-    public enum ExecuteReaderOrNonQuery { executeReader = 1, executeNonQuery = 2 };
+    public enum ExecuteReaderOrNonQuery { executeReader = 1, executeNonQuery = 2 , executeScalar= 3};
 
     static class ConnectionClass
     {
         private static SqlConnection ConnectMe;
         public static DataTable MyDataTable;
         public static List<SqlParameter> ParameterList;
+        public static string Id; 
+        
 
         public static void Connection(string conn)
         {
@@ -37,6 +39,7 @@ namespace Hospital
         {
             ConnectMe.Open();
             SqlCommand MyCommand = new SqlCommand(CommandText, ConnectMe);
+            
             switch (CT)
             {
                 case CommandType.Text:
@@ -52,9 +55,17 @@ namespace Hospital
                             break;
 
                         case ExecuteReaderOrNonQuery.executeNonQuery:
-
-                            MyCommand.ExecuteNonQuery();
+                            
                             MyCommand.Parameters.AddRange(ParameterList.ToArray());
+                            MyCommand.ExecuteNonQuery();
+                            
+                            break;
+                        case ExecuteReaderOrNonQuery.executeScalar:
+                            
+                            MyCommand.Parameters.AddRange(ParameterList.ToArray());
+                            MyCommand.ExecuteScalar();
+                            
+
                             break;
                     }
                     break;
@@ -65,13 +76,20 @@ namespace Hospital
                         switch (Ex)
                         {
                             case ExecuteReaderOrNonQuery.executeReader:
+                                MyCommand.Parameters.AddRange(ParameterList.ToArray());
                                 SqlDataReader DataReader = MyCommand.ExecuteReader();
                                 MyDataTable = new DataTable();
                                 MyDataTable.Load(DataReader);
                                 break;
                             case ExecuteReaderOrNonQuery.executeNonQuery:
                                 MyCommand.Parameters.AddRange(ParameterList.ToArray());
-                                MyCommand.ExecuteNonQuery();
+                                 MyCommand.ExecuteNonQuery();
+                                 
+                                
+                                break;
+                            case ExecuteReaderOrNonQuery.executeScalar:
+                                MyCommand.Parameters.AddRange(ParameterList.ToArray());
+                                MyCommand.ExecuteScalar();
                                 break;
                         }
 
@@ -79,6 +97,7 @@ namespace Hospital
                     }
             }
             ConnectMe.Close();
+            ParameterList.Clear();
         }
     }
 }

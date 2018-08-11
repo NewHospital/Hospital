@@ -51,11 +51,14 @@
             this.PatientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.AddSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PurchasingToolStripMenuItem
             // 
+            this.PurchasingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddSupplierToolStripMenuItem});
             this.PurchasingToolStripMenuItem.Name = "PurchasingToolStripMenuItem";
             this.PurchasingToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.PurchasingToolStripMenuItem.Text = "المشتريات";
@@ -227,6 +230,13 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // AddSupplierToolStripMenuItem
+            // 
+            this.AddSupplierToolStripMenuItem.Name = "AddSupplierToolStripMenuItem";
+            this.AddSupplierToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.AddSupplierToolStripMenuItem.Text = "إضافة مورد";
+            this.AddSupplierToolStripMenuItem.Click += new System.EventHandler(this.AddSupplierToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -279,6 +289,7 @@
         private System.Windows.Forms.ToolStripMenuItem AddDrugUnitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddDrugToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SpecializationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddSupplierToolStripMenuItem;
     }
 }
 

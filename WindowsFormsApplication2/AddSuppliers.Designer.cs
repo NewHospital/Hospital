@@ -31,17 +31,23 @@
             this.Lbl_AddSuppliers = new System.Windows.Forms.Label();
             this.Txt_AddSuppliers = new System.Windows.Forms.TextBox();
             this.But_AddSuppliers = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txt_Contactname = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.LblAddContactNamen = new System.Windows.Forms.Label();
             this.LblAddJobtitle = new System.Windows.Forms.Label();
             this.LblAddContactTel = new System.Windows.Forms.Label();
             this.Lbl_AddBranch = new System.Windows.Forms.Label();
             this.But_AddContact = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Com_branch = new System.Windows.Forms.ComboBox();
+            this.Txt_Tel = new System.Windows.Forms.TextBox();
+            this.Txt_JobTitle = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.But_addBranch = new System.Windows.Forms.Button();
+            this.Txt_AddAddress = new System.Windows.Forms.TextBox();
+            this.Lbl_Address = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_AddSuppliers
@@ -57,29 +63,30 @@
             // Txt_AddSuppliers
             // 
             this.Txt_AddSuppliers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_AddSuppliers.Location = new System.Drawing.Point(117, 30);
+            this.Txt_AddSuppliers.Location = new System.Drawing.Point(117, 29);
             this.Txt_AddSuppliers.Name = "Txt_AddSuppliers";
+            this.Txt_AddSuppliers.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Txt_AddSuppliers.Size = new System.Drawing.Size(443, 26);
             this.Txt_AddSuppliers.TabIndex = 2;
-            this.Txt_AddSuppliers.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // But_AddSuppliers
             // 
             this.But_AddSuppliers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.But_AddSuppliers.Location = new System.Drawing.Point(485, 76);
+            this.But_AddSuppliers.Location = new System.Drawing.Point(291, 73);
             this.But_AddSuppliers.Name = "But_AddSuppliers";
             this.But_AddSuppliers.Size = new System.Drawing.Size(75, 27);
             this.But_AddSuppliers.TabIndex = 3;
             this.But_AddSuppliers.Text = "اضافة";
             this.But_AddSuppliers.UseVisualStyleBackColor = true;
+            this.But_AddSuppliers.Click += new System.EventHandler(this.But_AddSuppliers_Click);
             // 
-            // textBox1
+            // Txt_Contactname
             // 
-            this.textBox1.Location = new System.Drawing.Point(472, 42);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 20);
-            this.textBox1.TabIndex = 4;
+            this.Txt_Contactname.Location = new System.Drawing.Point(472, 42);
+            this.Txt_Contactname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_Contactname.Name = "Txt_Contactname";
+            this.Txt_Contactname.Size = new System.Drawing.Size(144, 20);
+            this.Txt_Contactname.TabIndex = 4;
             // 
             // groupBox1
             // 
@@ -90,11 +97,11 @@
             this.groupBox1.Controls.Add(this.LblAddContactTel);
             this.groupBox1.Controls.Add(this.Lbl_AddBranch);
             this.groupBox1.Controls.Add(this.But_AddContact);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(32, 303);
+            this.groupBox1.Controls.Add(this.Com_branch);
+            this.groupBox1.Controls.Add(this.Txt_Tel);
+            this.groupBox1.Controls.Add(this.Txt_JobTitle);
+            this.groupBox1.Controls.Add(this.Txt_Contactname);
+            this.groupBox1.Location = new System.Drawing.Point(30, 246);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -103,6 +110,8 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "جهات الاتصال";
+            this.groupBox1.Visible = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // LblAddContactNamen
             // 
@@ -151,36 +160,98 @@
             this.But_AddContact.UseVisualStyleBackColor = true;
             this.But_AddContact.Click += new System.EventHandler(this.But_AddContact_Click);
             // 
-            // comboBox1
+            // Com_branch
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(95, 42);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(108, 21);
-            this.comboBox1.TabIndex = 8;
+            this.Com_branch.FormattingEnabled = true;
+            this.Com_branch.Location = new System.Drawing.Point(95, 42);
+            this.Com_branch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Com_branch.Name = "Com_branch";
+            this.Com_branch.Size = new System.Drawing.Size(108, 21);
+            this.Com_branch.TabIndex = 8;
             // 
-            // textBox3
+            // Txt_Tel
             // 
-            this.textBox3.Location = new System.Drawing.Point(207, 42);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(139, 20);
-            this.textBox3.TabIndex = 7;
+            this.Txt_Tel.Location = new System.Drawing.Point(207, 42);
+            this.Txt_Tel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_Tel.Name = "Txt_Tel";
+            this.Txt_Tel.Size = new System.Drawing.Size(139, 20);
+            this.Txt_Tel.TabIndex = 7;
             // 
-            // textBox2
+            // Txt_JobTitle
             // 
-            this.textBox2.Location = new System.Drawing.Point(359, 42);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(109, 20);
-            this.textBox2.TabIndex = 6;
+            this.Txt_JobTitle.Location = new System.Drawing.Point(359, 42);
+            this.Txt_JobTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_JobTitle.Name = "Txt_JobTitle";
+            this.Txt_JobTitle.Size = new System.Drawing.Size(109, 20);
+            this.Txt_JobTitle.TabIndex = 6;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.AutoSize = true;
+            this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.But_addBranch);
+            this.groupBox2.Controls.Add(this.Txt_AddAddress);
+            this.groupBox2.Location = new System.Drawing.Point(62, 136);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox2.Size = new System.Drawing.Size(585, 78);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "الفروع";
+            this.groupBox2.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(519, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "عنوان الفرع";
+            // 
+            // But_addBranch
+            // 
+            this.But_addBranch.Location = new System.Drawing.Point(52, 40);
+            this.But_addBranch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.But_addBranch.Name = "But_addBranch";
+            this.But_addBranch.Size = new System.Drawing.Size(125, 21);
+            this.But_addBranch.TabIndex = 9;
+            this.But_addBranch.Text = "إضافة عنوان الفرع";
+            this.But_addBranch.UseVisualStyleBackColor = true;
+            this.But_addBranch.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Txt_AddAddress
+            // 
+            this.Txt_AddAddress.Location = new System.Drawing.Point(243, 41);
+            this.Txt_AddAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Txt_AddAddress.Name = "Txt_AddAddress";
+            this.Txt_AddAddress.Size = new System.Drawing.Size(315, 20);
+            this.Txt_AddAddress.TabIndex = 4;
+            // 
+            // Lbl_Address
+            // 
+            this.Lbl_Address.AutoSize = true;
+            this.Lbl_Address.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Address.Location = new System.Drawing.Point(448, 102);
+            this.Lbl_Address.Name = "Lbl_Address";
+            this.Lbl_Address.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Lbl_Address.Size = new System.Drawing.Size(208, 19);
+            this.Lbl_Address.TabIndex = 8;
+            this.Lbl_Address.Text = "يرجى إدخال عناوين الفروع ";
+            this.Lbl_Address.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Lbl_Address.Visible = false;
+            this.Lbl_Address.Click += new System.EventHandler(this.Lbl_Address_Click);
             // 
             // AddSuppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 417);
+            this.Controls.Add(this.Lbl_Address);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.But_AddSuppliers);
             this.Controls.Add(this.Txt_AddSuppliers);
@@ -188,8 +259,11 @@
             this.Name = "AddSuppliers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "إضافة مورد";
+            this.Load += new System.EventHandler(this.AddSuppliers_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,15 +274,20 @@
         private System.Windows.Forms.Label Lbl_AddSuppliers;
         private System.Windows.Forms.TextBox Txt_AddSuppliers;
         private System.Windows.Forms.Button But_AddSuppliers;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_Contactname;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label LblAddContactNamen;
         private System.Windows.Forms.Label LblAddJobtitle;
         private System.Windows.Forms.Label LblAddContactTel;
         private System.Windows.Forms.Label Lbl_AddBranch;
         private System.Windows.Forms.Button But_AddContact;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox Com_branch;
+        private System.Windows.Forms.TextBox Txt_Tel;
+        private System.Windows.Forms.TextBox Txt_JobTitle;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button But_addBranch;
+        private System.Windows.Forms.TextBox Txt_AddAddress;
+        private System.Windows.Forms.Label Lbl_Address;
     }
 }

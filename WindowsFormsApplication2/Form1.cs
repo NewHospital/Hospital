@@ -168,5 +168,11 @@ namespace Hospital
         {
             
         }
+
+        private void AddSupplierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddSuppliers Supplier = new AddSuppliers();
+            Supplier.ShowDialog();
+        }
     }
 }
