@@ -174,5 +174,12 @@ namespace Hospital
             AddSuppliers Supplier = new AddSuppliers();
             Supplier.ShowDialog();
         }
+
+        private void AddingBuyInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddBuyingInvoice BuyInvoice = new AddBuyingInvoice();
+            BuyInvoice.ShowDialog();
+
+        }
     }
 }

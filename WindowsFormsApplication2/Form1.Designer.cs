@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.PurchasingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RoomReservationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ReservationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PatientReservationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,17 +52,25 @@
             this.PatientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.AddSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddingBuyInvoiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PurchasingToolStripMenuItem
             // 
             this.PurchasingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AddSupplierToolStripMenuItem});
+            this.AddSupplierToolStripMenuItem,
+            this.AddingBuyInvoiceToolStripMenuItem});
             this.PurchasingToolStripMenuItem.Name = "PurchasingToolStripMenuItem";
             this.PurchasingToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.PurchasingToolStripMenuItem.Text = "المشتريات";
+            // 
+            // AddSupplierToolStripMenuItem
+            // 
+            this.AddSupplierToolStripMenuItem.Name = "AddSupplierToolStripMenuItem";
+            this.AddSupplierToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.AddSupplierToolStripMenuItem.Text = "إضافة مورد";
+            this.AddSupplierToolStripMenuItem.Click += new System.EventHandler(this.AddSupplierToolStripMenuItem_Click);
             // 
             // RoomReservationToolStripMenuItem
             // 
@@ -230,12 +239,12 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // AddSupplierToolStripMenuItem
+            // AddingBuyInvoiceToolStripMenuItem
             // 
-            this.AddSupplierToolStripMenuItem.Name = "AddSupplierToolStripMenuItem";
-            this.AddSupplierToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.AddSupplierToolStripMenuItem.Text = "إضافة مورد";
-            this.AddSupplierToolStripMenuItem.Click += new System.EventHandler(this.AddSupplierToolStripMenuItem_Click);
+            this.AddingBuyInvoiceToolStripMenuItem.Name = "AddingBuyInvoiceToolStripMenuItem";
+            this.AddingBuyInvoiceToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.AddingBuyInvoiceToolStripMenuItem.Text = "إضافة فاتورة مشتريات";
+            this.AddingBuyInvoiceToolStripMenuItem.Click += new System.EventHandler(this.AddingBuyInvoiceToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -290,6 +299,7 @@
         private System.Windows.Forms.ToolStripMenuItem AddDrugToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem SpecializationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddSupplierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AddingBuyInvoiceToolStripMenuItem;
     }
 }
 

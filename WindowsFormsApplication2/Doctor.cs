@@ -12,34 +12,36 @@ namespace WindowsFormsApplication2
     using System;
     using System.Collections.Generic;
     
-    public partial class Reservations
+    public partial class Doctor
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Reservations()
+        public Doctor()
         {
-            this.Bills = new HashSet<Bills>();
-            this.Payments = new HashSet<Payments>();
-            this.DocfollowUp = new HashSet<DocfollowUp>();
-            this.Prescription = new HashSet<Prescription>();
+            this.Doctors1 = new HashSet<Doctor>();
+            this.DocfollowUps = new HashSet<DocfollowUp>();
+            this.PatientMeasures = new HashSet<PatientMeasure>();
+            this.Prescriptions = new HashSet<Prescription>();
         }
     
-        public int ReservationID { get; set; }
-        public int patientId { get; set; }
-        public int RoomID { get; set; }
-        public System.DateTime ArriveDate { get; set; }
-        public System.DateTime LeaveDate { get; set; }
-        public bool IsActive { get; set; }
-        public string Discription { get; set; }
+        public int DoctorId { get; set; }
+        public string DocName { get; set; }
+        public string DocAddress { get; set; }
+        public string DocPhone { get; set; }
+        public int DocDegree { get; set; }
+        public int DocSpecification { get; set; }
+        public Nullable<int> MagId { get; set; }
+        public Nullable<bool> Gender { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Bills> Bills { get; set; }
+        public virtual ICollection<Doctor> Doctors1 { get; set; }
+        public virtual Doctor Doctor1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Payments> Payments { get; set; }
-        public virtual Rooms Rooms { get; set; }
+        public virtual ICollection<DocfollowUp> DocfollowUps { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DocfollowUp> DocfollowUp { get; set; }
-        public virtual Patient Patient { get; set; }
+        public virtual ICollection<PatientMeasure> PatientMeasures { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Prescription> Prescription { get; set; }
+        public virtual ICollection<Prescription> Prescriptions { get; set; }
+        public virtual ScientificDegree ScientificDegree { get; set; }
+        public virtual Specification Specification { get; set; }
     }
 }

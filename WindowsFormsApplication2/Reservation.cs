@@ -12,15 +12,15 @@ namespace WindowsFormsApplication2
     using System;
     using System.Collections.Generic;
     
-    public partial class Reservations
+    public partial class Reservation
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Reservations()
+        public Reservation()
         {
-            this.Bills = new HashSet<Bills>();
-            this.Payments = new HashSet<Payments>();
-            this.DocfollowUp = new HashSet<DocfollowUp>();
-            this.Prescription = new HashSet<Prescription>();
+            this.Bills = new HashSet<Bill>();
+            this.Payments = new HashSet<Payment>();
+            this.DocfollowUps = new HashSet<DocfollowUp>();
+            this.Prescriptions = new HashSet<Prescription>();
         }
     
         public int ReservationID { get; set; }
@@ -32,14 +32,14 @@ namespace WindowsFormsApplication2
         public string Discription { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Bills> Bills { get; set; }
+        public virtual ICollection<Bill> Bills { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Payments> Payments { get; set; }
-        public virtual Rooms Rooms { get; set; }
+        public virtual ICollection<Payment> Payments { get; set; }
+        public virtual Room Room { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DocfollowUp> DocfollowUp { get; set; }
+        public virtual ICollection<DocfollowUp> DocfollowUps { get; set; }
         public virtual Patient Patient { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Prescription> Prescription { get; set; }
+        public virtual ICollection<Prescription> Prescriptions { get; set; }
     }
 }

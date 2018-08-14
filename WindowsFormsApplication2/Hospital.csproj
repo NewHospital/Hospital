@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBuyingInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBuyingInvoice.Designer.cs">
+      <DependentUpon>AddBuyingInvoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddDrug.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,12 @@
     <Compile Include="ScientificDegree.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="SearchSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchSupplier.Designer.cs">
+      <DependentUpon>SearchSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Specification.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
@@ -219,6 +231,9 @@
     <Compile Include="Suppliers.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddBuyingInvoice.resx">
+      <DependentUpon>AddBuyingInvoice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddDrug.resx">
       <DependentUpon>AddDrug.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,6 +275,9 @@
     </Compile>
     <EmbeddedResource Include="RoomDegrees.resx">
       <DependentUpon>RoomDegrees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchSupplier.resx">
+      <DependentUpon>SearchSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="HospitalModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
