@@ -61,16 +61,23 @@ namespace WindowsFormsApplication2
         hospitalEntities Hospital = new hospitalEntities();
         private void AddBuyingInvoice_Load(object sender, EventArgs e)
         {
-            
             List<Suppliers> SupList = Hospital.Suppliers.ToList();
-            Com_Suppliers.DataSource = SupList;
-            Com_Suppliers.DisplayMember = "SupplierName";
-            Com_Suppliers.ValueMember = "SupplierId";
-            if (string.IsNullOrEmpty( SearchSupplier.x) )
-            { Txt_SupplierName.Text = SearchSupplier.x; }
+
+            if (!string.IsNullOrEmpty( SearchSupplier.x) )
+            {
+                List<Suppliers> filteredlist=  (SupList.Where(a => a.SupplierName.ToString () == SearchSupplier.x)).ToList ();
+                Com_Suppliers.DataSource = filteredlist;
+                Com_Suppliers.DisplayMember = "SupplierName";
+                Com_Suppliers.ValueMember = "SupplierId";
+               
+                
+            }
             else
             {
-                Txt_SupplierName.Text = Com_Suppliers.SelectedItem.ToString ();
+                Com_Suppliers.DataSource = SupList;
+                Com_Suppliers.DisplayMember = "SupplierName";
+                Com_Suppliers.ValueMember = "SupplierId";
+                Txt_SupplierName.Text = Com_Suppliers.SelectedText.ToString ();
             }
             
 

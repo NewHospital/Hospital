@@ -16,7 +16,7 @@ namespace Hospital
         public static DataTable MyDataTable;
         public static List<SqlParameter> ParameterList;
 
-        public static string Serial;
+        public static string Serial="";
 
 
         public static void Connection(string conn)

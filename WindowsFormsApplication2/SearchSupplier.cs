@@ -44,11 +44,12 @@ namespace WindowsFormsApplication2
         {
             var RowIndex = e.RowIndex;
             DataGridViewRow Row = dataGridView1.Rows[RowIndex];
-             x = Row.Cells[0].Value.ToString();
+             x = Row.Cells[0].Value.ToString ();
+            
             this.Hide();
             AddBuyingInvoice BuyInvoice = new AddBuyingInvoice();
-            
-            BuyInvoice.Com_Suppliers.Visible = false; 
+          
+            BuyInvoice.Com_Suppliers.Enabled = false; 
             BuyInvoice.ShowDialog();
              
             
