@@ -178,51 +178,69 @@ namespace WindowsFormsApplication2
 
         private void But_Save_Click(object sender, EventArgs e)
         {
-             for (int i = 0; i < DrugUnitList.Count;)
+            var result = MessageBox.Show("هل انت متاكد من حفظ القاتورة", "تأكيد حفظ فاتورة", MessageBoxButtons.YesNo);
+            if (result== System.Windows.Forms.DialogResult.Yes)
+            {
+                for (int i = 0; i < DrugUnitList.Count;)
+                {
+                    for (int C = 16; C <= this.Controls.Count; C += 5)
                     {
-                        for (int C = 16; C <= this.Controls.Count; C += 5)
+                        if (!string.IsNullOrEmpty(Controls[C].Text) && !string.IsNullOrEmpty(Controls[C + 1].Text))
                         {
-                            if (!string.IsNullOrEmpty(Controls[C].Text) && !string.IsNullOrEmpty(Controls[C + 1].Text))
+                            int validQuantity;
+                            decimal validprice;
+
+                            if (int.TryParse(Controls[C].Text, out validQuantity) && decimal.TryParse(Controls[C + 1].Text, out validprice))
                             {
-                                int validQuantity;
-                                decimal validprice;
-
-                                if (int.TryParse(Controls[C].Text, out validQuantity) && decimal.TryParse(Controls[C + 1].Text, out validprice))
+                                var x = (DrugUnitList[i].SelectedValue);
+                                DrugUnitValue.Add((x).ToString());
+                                QntyValueList.Add(QntyTextboxList[i].Text);
+                                PriceValueList.Add(PriceTextboxList[i].Text);
+                                DatevalueList.Add(Convert.ToDateTime(ExpDatList[i].Text));
+                                int q = int.Parse(QntyTextboxList[i].Text);
+                                decimal p = decimal.Parse(PriceTextboxList[i].Text);
+                                LblValue.Add((q * p).ToString());
+                                string M = LblList[i].Text = (q * p).ToString();
+                                But_AddInvoice.Visible = true;
+                                i++;
+                                Lbl_Sum.Location = new System.Drawing.Point(29, LblYPosition + 25);
+                                sum += Convert.ToDecimal(M);
+                                Lbl_Sum.Text = sum.ToString();
+                                But_Save.Enabled = false;
+                                for (int N = 15; N < Controls.Count; N++)
                                 {
-                                    var x = (DrugUnitList[i].SelectedValue);
-                                    DrugUnitValue.Add((x).ToString());
-                                    QntyValueList.Add(QntyTextboxList[i].Text);
-                                    PriceValueList.Add(PriceTextboxList[i].Text);
-                                    DatevalueList.Add(Convert.ToDateTime(ExpDatList[i].Text));
-                                     int q = int.Parse(QntyTextboxList[i].Text);
-                                     decimal p = decimal.Parse(PriceTextboxList[i].Text);
-                                    LblValue.Add((q * p).ToString ());
-                                    string M= LblList[i].Text = (q * p).ToString();
-                                    But_AddInvoice.Visible = true;
-                                    i++;
-                                    Lbl_Sum.Location = new System.Drawing.Point (29, LblYPosition+25 );
-                                    sum += Convert.ToDecimal(M);
-                                     Lbl_Sum.Text = sum.ToString();
-                                   
-                        }
-
-                                else
-                                {
-                                MessageBox.Show("يرجى إدخال الرقم بشكل صحيح");
-                                i = 500;
-                                C= 500;
+                                    Controls[N].Enabled = false; 
                                 }
-                           
-                        }
+                              
+                            }
+
                             else
                             {
-                                MessageBox.Show("يرجى استكمال بيانات الفاتورة");
+                                MessageBox.Show("يرجى إدخال الرقم بشكل صحيح");
+                                i = 500;
+                                C = 500;
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("يرجى استكمال بيانات الفاتورة");
                             i = 100;
                             C = 500;
                         }
 
-                        }
                     }
+
+                }
+            }
+            else
+            {
+               
+                DrugUnitValue.Clear();
+                PriceValueList.Clear();
+                QntyValueList.Clear();
+                DatevalueList.Clear();
+            }
         }
 
         private void But_AddInvoice_Click(object sender, EventArgs e)
@@ -261,7 +279,7 @@ namespace WindowsFormsApplication2
                 ConnectionClass.SQLCommandWithoutParameters("update pharmacy.drugs set Balance += " + quantity + " where DrugId= " + x1 + "", CommandType.Text, ExecuteReaderOrNonQuery.executeNonQuery);
                     }
 
-                var result = MessageBox.Show("تم اضافة الفاتورة بنجاح، هل تريد إضافة فاتورة أخرى", "تأكيد الخروج", MessageBoxButtons.YesNo);
+                var result = MessageBox.Show("تم اضافة الفاتورة بنجاح، هل تريد إضافة فاتورة أخرى", "إضافة أم خروج", MessageBoxButtons.YesNo);
                 if (result == System.Windows.Forms.DialogResult.Yes)
                 {
                     this.Close();
@@ -273,6 +291,11 @@ namespace WindowsFormsApplication2
        
             else
             {
+                But_Save.Enabled = true;
+                for (int N = 15; N < Controls.Count; N++)
+                {
+                    Controls[N].Enabled = true;
+                }
                 MessageBox.Show("هناك عنصر مكرر بالفاتورة");
                 DrugUnitValue.Clear();
                 PriceValueList.Clear();
