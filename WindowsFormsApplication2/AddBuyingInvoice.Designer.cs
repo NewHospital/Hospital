@@ -42,6 +42,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.But_Save = new System.Windows.Forms.Button();
             this.But_AddInvoice = new System.Windows.Forms.Button();
+            this.Lbl_Sum = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Com_Suppliers
@@ -155,9 +156,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(176, 12);
+            this.button1.Location = new System.Drawing.Point(176, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 27);
             this.button1.TabIndex = 24;
             this.button1.Text = "إضافة فاتورة مبيعات";
             this.button1.UseVisualStyleBackColor = true;
@@ -185,12 +186,21 @@
             this.But_AddInvoice.Visible = false;
             this.But_AddInvoice.Click += new System.EventHandler(this.But_AddInvoice_Click);
             // 
+            // Lbl_Sum
+            // 
+            this.Lbl_Sum.AutoSize = true;
+            this.Lbl_Sum.Location = new System.Drawing.Point(48, 195);
+            this.Lbl_Sum.Name = "Lbl_Sum";
+            this.Lbl_Sum.Size = new System.Drawing.Size(0, 13);
+            this.Lbl_Sum.TabIndex = 27;
+            // 
             // AddBuyingInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(638, 451);
+            this.Controls.Add(this.Lbl_Sum);
             this.Controls.Add(this.But_AddInvoice);
             this.Controls.Add(this.But_Save);
             this.Controls.Add(this.button1);
@@ -230,5 +240,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button But_Save;
         private System.Windows.Forms.Button But_AddInvoice;
+        private System.Windows.Forms.Label Lbl_Sum;
     }
 }

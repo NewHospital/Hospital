@@ -94,6 +94,8 @@ namespace Hospital
             MyCOnnection.Close();
         }
 
+
+
         public static string SerialNumber()
         {
             SqlConnection CON= new SqlConnection("Data Source=.;Initial Catalog=hospital;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
@@ -107,7 +109,57 @@ namespace Hospital
             return string.Concat ((x.ToString ("00000")), "/", Date);
         }
 
-       
+        public static void SQLCommandWithoutParameters (string CommandText, CommandType CT, ExecuteReaderOrNonQuery Ex)
+        {
+            MyCOnnection.Open();
+            SqlCommand MyCommand = new SqlCommand(CommandText, MyCOnnection);
+
+            switch (CT)
+            {
+                case CommandType.Text:
+                    MyCommand.CommandType = CommandType.Text;
+
+                    switch (Ex)
+                    {
+                        case ExecuteReaderOrNonQuery.executeReader:
+                            SqlDataReader DataReader = MyCommand.ExecuteReader();
+                                MyDataTable = new DataTable();
+                                MyDataTable.Load(DataReader);
+                                                    break;
+
+                        case ExecuteReaderOrNonQuery.executeNonQuery:
+                            MyCommand.ExecuteNonQuery();
+                            break;
+
+                        case ExecuteReaderOrNonQuery.executeScalar:
+                            MyCommand.ExecuteScalar();
+                            break;
+                    }
+                    break;
+
+                case CommandType.StoredProcedure:
+                    {
+                        MyCommand.CommandType = CommandType.StoredProcedure;
+                        switch (Ex)
+                        {
+                            case ExecuteReaderOrNonQuery.executeReader:
+                                SqlDataReader DataReader = MyCommand.ExecuteReader();
+                                 MyDataTable = new DataTable();
+                              MyDataTable.Load(DataReader);
+                                break;
+                            case ExecuteReaderOrNonQuery.executeNonQuery:
+                                MyCommand.ExecuteNonQuery();
+                                break;
+
+                            case ExecuteReaderOrNonQuery.executeScalar:
+                                MyCommand.ExecuteScalar();
+                                break;
+                        }
+                        break;
+                    }
+            }
+            MyCOnnection.Close();
+        } 
     }
 }
 

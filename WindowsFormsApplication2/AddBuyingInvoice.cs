@@ -32,10 +32,16 @@ namespace WindowsFormsApplication2
         public static List<DateTimePicker> ExpDatList = new List<DateTimePicker>();
         public static List<DateTime> DatevalueList = new List<DateTime>();
 
+        public static List<Label> LblList = new List<Label>();
+        public static List<string> LblValue = new List<string>();
+        
+
+
         public SqlParameter OutParameter = new SqlParameter("GetID", SqlDbType.Int);
         public SqlParameter SerialParameter = new SqlParameter("serial", SqlDbType.NVarChar);
         public static List<Drugs> DrugList;
-        public static string serial; 
+        public static string serial;
+        public static decimal sum; 
 
         public int DrugXPosition = 431;
         public int DrugYPosition = 155;
@@ -44,7 +50,11 @@ namespace WindowsFormsApplication2
         public int UnitXPosition = 232;
         public int UnitYPosition = 155;
         public int ExpXPosition = 103;
-        public int ExpYPosition = 155; 
+        public int ExpYPosition = 155;
+        public int LblXPosition = 29;
+        public int LblYPosition = 155;
+        public int sumXPosition = 29;
+        public int sumYPosition = 180;
 
 
 
@@ -122,6 +132,19 @@ namespace WindowsFormsApplication2
             ExpYPosition += 25;
             ExpDatList.Add(ExpDate);
 
+            Label Value = new Label();
+            Value.Name = "Label" + C;
+            Value.Location = new System.Drawing.Point(LblXPosition, LblYPosition);
+            Value.Size = new System.Drawing.Size(104, 20);
+            this.Controls.Add(Value);
+            LblYPosition += 25;
+            Value.Text = "";
+            LblList.Add(Value);
+
+
+         
+
+
             C++;
 
 
@@ -157,7 +180,7 @@ namespace WindowsFormsApplication2
         {
              for (int i = 0; i < DrugUnitList.Count;)
                     {
-                        for (int C = 15; C <= this.Controls.Count; C += 4)
+                        for (int C = 16; C <= this.Controls.Count; C += 5)
                         {
                             if (!string.IsNullOrEmpty(Controls[C].Text) && !string.IsNullOrEmpty(Controls[C + 1].Text))
                             {
@@ -171,13 +194,21 @@ namespace WindowsFormsApplication2
                                     QntyValueList.Add(QntyTextboxList[i].Text);
                                     PriceValueList.Add(PriceTextboxList[i].Text);
                                     DatevalueList.Add(Convert.ToDateTime(ExpDatList[i].Text));
+                                     int q = int.Parse(QntyTextboxList[i].Text);
+                                     decimal p = decimal.Parse(PriceTextboxList[i].Text);
+                                    LblValue.Add((q * p).ToString ());
+                                    string M= LblList[i].Text = (q * p).ToString();
                                     But_AddInvoice.Visible = true;
                                     i++;
-                                }
+                                    Lbl_Sum.Location = new System.Drawing.Point (29, LblYPosition+25 );
+                                    sum += Convert.ToDecimal(M);
+                                     Lbl_Sum.Text = sum.ToString();
+                                   
+                        }
 
                                 else
                                 {
-                                 MessageBox.Show("يرجى إدخال الرقم بشكل صحيح");
+                                MessageBox.Show("يرجى إدخال الرقم بشكل صحيح");
                                 i = 500;
                                 C= 500;
                                 }
@@ -212,7 +243,7 @@ namespace WindowsFormsApplication2
              }                 
 
             if (found<=DrugUnitValue.Count)
-            //try
+  
             {
                 serial  = ConnectionClass.SerialNumber();
                 OutParameter.Direction = ParameterDirection.ReturnValue;
@@ -227,6 +258,7 @@ namespace WindowsFormsApplication2
                 DateTime D = DatevalueList[i]; 
                 ConnectionClass.Parameters(new SqlParameter("@InvoiceId", x), new SqlParameter("@DrugId", x1), new SqlParameter("@pricePerUnit", price), new SqlParameter("@Qnty", quantity), new SqlParameter ("@Expdate", D));
                 ConnectionClass.SQLCommand("AddInvoiceDetail", CommandType.StoredProcedure, ExecuteReaderOrNonQuery.executeNonQuery);
+                ConnectionClass.SQLCommandWithoutParameters("update pharmacy.drugs set Balance += " + quantity + " where DrugId= " + x1 + "", CommandType.Text, ExecuteReaderOrNonQuery.executeNonQuery);
                     }
 
                 var result = MessageBox.Show("تم اضافة الفاتورة بنجاح، هل تريد إضافة فاتورة أخرى", "تأكيد الخروج", MessageBoxButtons.YesNo);
@@ -238,8 +270,7 @@ namespace WindowsFormsApplication2
                 }
                 else
                 { this.Close(); }}
-        //}
-            //catch { MessageBox.Show ("حدث خطأ برجاء مراجعة الفاتورة"); }
+       
             else
             {
                 MessageBox.Show("هناك عنصر مكرر بالفاتورة");
@@ -247,6 +278,7 @@ namespace WindowsFormsApplication2
                 PriceValueList.Clear();
                 QntyValueList.Clear();
                 DatevalueList.Clear();
+                But_AddInvoice.Visible = false;
             }
 
             
