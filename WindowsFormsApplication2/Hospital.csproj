@@ -93,6 +93,12 @@
     <Compile Include="AddNewPatient.Designer.cs">
       <DependentUpon>AddNewPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddReservation.Designer.cs">
+      <DependentUpon>AddReservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddRooms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddNewPatient.resx">
       <DependentUpon>AddNewPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddReservation.resx">
+      <DependentUpon>AddReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddRooms.resx">
       <DependentUpon>AddRooms.cs</DependentUpon>

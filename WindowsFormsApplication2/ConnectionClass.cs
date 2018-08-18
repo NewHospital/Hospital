@@ -15,6 +15,7 @@ namespace Hospital
         public static SqlConnection MyCOnnection;
         public static DataTable MyDataTable;
         public static List<SqlParameter> ParameterList;
+        public static SqlCommand MyCommand;
 
         public static string Serial="";
 
@@ -32,14 +33,19 @@ namespace Hospital
             foreach (var item in MyParameters)
             {
                 ParameterList.Add(item);
+                
             }
+            
         }
-
+     
 
         public static void SQLCommand(string CommandText, CommandType CT, ExecuteReaderOrNonQuery Ex)
         {
+            
+
             MyCOnnection.Open();
-            SqlCommand MyCommand = new SqlCommand(CommandText, MyCOnnection);
+             MyCommand = new SqlCommand(CommandText, MyCOnnection);
+            
 
             switch (CT)
             {
@@ -64,6 +70,7 @@ namespace Hospital
                             MyCommand.ExecuteScalar();
                             break;
                     }
+                    MyCommand.Parameters.Clear();
                     ParameterList.Clear();
                     break;
 
@@ -87,6 +94,7 @@ namespace Hospital
                                 MyCommand.ExecuteScalar();
                                 break;
                         }
+                        MyCommand.Parameters.Clear();
                         ParameterList.Clear();
                         break;
                     }

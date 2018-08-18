@@ -145,3 +145,4 @@ E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Windows
 E:\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddNewDoctor.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddBuyingInvoice.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.SearchSupplier.resources
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddReservation.resources

@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.Txt_FellowName = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Txt_FellowSoSeNo = new System.Windows.Forms.TextBox();
             this.Txt_FellowPhone = new System.Windows.Forms.TextBox();
             this.But_AddFellow = new System.Windows.Forms.Button();
@@ -48,12 +46,6 @@
             this.Txt_FellowName.Size = new System.Drawing.Size(244, 20);
             this.Txt_FellowName.TabIndex = 0;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // Txt_FellowSoSeNo
             // 
             this.Txt_FellowSoSeNo.Location = new System.Drawing.Point(103, 98);
@@ -65,11 +57,11 @@
             // 
             // Txt_FellowPhone
             // 
-            this.Txt_FellowPhone.Location = new System.Drawing.Point(187, 154);
+            this.Txt_FellowPhone.Location = new System.Drawing.Point(180, 154);
             this.Txt_FellowPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_FellowPhone.Name = "Txt_FellowPhone";
             this.Txt_FellowPhone.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Txt_FellowPhone.Size = new System.Drawing.Size(98, 20);
+            this.Txt_FellowPhone.Size = new System.Drawing.Size(105, 20);
             this.Txt_FellowPhone.TabIndex = 3;
             // 
             // But_AddFellow
@@ -134,7 +126,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox Txt_FellowName;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox Txt_FellowSoSeNo;
         private System.Windows.Forms.TextBox Txt_FellowPhone;
         private System.Windows.Forms.Button But_AddFellow;
