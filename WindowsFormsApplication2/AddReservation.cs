@@ -35,7 +35,7 @@ namespace WindowsFormsApplication2
             DataTable D = new DataTable();
             D.Columns.Add("roomId");
             D.Columns.Add("RoomNo");
-            //D.Columns.Add("RoomDegree");
+           
             D.Load(read);
 
             Com_Room.DataSource = D;
