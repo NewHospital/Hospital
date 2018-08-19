@@ -30,11 +30,12 @@ namespace WindowsFormsApplication2
 
             SqlConnection Con = new SqlConnection("Data Source=.;Initial Catalog=hospital;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
             Con.Open();
-            SqlCommand Com = new SqlCommand("select Rooms.RoomId, RoomNo from Hosting.Rooms where RoomId not in (select RoomId from PatientSector.Reservations where IsActive= 1)", Con);
+            SqlCommand Com = new SqlCommand("select Rooms.RoomId, Rooms.RoomNo, Rooms.RoomDegree from Hosting.Rooms where RoomId not in (select RoomId from PatientSector.Reservations where IsActive= 1)", Con);
             SqlDataReader read = Com.ExecuteReader();
             DataTable D = new DataTable();
             D.Columns.Add("roomId");
             D.Columns.Add("RoomNo");
+            //D.Columns.Add("RoomDegree");
             D.Load(read);
 
             Com_Room.DataSource = D;
@@ -43,24 +44,17 @@ namespace WindowsFormsApplication2
          
             Con.Close();
 
-            //ConnectionClass.SQLCommandWithoutParameters("select Rooms.RoomId, RoomNo from Hosting.Rooms where RoomId not in (select RoomId from PatientSector.Reservations where IsActive= 1)", CommandType.Text, ExecuteReaderOrNonQuery.executeReader);
-            
-            //Com_Room.DataSource = ConnectionClass.MyDataTable;
-            //Com_Room.ValueMember = ConnectionClass.MyDataTable.Columns[0].ColumnName;
-            //Com_Room.DisplayMember = ConnectionClass.MyDataTable.Columns[1].ColumnName;
-
-
-
-   
           
-            
 
 
 
 
 
 
-        }
+
+
+
+            }
 
         private void But_Addreservation_Click(object sender, EventArgs e)
         {
@@ -89,14 +83,21 @@ namespace WindowsFormsApplication2
 
         private void Com_Room_SelectedValueChanged(object sender, EventArgs e)
         {
-            //string n = (((DataRowView) Com_Room.SelectedValue)["roomId"]).ToString ();
-            //int z = int.Parse(n);
+            if (Com_Room.SelectedValue != null)
+            {
+                string n = (((DataRowView)Com_Room.SelectedItem)[0]).ToString();
+                int z = int.Parse(n);
+                var Q = (from E in Hospital.Rooms
+                         where E.RoomId == z
+                         select new { E.RoomDegree }).ToList();
+                int m = Q[0].RoomDegree;
+                var s = (from E in Hospital.RoomsDegree
+                         where E.RoomDegreeID == m
+                         select new { E.DegreeName }).ToList();
 
-            //var s = (from E in Hospital.RoomsDegree
-            //         where E.RoomDegreeID == z
-            //         select new { E.DegreeName }).ToList();
+                Lbl_Degree.Text = s[0].DegreeName;
 
-            //Lbl_Degree.Text = s[0].ToString();
+            }
         }
     }
     }
