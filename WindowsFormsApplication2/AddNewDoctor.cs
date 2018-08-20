@@ -54,23 +54,33 @@ namespace WindowsFormsApplication2
 
         private void But_AddDoc_Click(object sender, EventArgs e)
         {
-            bool x=true ;
-            if (Rad_Male.Checked)
+            try
             {
-                x = true;
+                bool x = true;
+                if (Rad_Male.Checked)
+                {
+                    x = true;
+                }
+                else if (Rad_Female.Checked)
+                {
+                    x = false;
+                }
+
+                ConnectionClass.Parameters(new SqlParameter("@DocName", Txt_DocName.Text), new SqlParameter("@DocAddress", Txt_DoCAddress.Text), new SqlParameter("@Docphone", Txt_DocTel.Text), new SqlParameter("@DocDegree", Com_Degree.SelectedValue), new SqlParameter("@DocSpecification", Com_Specification.SelectedValue), new SqlParameter("@gender", x));
+                ConnectionClass.SQLCommand("Cproc_AddNewDoc", CommandType.StoredProcedure, ExecuteReaderOrNonQuery.executeNonQuery);
+                Txt_DoCAddress.Clear();
+                Txt_DocName.Clear();
+                Txt_DocTel.Clear();
+                MessageBox.Show("تم إضافة طبيب");
             }
-            else if (Rad_Female.Checked)
+            catch (SqlException Ex)
             {
-                x = false;
+                if (Ex.Number == 2627)
+                {
+                    MessageBox.Show("هذا الطبيب مسجل من قبل");
+                    ConnectionClass.MyCOnnection.Close();
+                }
             }
-
-            ConnectionClass.Parameters(new SqlParameter("@DocName", Txt_DocName.Text), new SqlParameter("@DocAddress", Txt_DoCAddress.Text), new SqlParameter("@Docphone", Txt_DocTel.Text), new SqlParameter("@DocDegree", Com_Degree.SelectedValue), new SqlParameter("@DocSpecification", Com_Specification.SelectedValue), new SqlParameter ("@gender", x ));
-            ConnectionClass.SQLCommand("Cproc_AddNewDoc", CommandType.StoredProcedure, ExecuteReaderOrNonQuery.executeNonQuery);
-            Txt_DoCAddress.Clear();
-            Txt_DocName.Clear();
-            Txt_DocTel.Clear();
-            MessageBox.Show("تم إضافة طبيب");
-
         }
 
         private void button2_Click(object sender, EventArgs e)

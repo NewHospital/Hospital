@@ -146,3 +146,7 @@ E:\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddNewDo
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddBuyingInvoice.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.SearchSupplier.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddReservation.resources
+E:\Projects\Hospital project\BackUp\19-8-2018\Hospital\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+E:\Projects\Hospital project\BackUp\19-8-2018\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+E:\Projects\Hospital project\BackUp\19-8-2018\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.FollowUp.resources

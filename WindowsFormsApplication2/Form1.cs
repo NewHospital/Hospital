@@ -181,5 +181,11 @@ namespace Hospital
             BuyInvoice.ShowDialog();
 
         }
+
+        private void FollowUpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FollowUp Follow = new FollowUp();
+            Follow.ShowDialog();
+        }
     }
 }
