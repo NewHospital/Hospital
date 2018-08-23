@@ -2,7 +2,7 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="hospitalModelStoreContainer" CdmEntityContainer="hospitalEntities">
     <EntitySetMapping Name="Bills">
-      <EntityTypeMapping TypeName="hospitalModel.Bills">
+      <EntityTypeMapping TypeName="hospitalModel.Bill">
         <MappingFragment StoreEntitySet="Bills">
           <ScalarProperty Name="BillId" ColumnName="BillId" />
           <ScalarProperty Name="ReservationID" ColumnName="ReservationID" />
@@ -15,7 +15,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="BillsTypes">
-      <EntityTypeMapping TypeName="hospitalModel.BillsTypes">
+      <EntityTypeMapping TypeName="hospitalModel.BillsType">
         <MappingFragment StoreEntitySet="BillsTypes">
           <ScalarProperty Name="TypeId" ColumnName="TypeId" />
           <ScalarProperty Name="TypeName" ColumnName="TypeName" />
@@ -23,7 +23,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Payments">
-      <EntityTypeMapping TypeName="hospitalModel.Payments">
+      <EntityTypeMapping TypeName="hospitalModel.Payment">
         <MappingFragment StoreEntitySet="Payments">
           <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
           <ScalarProperty Name="paymentDate" ColumnName="paymentDate" />
@@ -34,7 +34,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="BuyingInvoice">
+    <EntitySetMapping Name="BuyingInvoices">
       <EntityTypeMapping TypeName="hospitalModel.BuyingInvoice">
         <MappingFragment StoreEntitySet="BuyingInvoice">
           <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
@@ -44,7 +44,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="BuyingInvoiceDetail">
+    <EntitySetMapping Name="BuyingInvoiceDetails">
       <EntityTypeMapping TypeName="hospitalModel.BuyingInvoiceDetail">
         <MappingFragment StoreEntitySet="BuyingInvoiceDetail">
           <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
@@ -55,7 +55,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="SupplierAddress">
+    <EntitySetMapping Name="SupplierAddresses">
       <EntityTypeMapping TypeName="hospitalModel.SupplierAddress">
         <MappingFragment StoreEntitySet="SupplierAddress">
           <ScalarProperty Name="AddressId" ColumnName="AddressId" />
@@ -64,7 +64,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="SupplierContact">
+    <EntitySetMapping Name="SupplierContacts">
       <EntityTypeMapping TypeName="hospitalModel.SupplierContact">
         <MappingFragment StoreEntitySet="SupplierContact">
           <ScalarProperty Name="ContactName" ColumnName="ContactName" />
@@ -75,15 +75,26 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Suppliers">
-      <EntityTypeMapping TypeName="hospitalModel.Suppliers">
+      <EntityTypeMapping TypeName="hospitalModel.Supplier">
         <MappingFragment StoreEntitySet="Suppliers">
           <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
           <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="hospitalModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Rooms">
-      <EntityTypeMapping TypeName="hospitalModel.Rooms">
+      <EntityTypeMapping TypeName="hospitalModel.Room">
         <MappingFragment StoreEntitySet="Rooms">
           <ScalarProperty Name="RoomId" ColumnName="RoomId" />
           <ScalarProperty Name="RoomNo" ColumnName="RoomNo" />
@@ -92,7 +103,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="RoomsDegree">
+    <EntitySetMapping Name="RoomsDegrees">
       <EntityTypeMapping TypeName="hospitalModel.RoomsDegree">
         <MappingFragment StoreEntitySet="RoomsDegree">
           <ScalarProperty Name="RoomDegreeID" ColumnName="RoomDegreeID" />
@@ -103,9 +114,8 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Doctors">
-      <EntityTypeMapping TypeName="hospitalModel.Doctors">
+      <EntityTypeMapping TypeName="hospitalModel.Doctor">
         <MappingFragment StoreEntitySet="Doctors">
-          <ScalarProperty Name="Gender" ColumnName="Gender" />
           <ScalarProperty Name="DoctorId" ColumnName="DoctorId" />
           <ScalarProperty Name="DocName" ColumnName="DocName" />
           <ScalarProperty Name="DocAddress" ColumnName="DocAddress" />
@@ -113,10 +123,11 @@
           <ScalarProperty Name="DocDegree" ColumnName="DocDegree" />
           <ScalarProperty Name="DocSpecification" ColumnName="DocSpecification" />
           <ScalarProperty Name="MagId" ColumnName="MagId" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="ScientificDegree">
+    <EntitySetMapping Name="ScientificDegrees">
       <EntityTypeMapping TypeName="hospitalModel.ScientificDegree">
         <MappingFragment StoreEntitySet="ScientificDegree">
           <ScalarProperty Name="ScientificDegreeId" ColumnName="ScientificDegreeId" />
@@ -124,7 +135,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Specification">
+    <EntitySetMapping Name="Specifications">
       <EntityTypeMapping TypeName="hospitalModel.Specification">
         <MappingFragment StoreEntitySet="Specification">
           <ScalarProperty Name="SpecificationId" ColumnName="SpecificationId" />
@@ -133,7 +144,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="bloodGroups">
-      <EntityTypeMapping TypeName="hospitalModel.bloodGroups">
+      <EntityTypeMapping TypeName="hospitalModel.bloodGroup">
         <MappingFragment StoreEntitySet="bloodGroups">
           <ScalarProperty Name="BloodID" ColumnName="BloodID" />
           <ScalarProperty Name="BloodGroupName" ColumnName="BloodGroupName" />
@@ -141,14 +152,14 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Diseases">
-      <EntityTypeMapping TypeName="hospitalModel.Diseases">
+      <EntityTypeMapping TypeName="hospitalModel.Disease">
         <MappingFragment StoreEntitySet="Diseases">
           <ScalarProperty Name="DiseaseId" ColumnName="DiseaseId" />
           <ScalarProperty Name="DiseaseName" ColumnName="DiseaseName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="DocfollowUp">
+    <EntitySetMapping Name="DocfollowUps">
       <EntityTypeMapping TypeName="hospitalModel.DocfollowUp">
         <MappingFragment StoreEntitySet="DocfollowUp">
           <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
@@ -157,7 +168,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Fellow">
+    <EntitySetMapping Name="Fellows">
       <EntityTypeMapping TypeName="hospitalModel.Fellow">
         <MappingFragment StoreEntitySet="Fellow">
           <ScalarProperty Name="FellowID" ColumnName="FellowID" />
@@ -168,7 +179,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Patient">
+    <EntitySetMapping Name="Patients">
       <EntityTypeMapping TypeName="hospitalModel.Patient">
         <MappingFragment StoreEntitySet="Patient">
           <ScalarProperty Name="PatientID" ColumnName="PatientID" />
@@ -183,19 +194,19 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PatientMeasures">
-      <EntityTypeMapping TypeName="hospitalModel.PatientMeasures">
+      <EntityTypeMapping TypeName="hospitalModel.PatientMeasure">
         <MappingFragment StoreEntitySet="PatientMeasures">
-          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
           <ScalarProperty Name="PatientID" ColumnName="PatientID" />
           <ScalarProperty Name="DiseaseID" ColumnName="DiseaseID" />
           <ScalarProperty Name="MeasureResult" ColumnName="MeasureResult" />
           <ScalarProperty Name="TimeOfMeasure" ColumnName="TimeOfMeasure" />
           <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Reservations">
-      <EntityTypeMapping TypeName="hospitalModel.Reservations">
+      <EntityTypeMapping TypeName="hospitalModel.Reservation">
         <MappingFragment StoreEntitySet="Reservations">
           <ScalarProperty Name="ReservationID" ColumnName="ReservationID" />
           <ScalarProperty Name="patientId" ColumnName="patientId" />
@@ -208,7 +219,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Drugs">
-      <EntityTypeMapping TypeName="hospitalModel.Drugs">
+      <EntityTypeMapping TypeName="hospitalModel.Drug">
         <MappingFragment StoreEntitySet="Drugs">
           <ScalarProperty Name="DrugId" ColumnName="DrugId" />
           <ScalarProperty Name="DrugName" ColumnName="DrugName" />
@@ -219,14 +230,14 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="DrugUnits">
-      <EntityTypeMapping TypeName="hospitalModel.DrugUnits">
+      <EntityTypeMapping TypeName="hospitalModel.DrugUnit">
         <MappingFragment StoreEntitySet="DrugUnits">
           <ScalarProperty Name="DrugUnitId" ColumnName="DrugUnitId" />
           <ScalarProperty Name="DrugUnitName" ColumnName="DrugUnitName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Prescription">
+    <EntitySetMapping Name="Prescriptions">
       <EntityTypeMapping TypeName="hospitalModel.Prescription">
         <MappingFragment StoreEntitySet="Prescription">
           <ScalarProperty Name="PrescriptionId" ColumnName="PrescriptionId" />
@@ -236,7 +247,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PrescriptionDetail">
+    <EntitySetMapping Name="PrescriptionDetails">
       <EntityTypeMapping TypeName="hospitalModel.PrescriptionDetail">
         <MappingFragment StoreEntitySet="PrescriptionDetail">
           <ScalarProperty Name="PrescriptionId" ColumnName="PrescriptionId" />
@@ -254,13 +265,18 @@
         <ScalarProperty Name="PatientID" ColumnName="PatientID" />
       </EndProperty>
     </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="AddInvoiceDetail" FunctionName="hospitalModel.Store.AddInvoiceDetail" />
+    <FunctionImportMapping FunctionImportName="AddReservation" FunctionName="hospitalModel.Store.AddReservation" />
     <FunctionImportMapping FunctionImportName="Cproc_AddBillsType" FunctionName="hospitalModel.Store.Cproc_AddBillsType" />
     <FunctionImportMapping FunctionImportName="Cproc_AddBloodGroup" FunctionName="hospitalModel.Store.Cproc_AddBloodGroup" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddBuyInvoice" FunctionName="hospitalModel.Store.Cproc_AddBuyInvoice" />
     <FunctionImportMapping FunctionImportName="Cproc_AddDiseases" FunctionName="hospitalModel.Store.Cproc_AddDiseases" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddDocFollowUp" FunctionName="hospitalModel.Store.Cproc_AddDocFollowUp" />
     <FunctionImportMapping FunctionImportName="Cproc_AddDrug" FunctionName="hospitalModel.Store.Cproc_AddDrug" />
     <FunctionImportMapping FunctionImportName="Cproc_AddDrugUnits" FunctionName="hospitalModel.Store.Cproc_AddDrugUnits" />
     <FunctionImportMapping FunctionImportName="Cproc_AddFellow" FunctionName="hospitalModel.Store.Cproc_AddFellow" />
     <FunctionImportMapping FunctionImportName="Cproc_AddNewDoc" FunctionName="hospitalModel.Store.Cproc_AddNewDoc" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddNewPatient" FunctionName="hospitalModel.Store.Cproc_AddNewPatient" />
     <FunctionImportMapping FunctionImportName="Cproc_AddPatientMeasure" FunctionName="hospitalModel.Store.Cproc_AddPatientMeasure" />
     <FunctionImportMapping FunctionImportName="cproc_AddRooms" FunctionName="hospitalModel.Store.cproc_AddRooms" />
     <FunctionImportMapping FunctionImportName="Cproc_AddRoomsDegree" FunctionName="hospitalModel.Store.Cproc_AddRoomsDegree" />
@@ -268,6 +284,7 @@
     <FunctionImportMapping FunctionImportName="Cproc_AddSupplierAddress" FunctionName="hospitalModel.Store.Cproc_AddSupplierAddress" />
     <FunctionImportMapping FunctionImportName="Cproc_AddSupplierContact" FunctionName="hospitalModel.Store.Cproc_AddSupplierContact" />
     <FunctionImportMapping FunctionImportName="Cproc_AddSuppliers" FunctionName="hospitalModel.Store.Cproc_AddSuppliers" />
+    <FunctionImportMapping FunctionImportName="Cproc_BuySerial" FunctionName="hospitalModel.Store.Cproc_BuySerial" />
     <FunctionImportMapping FunctionImportName="Cproc_DocDegrees" FunctionName="hospitalModel.Store.Cproc_DocDegrees" />
     <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="hospitalModel.Store.sp_alterdiagram" />
     <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="hospitalModel.Store.sp_creatediagram" />
@@ -293,7 +310,7 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="hospitalModel.Store.sp_renamediagram" />
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="hospitalModel.Store.sp_upgraddiagrams" />
-    <FunctionImportMapping FunctionImportName="AddInvoiceDetail" FunctionName="hospitalModel.Store.AddInvoiceDetail" />
-    <FunctionImportMapping FunctionImportName="Cproc_AddBuyInvoice" FunctionName="hospitalModel.Store.Cproc_AddBuyInvoice" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddMeasure" FunctionName="hospitalModel.Store.Cproc_AddMeasure" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddPayment" FunctionName="hospitalModel.Store.Cproc_AddPayment" />
   </EntityContainerMapping>
 </Mapping>

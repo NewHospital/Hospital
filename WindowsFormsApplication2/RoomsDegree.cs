@@ -17,7 +17,7 @@ namespace WindowsFormsApplication2
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public RoomsDegree()
         {
-            this.Rooms = new HashSet<Rooms>();
+            this.Rooms = new HashSet<Room>();
         }
     
         public int RoomDegreeID { get; set; }
@@ -26,6 +26,6 @@ namespace WindowsFormsApplication2
         public string Discription { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Rooms> Rooms { get; set; }
+        public virtual ICollection<Room> Rooms { get; set; }
     }
 }

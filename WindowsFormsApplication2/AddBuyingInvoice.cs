@@ -39,7 +39,7 @@ namespace WindowsFormsApplication2
 
         public SqlParameter OutParameter = new SqlParameter("GetID", SqlDbType.Int);
         public SqlParameter SerialParameter = new SqlParameter("serial", SqlDbType.NVarChar);
-        public static List<Drugs> DrugList;
+        public static List<Drug> DrugList;
         public static string serial;
         public static decimal sum;
 
@@ -61,11 +61,11 @@ namespace WindowsFormsApplication2
         hospitalEntities Hospital = new hospitalEntities();
         private void AddBuyingInvoice_Load(object sender, EventArgs e)
         {
-            List<Suppliers> SupList = Hospital.Suppliers.ToList();
+            List<Supplier> SupList = Hospital.Suppliers.ToList();
 
             if (!string.IsNullOrEmpty(SearchSupplier.x))
             {
-                List<Suppliers> filteredlist = (SupList.Where(a => a.SupplierName.ToString() == SearchSupplier.x)).ToList();
+                List<Supplier> filteredlist = (SupList.Where(a => a.SupplierName.ToString() == SearchSupplier.x)).ToList();
                 Com_Suppliers.DataSource = filteredlist;
                 Com_Suppliers.DisplayMember = "SupplierName";
                 Com_Suppliers.ValueMember = "SupplierId";

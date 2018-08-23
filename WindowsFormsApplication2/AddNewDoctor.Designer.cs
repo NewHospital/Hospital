@@ -50,7 +50,7 @@
             // 
             // But_AddDoc
             // 
-            this.But_AddDoc.Location = new System.Drawing.Point(193, 289);
+            this.But_AddDoc.Location = new System.Drawing.Point(235, 284);
             this.But_AddDoc.Name = "But_AddDoc";
             this.But_AddDoc.Size = new System.Drawing.Size(122, 44);
             this.But_AddDoc.TabIndex = 0;
@@ -89,7 +89,7 @@
             this.Rad_Male.Location = new System.Drawing.Point(79, 18);
             this.Rad_Male.Name = "Rad_Male";
             this.Rad_Male.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Rad_Male.Size = new System.Drawing.Size(42, 17);
+            this.Rad_Male.Size = new System.Drawing.Size(40, 17);
             this.Rad_Male.TabIndex = 5;
             this.Rad_Male.TabStop = true;
             this.Rad_Male.Text = "ذكر";
@@ -101,7 +101,7 @@
             this.Rad_Female.Location = new System.Drawing.Point(6, 18);
             this.Rad_Female.Name = "Rad_Female";
             this.Rad_Female.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Rad_Female.Size = new System.Drawing.Size(48, 17);
+            this.Rad_Female.Size = new System.Drawing.Size(46, 17);
             this.Rad_Female.TabIndex = 6;
             this.Rad_Female.Text = "أنثى";
             this.Rad_Female.UseVisualStyleBackColor = true;
@@ -141,7 +141,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(513, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "اسم الطبيب";
             // 
@@ -150,7 +150,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(513, 128);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "عنوان الطبيب";
             // 
@@ -168,7 +168,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(513, 220);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
+            this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "التخصص";
             // 
@@ -177,7 +177,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(187, 220);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 13);
+            this.label5.Size = new System.Drawing.Size(72, 13);
             this.label5.TabIndex = 13;
             this.label5.Text = "الدرجة العلمية";
             // 

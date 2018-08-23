@@ -8,7 +8,7 @@
     <Property Name="ReservationID" Type="int" Nullable="false" />
     <Property Name="BillNo" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="BillDate" Type="datetime2" Precision="7" Nullable="false" />
-    <Property Name="Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="8" Scale="2" Nullable="false" />
     <Property Name="Discription" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="BillType" Type="int" Nullable="false" />
   </EntityType>
@@ -27,7 +27,7 @@
     <Property Name="paymentDate" Type="datetime" Nullable="false" />
     <Property Name="ReservationId" Type="int" Nullable="false" />
     <Property Name="ReceiptSerial" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="8" Scale="2" Nullable="false" />
     <Property Name="Discription" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="BuyingInvoice">
@@ -47,7 +47,7 @@
     <Property Name="InvoiceId" Type="int" Nullable="false" />
     <Property Name="DrugId" Type="int" Nullable="false" />
     <Property Name="Qnty" Type="int" Nullable="false" />
-    <Property Name="pricePerUnit" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="pricePerUnit" Type="decimal" Precision="8" Scale="2" Nullable="false" />
     <Property Name="ExpDate" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="SupplierAddress">
@@ -75,6 +75,16 @@
     <Property Name="SupplierId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="SupplierName" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="Rooms">
     <Key>
       <PropertyRef Name="RoomId" />
@@ -90,7 +100,7 @@
     </Key>
     <Property Name="RoomDegreeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="DegreeName" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="FeesPerDay" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="FeesPerDay" Type="decimal" Precision="8" Scale="2" Nullable="false" />
     <Property Name="Discription" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Doctors">
@@ -150,7 +160,7 @@
     <Property Name="FellowID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FellowName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="SoSecNo" Type="int" Nullable="false" />
-    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="60" />
     <Property Name="PatientId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="medicalHistory">
@@ -169,7 +179,7 @@
     <Property Name="PatientName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Gender" Type="bit" Nullable="false" />
     <Property Name="DOB" Type="datetime" Nullable="false" />
-    <Property Name="SoSecNo" Type="int" Nullable="false" />
+    <Property Name="SoSecNo" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="BloodGroup" Type="int" Nullable="false" />
     <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
     <Property Name="Address" Type="nvarchar" MaxLength="50" />
@@ -191,11 +201,11 @@
     <Key>
       <PropertyRef Name="ReservationID" />
     </Key>
-    <Property Name="ReservationID" Type="int" Nullable="false" />
+    <Property Name="ReservationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="patientId" Type="int" Nullable="false" />
     <Property Name="RoomID" Type="int" Nullable="false" />
     <Property Name="ArriveDate" Type="datetime" Nullable="false" />
-    <Property Name="LeaveDate" Type="datetime" Nullable="false" />
+    <Property Name="LeaveDate" Type="datetime" />
     <Property Name="IsActive" Type="bit" Nullable="false" />
     <Property Name="Discription" Type="nvarchar" MaxLength="50" />
   </EntityType>
@@ -206,7 +216,7 @@
     <Property Name="DrugId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="DrugName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="DrugUnit" Type="int" Nullable="false" />
-    <Property Name="PricePerUnit" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PricePerUnit" Type="decimal" Precision="8" Scale="2" Nullable="false" />
     <Property Name="Balance" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="DrugUnits">
@@ -232,7 +242,7 @@
     </Key>
     <Property Name="PrescriptionId" Type="int" Nullable="false" />
     <Property Name="DrugId" Type="int" Nullable="false" />
-    <Property Name="Qnty" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Qnty" Type="int" Nullable="false" />
     <Property Name="IsReceived" Type="bit" Nullable="false" />
   </EntityType>
   <Association Name="FK_BillsTypes_Bills">
@@ -578,6 +588,12 @@
     <Parameter Name="Qnty" Type="int" Mode="In" />
     <Parameter Name="Expdate" Type="datetime" Mode="In" />
   </Function>
+  <Function Name="AddReservation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="patientId" Type="int" Mode="In" />
+    <Parameter Name="RoomId" Type="int" Mode="In" />
+    <Parameter Name="ArriveDate" Type="datetime" Mode="In" />
+    <Parameter Name="Discription" Type="nvarchar" Mode="In" />
+  </Function>
   <Function Name="Cproc_AddBillsType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Name" Type="nvarchar" Mode="In" />
   </Function>
@@ -587,9 +603,14 @@
   <Function Name="Cproc_AddBuyInvoice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="supplierId" Type="int" Mode="In" />
     <Parameter Name="invoiceDate" Type="date" Mode="In" />
+    <Parameter Name="InvAutoNumber" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="Cproc_AddDiseases" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="DiseaseName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Cproc_AddDocFollowUp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="reservationId" Type="int" Mode="In" />
+    <Parameter Name="DocId" Type="int" Mode="In" />
   </Function>
   <Function Name="Cproc_AddDrug" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="DrugName" Type="nvarchar" Mode="In" />
@@ -606,6 +627,13 @@
     <Parameter Name="phoneNumber" Type="nvarchar" Mode="In" />
     <Parameter Name="patientId" Type="int" Mode="In" />
   </Function>
+  <Function Name="Cproc_AddMeasure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="patientId" Type="int" Mode="In" />
+    <Parameter Name="diseaseId" Type="int" Mode="In" />
+    <Parameter Name="MeasureResult" Type="nvarchar" Mode="In" />
+    <Parameter Name="remark" Type="nvarchar" Mode="In" />
+    <Parameter Name="doctorId" Type="int" Mode="In" />
+  </Function>
   <Function Name="Cproc_AddNewDoc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="DocName" Type="nvarchar" Mode="In" />
     <Parameter Name="DocAddress" Type="nvarchar" Mode="In" />
@@ -614,6 +642,15 @@
     <Parameter Name="DocSpecification" Type="int" Mode="In" />
     <Parameter Name="gender" Type="bit" Mode="In" />
   </Function>
+  <Function Name="Cproc_AddNewPatient" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="patientName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Gender" Type="bit" Mode="In" />
+    <Parameter Name="DoB" Type="date" Mode="In" />
+    <Parameter Name="SoSeNo" Type="nvarchar" Mode="In" />
+    <Parameter Name="BloodGroup" Type="int" Mode="In" />
+    <Parameter Name="phoneNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="address" Type="nvarchar" Mode="In" />
+  </Function>
   <Function Name="Cproc_AddPatientMeasure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="patientId" Type="int" Mode="In" />
     <Parameter Name="DiseaseId" Type="int" Mode="In" />
@@ -621,6 +658,12 @@
     <Parameter Name="TimeOfMeasure" Type="datetime2" Mode="In" />
     <Parameter Name="remarks" Type="nvarchar" Mode="In" />
     <Parameter Name="DoctorId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Cproc_AddPayment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ReservationId" Type="int" Mode="In" />
+    <Parameter Name="ReceiptSerial" Type="nvarchar" Mode="In" />
+    <Parameter Name="amount" Type="decimal" Mode="In" />
+    <Parameter Name="Discription" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="cproc_AddRooms" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="RoomDegree" Type="int" Mode="In" />
@@ -648,6 +691,7 @@
   <Function Name="Cproc_AddSuppliers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="SupplierName" Type="nvarchar" Mode="In" />
   </Function>
+  <Function Name="Cproc_BuySerial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="Cproc_DocDegrees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ScientificDegreeName" Type="nvarchar" Mode="In" />
   </Function>
@@ -694,6 +738,7 @@
     <EntitySet Name="SupplierAddress" EntityType="Self.SupplierAddress" Schema="Buying" store:Type="Tables" />
     <EntitySet Name="SupplierContact" EntityType="Self.SupplierContact" Schema="Buying" store:Type="Tables" />
     <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="Buying" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Rooms" EntityType="Self.Rooms" Schema="Hosting" store:Type="Tables" />
     <EntitySet Name="RoomsDegree" EntityType="Self.RoomsDegree" Schema="Hosting" store:Type="Tables" />
     <EntitySet Name="Doctors" EntityType="Self.Doctors" Schema="MedicalSector" store:Type="Tables" />

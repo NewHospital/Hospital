@@ -25,7 +25,7 @@ namespace Hospital
         {
                 hospitalEntities HosPital = new hospitalEntities();
 
-            List<DrugUnits> DrugUnitList = HosPital.DrugUnits.ToList();
+            List<DrugUnit> DrugUnitList = HosPital.DrugUnits.ToList();
             DataTable Table = new DataTable();
             Table.Columns.Add("DrugUnitId");
             Table.Columns.Add("DrugUnitName");

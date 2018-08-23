@@ -61,7 +61,7 @@ namespace WindowsFormsApplication2
             int Y = int.Parse(x);
             
             var s = (from E in Hospital.Reservations
-                     join R in Hospital.Patient
+                     join R in Hospital.Patients
                      on E.patientId equals R.PatientID
                      where E.ReservationID== Y
                      select new { R.PatientName}.PatientName).First().ToString();

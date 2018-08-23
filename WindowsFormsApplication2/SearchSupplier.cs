@@ -23,7 +23,7 @@ namespace WindowsFormsApplication2
         {
             
             hospitalEntities Hospital = new hospitalEntities();
-            List<Suppliers> SupList = Hospital.Suppliers.ToList ();
+            List<Supplier> SupList = Hospital.Suppliers.ToList ();
             var FilterList = (from s in SupList
                               where s.SupplierName.Contains("" + txt_SearchText.Text + "") 
                               select new {s.SupplierName}).ToList();

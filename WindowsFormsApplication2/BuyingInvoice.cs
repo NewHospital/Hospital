@@ -17,7 +17,7 @@ namespace WindowsFormsApplication2
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public BuyingInvoice()
         {
-            this.BuyingInvoiceDetail = new HashSet<BuyingInvoiceDetail>();
+            this.BuyingInvoiceDetails = new HashSet<BuyingInvoiceDetail>();
         }
     
         public int InvoiceId { get; set; }
@@ -26,7 +26,7 @@ namespace WindowsFormsApplication2
         public string InvoiceNumber { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BuyingInvoiceDetail> BuyingInvoiceDetail { get; set; }
-        public virtual Suppliers Suppliers { get; set; }
+        public virtual ICollection<BuyingInvoiceDetail> BuyingInvoiceDetails { get; set; }
+        public virtual Supplier Supplier { get; set; }
     }
 }

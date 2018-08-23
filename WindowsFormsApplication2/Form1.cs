@@ -187,5 +187,18 @@ namespace Hospital
             FollowUp Follow = new FollowUp();
             Follow.ShowDialog();
         }
+
+        private void MeasuresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Measures M = new Measures();
+            M.ShowDialog();
+        }
+
+        private void PaymentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Payments pay = new Payments();
+            pay.ShowDialog();
+            
+        }
     }
 }

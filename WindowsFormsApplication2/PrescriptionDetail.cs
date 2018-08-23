@@ -16,10 +16,10 @@ namespace WindowsFormsApplication2
     {
         public int PrescriptionId { get; set; }
         public int DrugId { get; set; }
-        public decimal Qnty { get; set; }
+        public int Qnty { get; set; }
         public bool IsReceived { get; set; }
     
-        public virtual Drugs Drugs { get; set; }
+        public virtual Drug Drug { get; set; }
         public virtual Prescription Prescription { get; set; }
     }
 }

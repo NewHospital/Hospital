@@ -23,7 +23,7 @@ namespace WindowsFormsApplication2
         private void AddReservation_Load(object sender, EventArgs e)
         {
      
-            var PatientName = (from E in Hospital.Patient
+            var PatientName = (from E in Hospital.Patients
                               where E.PatientID == AddNewPatient.x
                               select new { E.PatientName }).ToList();
             Lbl_PatientName.Text = PatientName [0].PatientName;
@@ -91,7 +91,7 @@ namespace WindowsFormsApplication2
                          where E.RoomId == z
                          select new { E.RoomDegree }).ToList();
                 int m = Q[0].RoomDegree;
-                var s = (from E in Hospital.RoomsDegree
+                var s = (from E in Hospital.RoomsDegrees
                          where E.RoomDegreeID == m
                          select new { E.DegreeName }).ToList();
 

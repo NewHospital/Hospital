@@ -99,7 +99,7 @@ namespace Hospital
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-            List <SupplierAddress> SupList = Hospital.SupplierAddress.ToList ();
+            List <SupplierAddress> SupList = Hospital.SupplierAddresses.ToList ();
             
             
             var filter= SupList.Where (a=> a.SupplierId== Convert.ToInt32(  GetId.Value)).ToList ();

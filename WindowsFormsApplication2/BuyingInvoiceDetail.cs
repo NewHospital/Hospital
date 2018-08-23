@@ -21,6 +21,6 @@ namespace WindowsFormsApplication2
         public System.DateTime ExpDate { get; set; }
     
         public virtual BuyingInvoice BuyingInvoice { get; set; }
-        public virtual Drugs Drugs { get; set; }
+        public virtual Drug Drug { get; set; }
     }
 }

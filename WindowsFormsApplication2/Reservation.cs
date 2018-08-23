@@ -27,7 +27,7 @@ namespace WindowsFormsApplication2
         public int patientId { get; set; }
         public int RoomID { get; set; }
         public System.DateTime ArriveDate { get; set; }
-        public System.DateTime LeaveDate { get; set; }
+        public Nullable<System.DateTime> LeaveDate { get; set; }
         public bool IsActive { get; set; }
         public string Discription { get; set; }
     

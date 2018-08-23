@@ -17,7 +17,7 @@ namespace WindowsFormsApplication2
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SupplierAddress()
         {
-            this.SupplierContact = new HashSet<SupplierContact>();
+            this.SupplierContacts = new HashSet<SupplierContact>();
         }
     
         public int AddressId { get; set; }
@@ -25,7 +25,7 @@ namespace WindowsFormsApplication2
         public string SupplierAdress { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SupplierContact> SupplierContact { get; set; }
-        public virtual Suppliers Suppliers { get; set; }
+        public virtual ICollection<SupplierContact> SupplierContacts { get; set; }
+        public virtual Supplier Supplier { get; set; }
     }
 }

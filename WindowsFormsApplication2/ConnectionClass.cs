@@ -168,6 +168,21 @@ namespace Hospital
             }
             MyCOnnection.Close();
         } 
+
+        public static string PaymentSerial ()
+        {
+            SqlConnection CON = new SqlConnection("Data Source=.;Initial Catalog=hospital;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            CON.Open();
+            SqlCommand Command = new SqlCommand("select next value for PaymentSerial", CON);
+            Command.CommandType = CommandType.Text;
+            int x = Convert.ToInt32(Command.ExecuteScalar());
+            DateTime date = DateTime.Now;
+            string Date = date.Year.ToString();
+            CON.Close();
+            return string.Concat((x.ToString("Payment:00000")), "/", Date);
+        }
     }
+
+    
 }
 

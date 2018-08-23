@@ -35,7 +35,7 @@ namespace Hospital
         private void AddNewPatient_Load(object sender, EventArgs e)
         {
             hospitalEntities Hospital = new hospitalEntities();
-            List<bloodGroups> BloodList = Hospital.bloodGroups.ToList();
+            List<bloodGroup> BloodList = Hospital.bloodGroups.ToList();
             Com_BloodGroups.DataSource = BloodList;
             Com_BloodGroups.ValueMember = "BloodID";
             Com_BloodGroups.DisplayMember = "BloodGroupName";

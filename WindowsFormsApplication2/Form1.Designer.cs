@@ -47,13 +47,16 @@
             this.AddDoctorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.DoctorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SpecializationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FollowUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MeasuresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddDiseasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ModifyPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PatientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.FollowUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AccountsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -181,7 +184,8 @@
             this.ModifyDoctorToolStripMenuItem,
             this.AddSpecializationToolStripMenuItem,
             this.SpecializationToolStripMenuItem,
-            this.FollowUpToolStripMenuItem});
+            this.FollowUpToolStripMenuItem,
+            this.MeasuresToolStripMenuItem});
             this.DoctorsToolStripMenuItem.Name = "DoctorsToolStripMenuItem";
             this.DoctorsToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.DoctorsToolStripMenuItem.Text = "الأطباء";
@@ -192,6 +196,20 @@
             this.SpecializationToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.SpecializationToolStripMenuItem.Text = "إضافة التخصصات الطبية";
             this.SpecializationToolStripMenuItem.Click += new System.EventHandler(this.SpecializationToolStripMenuItem_Click);
+            // 
+            // FollowUpToolStripMenuItem
+            // 
+            this.FollowUpToolStripMenuItem.Name = "FollowUpToolStripMenuItem";
+            this.FollowUpToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.FollowUpToolStripMenuItem.Text = "المتابعات";
+            this.FollowUpToolStripMenuItem.Click += new System.EventHandler(this.FollowUpToolStripMenuItem_Click);
+            // 
+            // MeasuresToolStripMenuItem
+            // 
+            this.MeasuresToolStripMenuItem.Name = "MeasuresToolStripMenuItem";
+            this.MeasuresToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.MeasuresToolStripMenuItem.Text = "القياسات";
+            this.MeasuresToolStripMenuItem.Click += new System.EventHandler(this.MeasuresToolStripMenuItem_Click);
             // 
             // AddDiseasToolStripMenuItem
             // 
@@ -240,7 +258,8 @@
             this.RoomsToolStripMenuItem,
             this.PharmacyToolStripMenuItem,
             this.ReservationsToolStripMenuItem,
-            this.PurchasingToolStripMenuItem});
+            this.PurchasingToolStripMenuItem,
+            this.AccountsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -248,12 +267,20 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // FollowUpToolStripMenuItem
+            // AccountsToolStripMenuItem
             // 
-            this.FollowUpToolStripMenuItem.Name = "FollowUpToolStripMenuItem";
-            this.FollowUpToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.FollowUpToolStripMenuItem.Text = "المتابعات";
-            this.FollowUpToolStripMenuItem.Click += new System.EventHandler(this.FollowUpToolStripMenuItem_Click);
+            this.AccountsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.PaymentToolStripMenuItem});
+            this.AccountsToolStripMenuItem.Name = "AccountsToolStripMenuItem";
+            this.AccountsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.AccountsToolStripMenuItem.Text = "الحسابات";
+            // 
+            // PaymentToolStripMenuItem
+            // 
+            this.PaymentToolStripMenuItem.Name = "PaymentToolStripMenuItem";
+            this.PaymentToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.PaymentToolStripMenuItem.Text = "مدفوعات";
+            this.PaymentToolStripMenuItem.Click += new System.EventHandler(this.PaymentToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -310,6 +337,9 @@
         private System.Windows.Forms.ToolStripMenuItem AddSupplierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddingBuyInvoiceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem FollowUpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MeasuresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AccountsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PaymentToolStripMenuItem;
     }
 }
 

@@ -17,13 +17,13 @@ namespace WindowsFormsApplication2
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ScientificDegree()
         {
-            this.Doctors = new HashSet<Doctors>();
+            this.Doctors = new HashSet<Doctor>();
         }
     
         public int ScientificDegreeId { get; set; }
         public string ScientificDegreeName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Doctors> Doctors { get; set; }
+        public virtual ICollection<Doctor> Doctors { get; set; }
     }
 }

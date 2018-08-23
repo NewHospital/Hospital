@@ -18,7 +18,7 @@ namespace WindowsFormsApplication2
         public int ReservationID { get; set; }
         public bool IsActive { get; set; }
     
-        public virtual Doctors Doctors { get; set; }
-        public virtual Reservations Reservations { get; set; }
+        public virtual Doctor Doctor { get; set; }
+        public virtual Reservation Reservation { get; set; }
     }
 }

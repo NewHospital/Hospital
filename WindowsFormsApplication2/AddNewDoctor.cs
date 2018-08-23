@@ -22,7 +22,7 @@ namespace WindowsFormsApplication2
         private void AddNewDoctor_Load(object sender, EventArgs e)
         {
             hospitalEntities Hospital = new hospitalEntities();
-            List <Specification> DocSpecilizationList = Hospital.Specification.ToList();
+            List <Specification> DocSpecilizationList = Hospital.Specifications.ToList();
             DataTable DT = new DataTable();
             DT.Columns.Add("SpecificationId");
             DT.Columns.Add("SpecificationName");
@@ -34,7 +34,7 @@ namespace WindowsFormsApplication2
             Com_Specification.DisplayMember = DT.Columns [1].ColumnName;
             Com_Specification.ValueMember = DT.Columns [0].ColumnName;
 
-            List <ScientificDegree> DocDegreeList = Hospital.ScientificDegree.ToList();
+            List <ScientificDegree> DocDegreeList = Hospital.ScientificDegrees.ToList();
             DataTable DT1 = new DataTable();
             DT1.Columns.Add("ScientificDegreeId");
             DT1.Columns.Add("ScientificDegreeName");
@@ -54,6 +54,9 @@ namespace WindowsFormsApplication2
 
         private void But_AddDoc_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(Txt_DocName.Text)|| !string.IsNullOrEmpty (Txt_DoCAddress.Text) || !string.IsNullOrEmpty (Txt_DocTel.Text))
+            { 
+
             try
             {
                 bool x = true;
@@ -81,6 +84,8 @@ namespace WindowsFormsApplication2
                     ConnectionClass.MyCOnnection.Close();
                 }
             }
+            }
+            else { MessageBox.Show("يرجى استكمال بيانات الطبيب"); }
         }
 
         private void button2_Click(object sender, EventArgs e)

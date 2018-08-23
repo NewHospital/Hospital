@@ -27,30 +27,77 @@ namespace WindowsFormsApplication2
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Bills> Bills { get; set; }
-        public virtual DbSet<BillsTypes> BillsTypes { get; set; }
-        public virtual DbSet<Payments> Payments { get; set; }
-        public virtual DbSet<BuyingInvoice> BuyingInvoice { get; set; }
-        public virtual DbSet<BuyingInvoiceDetail> BuyingInvoiceDetail { get; set; }
-        public virtual DbSet<SupplierAddress> SupplierAddress { get; set; }
-        public virtual DbSet<SupplierContact> SupplierContact { get; set; }
-        public virtual DbSet<Suppliers> Suppliers { get; set; }
-        public virtual DbSet<Rooms> Rooms { get; set; }
-        public virtual DbSet<RoomsDegree> RoomsDegree { get; set; }
-        public virtual DbSet<Doctors> Doctors { get; set; }
-        public virtual DbSet<ScientificDegree> ScientificDegree { get; set; }
-        public virtual DbSet<Specification> Specification { get; set; }
-        public virtual DbSet<bloodGroups> bloodGroups { get; set; }
-        public virtual DbSet<Diseases> Diseases { get; set; }
-        public virtual DbSet<DocfollowUp> DocfollowUp { get; set; }
-        public virtual DbSet<Fellow> Fellow { get; set; }
-        public virtual DbSet<Patient> Patient { get; set; }
-        public virtual DbSet<PatientMeasures> PatientMeasures { get; set; }
-        public virtual DbSet<Reservations> Reservations { get; set; }
-        public virtual DbSet<Drugs> Drugs { get; set; }
-        public virtual DbSet<DrugUnits> DrugUnits { get; set; }
-        public virtual DbSet<Prescription> Prescription { get; set; }
-        public virtual DbSet<PrescriptionDetail> PrescriptionDetail { get; set; }
+        public virtual DbSet<Bill> Bills { get; set; }
+        public virtual DbSet<BillsType> BillsTypes { get; set; }
+        public virtual DbSet<Payment> Payments { get; set; }
+        public virtual DbSet<BuyingInvoice> BuyingInvoices { get; set; }
+        public virtual DbSet<BuyingInvoiceDetail> BuyingInvoiceDetails { get; set; }
+        public virtual DbSet<SupplierAddress> SupplierAddresses { get; set; }
+        public virtual DbSet<SupplierContact> SupplierContacts { get; set; }
+        public virtual DbSet<Supplier> Suppliers { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Room> Rooms { get; set; }
+        public virtual DbSet<RoomsDegree> RoomsDegrees { get; set; }
+        public virtual DbSet<Doctor> Doctors { get; set; }
+        public virtual DbSet<ScientificDegree> ScientificDegrees { get; set; }
+        public virtual DbSet<Specification> Specifications { get; set; }
+        public virtual DbSet<bloodGroup> bloodGroups { get; set; }
+        public virtual DbSet<Disease> Diseases { get; set; }
+        public virtual DbSet<DocfollowUp> DocfollowUps { get; set; }
+        public virtual DbSet<Fellow> Fellows { get; set; }
+        public virtual DbSet<Patient> Patients { get; set; }
+        public virtual DbSet<PatientMeasure> PatientMeasures { get; set; }
+        public virtual DbSet<Reservation> Reservations { get; set; }
+        public virtual DbSet<Drug> Drugs { get; set; }
+        public virtual DbSet<DrugUnit> DrugUnits { get; set; }
+        public virtual DbSet<Prescription> Prescriptions { get; set; }
+        public virtual DbSet<PrescriptionDetail> PrescriptionDetails { get; set; }
+    
+        public virtual int AddInvoiceDetail(Nullable<int> invoiceId, Nullable<int> drugId, Nullable<decimal> pricePerUnit, Nullable<int> qnty, Nullable<System.DateTime> expdate)
+        {
+            var invoiceIdParameter = invoiceId.HasValue ?
+                new ObjectParameter("InvoiceId", invoiceId) :
+                new ObjectParameter("InvoiceId", typeof(int));
+    
+            var drugIdParameter = drugId.HasValue ?
+                new ObjectParameter("DrugId", drugId) :
+                new ObjectParameter("DrugId", typeof(int));
+    
+            var pricePerUnitParameter = pricePerUnit.HasValue ?
+                new ObjectParameter("pricePerUnit", pricePerUnit) :
+                new ObjectParameter("pricePerUnit", typeof(decimal));
+    
+            var qntyParameter = qnty.HasValue ?
+                new ObjectParameter("Qnty", qnty) :
+                new ObjectParameter("Qnty", typeof(int));
+    
+            var expdateParameter = expdate.HasValue ?
+                new ObjectParameter("Expdate", expdate) :
+                new ObjectParameter("Expdate", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("AddInvoiceDetail", invoiceIdParameter, drugIdParameter, pricePerUnitParameter, qntyParameter, expdateParameter);
+        }
+    
+        public virtual int AddReservation(Nullable<int> patientId, Nullable<int> roomId, Nullable<System.DateTime> arriveDate, string discription)
+        {
+            var patientIdParameter = patientId.HasValue ?
+                new ObjectParameter("patientId", patientId) :
+                new ObjectParameter("patientId", typeof(int));
+    
+            var roomIdParameter = roomId.HasValue ?
+                new ObjectParameter("RoomId", roomId) :
+                new ObjectParameter("RoomId", typeof(int));
+    
+            var arriveDateParameter = arriveDate.HasValue ?
+                new ObjectParameter("ArriveDate", arriveDate) :
+                new ObjectParameter("ArriveDate", typeof(System.DateTime));
+    
+            var discriptionParameter = discription != null ?
+                new ObjectParameter("Discription", discription) :
+                new ObjectParameter("Discription", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("AddReservation", patientIdParameter, roomIdParameter, arriveDateParameter, discriptionParameter);
+        }
     
         public virtual int Cproc_AddBillsType(string name)
         {
@@ -70,6 +117,23 @@ namespace WindowsFormsApplication2
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cproc_AddBloodGroup", bloodGroupNameParameter);
         }
     
+        public virtual int Cproc_AddBuyInvoice(Nullable<int> supplierId, Nullable<System.DateTime> invoiceDate, string invAutoNumber)
+        {
+            var supplierIdParameter = supplierId.HasValue ?
+                new ObjectParameter("supplierId", supplierId) :
+                new ObjectParameter("supplierId", typeof(int));
+    
+            var invoiceDateParameter = invoiceDate.HasValue ?
+                new ObjectParameter("invoiceDate", invoiceDate) :
+                new ObjectParameter("invoiceDate", typeof(System.DateTime));
+    
+            var invAutoNumberParameter = invAutoNumber != null ?
+                new ObjectParameter("InvAutoNumber", invAutoNumber) :
+                new ObjectParameter("InvAutoNumber", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cproc_AddBuyInvoice", supplierIdParameter, invoiceDateParameter, invAutoNumberParameter);
+        }
+    
         public virtual int Cproc_AddDiseases(string diseaseName)
         {
             var diseaseNameParameter = diseaseName != null ?
@@ -77,6 +141,19 @@ namespace WindowsFormsApplication2
                 new ObjectParameter("DiseaseName", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cproc_AddDiseases", diseaseNameParameter);
+        }
+    
+        public virtual int Cproc_AddDocFollowUp(Nullable<int> reservationId, Nullable<int> docId)
+        {
+            var reservationIdParameter = reservationId.HasValue ?
+                new ObjectParameter("reservationId", reservationId) :
+                new ObjectParameter("reservationId", typeof(int));
+    
+            var docIdParameter = docId.HasValue ?
+                new ObjectParameter("DocId", docId) :
+                new ObjectParameter("DocId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cproc_AddDocFollowUp", reservationIdParameter, docIdParameter);
         }
     
         public virtual int Cproc_AddDrug(string drugName, Nullable<int> drugUnit, Nullable<decimal> pricePerUnit, Nullable<int> balance)
@@ -157,6 +234,39 @@ namespace WindowsFormsApplication2
                 new ObjectParameter("gender", typeof(bool));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cproc_AddNewDoc", docNameParameter, docAddressParameter, docphoneParameter, docDegreeParameter, docSpecificationParameter, genderParameter);
+        }
+    
+        public virtual int Cproc_AddNewPatient(string patientName, Nullable<bool> gender, Nullable<System.DateTime> doB, string soSeNo, Nullable<int> bloodGroup, string phoneNumber, string address)
+        {
+            var patientNameParameter = patientName != null ?
+                new ObjectParameter("patientName", patientName) :
+                new ObjectParameter("patientName", typeof(string));
+    
+            var genderParameter = gender.HasValue ?
+                new ObjectParameter("Gender", gender) :
+                new ObjectParameter("Gender", typeof(bool));
+    
+            var doBParameter = doB.HasValue ?
+                new ObjectParameter("DoB", doB) :
+                new ObjectParameter("DoB", typeof(System.DateTime));
+    
+            var soSeNoParameter = soSeNo != null ?
+                new ObjectParameter("SoSeNo", soSeNo) :
+                new ObjectParameter("SoSeNo", typeof(string));
+    
+            var bloodGroupParameter = bloodGroup.HasValue ?
+                new ObjectParameter("BloodGroup", bloodGroup) :
+                new ObjectParameter("BloodGroup", typeof(int));
+    
+            var phoneNumberParameter = phoneNumber != null ?
+                new ObjectParameter("phoneNumber", phoneNumber) :
+                new ObjectParameter("phoneNumber", typeof(string));
+    
+            var addressParameter = address != null ?
+                new ObjectParameter("address", address) :
+                new ObjectParameter("address", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cproc_AddNewPatient", patientNameParameter, genderParameter, doBParameter, soSeNoParameter, bloodGroupParameter, phoneNumberParameter, addressParameter);
         }
     
         public virtual int Cproc_AddPatientMeasure(Nullable<int> patientId, Nullable<int> diseaseId, string measureResult, Nullable<System.DateTime> timeOfMeasure, string remarks, Nullable<int> doctorId)
@@ -274,6 +384,11 @@ namespace WindowsFormsApplication2
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cproc_AddSuppliers", supplierNameParameter);
         }
     
+        public virtual int Cproc_BuySerial()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cproc_BuySerial");
+        }
+    
         public virtual int Cproc_DocDegrees(string scientificDegreeName)
         {
             var scientificDegreeNameParameter = scientificDegreeName != null ?
@@ -386,42 +501,50 @@ namespace WindowsFormsApplication2
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
         }
     
-        public virtual int AddInvoiceDetail(Nullable<int> invoiceId, Nullable<int> drugId, Nullable<decimal> pricePerUnit, Nullable<int> qnty, Nullable<System.DateTime> expdate)
+        public virtual int Cproc_AddMeasure(Nullable<int> patientId, Nullable<int> diseaseId, string measureResult, string remark, Nullable<int> doctorId)
         {
-            var invoiceIdParameter = invoiceId.HasValue ?
-                new ObjectParameter("InvoiceId", invoiceId) :
-                new ObjectParameter("InvoiceId", typeof(int));
+            var patientIdParameter = patientId.HasValue ?
+                new ObjectParameter("patientId", patientId) :
+                new ObjectParameter("patientId", typeof(int));
     
-            var drugIdParameter = drugId.HasValue ?
-                new ObjectParameter("DrugId", drugId) :
-                new ObjectParameter("DrugId", typeof(int));
+            var diseaseIdParameter = diseaseId.HasValue ?
+                new ObjectParameter("diseaseId", diseaseId) :
+                new ObjectParameter("diseaseId", typeof(int));
     
-            var pricePerUnitParameter = pricePerUnit.HasValue ?
-                new ObjectParameter("pricePerUnit", pricePerUnit) :
-                new ObjectParameter("pricePerUnit", typeof(decimal));
+            var measureResultParameter = measureResult != null ?
+                new ObjectParameter("MeasureResult", measureResult) :
+                new ObjectParameter("MeasureResult", typeof(string));
     
-            var qntyParameter = qnty.HasValue ?
-                new ObjectParameter("Qnty", qnty) :
-                new ObjectParameter("Qnty", typeof(int));
+            var remarkParameter = remark != null ?
+                new ObjectParameter("remark", remark) :
+                new ObjectParameter("remark", typeof(string));
     
-            var expdateParameter = expdate.HasValue ?
-                new ObjectParameter("Expdate", expdate) :
-                new ObjectParameter("Expdate", typeof(System.DateTime));
+            var doctorIdParameter = doctorId.HasValue ?
+                new ObjectParameter("doctorId", doctorId) :
+                new ObjectParameter("doctorId", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("AddInvoiceDetail", invoiceIdParameter, drugIdParameter, pricePerUnitParameter, qntyParameter, expdateParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cproc_AddMeasure", patientIdParameter, diseaseIdParameter, measureResultParameter, remarkParameter, doctorIdParameter);
         }
     
-        public virtual int Cproc_AddBuyInvoice(Nullable<int> supplierId, Nullable<System.DateTime> invoiceDate)
+        public virtual int Cproc_AddPayment(Nullable<int> reservationId, string receiptSerial, Nullable<decimal> amount, string discription)
         {
-            var supplierIdParameter = supplierId.HasValue ?
-                new ObjectParameter("supplierId", supplierId) :
-                new ObjectParameter("supplierId", typeof(int));
+            var reservationIdParameter = reservationId.HasValue ?
+                new ObjectParameter("ReservationId", reservationId) :
+                new ObjectParameter("ReservationId", typeof(int));
     
-            var invoiceDateParameter = invoiceDate.HasValue ?
-                new ObjectParameter("invoiceDate", invoiceDate) :
-                new ObjectParameter("invoiceDate", typeof(System.DateTime));
+            var receiptSerialParameter = receiptSerial != null ?
+                new ObjectParameter("ReceiptSerial", receiptSerial) :
+                new ObjectParameter("ReceiptSerial", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cproc_AddBuyInvoice", supplierIdParameter, invoiceDateParameter);
+            var amountParameter = amount.HasValue ?
+                new ObjectParameter("amount", amount) :
+                new ObjectParameter("amount", typeof(decimal));
+    
+            var discriptionParameter = discription != null ?
+                new ObjectParameter("Discription", discription) :
+                new ObjectParameter("Discription", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cproc_AddPayment", reservationIdParameter, receiptSerialParameter, amountParameter, discriptionParameter);
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Hospital
         private void AddRooms_Load(object sender, EventArgs e)
         {
             
-            List<RoomsDegree> RoomsList = Hospital.RoomsDegree.ToList();
+            List<RoomsDegree> RoomsList = Hospital.RoomsDegrees.ToList();
             DataTable D = new DataTable();
             D.Columns.Add("RoomDegreeID");
             D.Columns.Add("DegreeName");

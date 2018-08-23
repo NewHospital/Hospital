@@ -17,7 +17,7 @@ namespace WindowsFormsApplication2
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Prescription()
         {
-            this.PrescriptionDetail = new HashSet<PrescriptionDetail>();
+            this.PrescriptionDetails = new HashSet<PrescriptionDetail>();
         }
     
         public int PrescriptionId { get; set; }
@@ -25,9 +25,9 @@ namespace WindowsFormsApplication2
         public int DocId { get; set; }
         public int ReservationID { get; set; }
     
-        public virtual Doctors Doctors { get; set; }
-        public virtual Reservations Reservations { get; set; }
+        public virtual Doctor Doctor { get; set; }
+        public virtual Reservation Reservation { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PrescriptionDetail> PrescriptionDetail { get; set; }
+        public virtual ICollection<PrescriptionDetail> PrescriptionDetails { get; set; }
     }
 }

@@ -150,3 +150,5 @@ E:\Projects\Hospital project\BackUp\19-8-2018\Hospital\WindowsFormsApplication2\
 E:\Projects\Hospital project\BackUp\19-8-2018\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
 E:\Projects\Hospital project\BackUp\19-8-2018\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.FollowUp.resources
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Measures.resources
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Payments.resources
