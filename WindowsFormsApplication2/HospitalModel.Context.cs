@@ -52,6 +52,7 @@ namespace WindowsFormsApplication2
         public virtual DbSet<DrugUnit> DrugUnits { get; set; }
         public virtual DbSet<Prescription> Prescriptions { get; set; }
         public virtual DbSet<PrescriptionDetail> PrescriptionDetails { get; set; }
+        public virtual DbSet<VW_Prescription> VW_Prescription { get; set; }
     
         public virtual int AddInvoiceDetail(Nullable<int> invoiceId, Nullable<int> drugId, Nullable<decimal> pricePerUnit, Nullable<int> qnty, Nullable<System.DateTime> expdate)
         {
@@ -545,6 +546,23 @@ namespace WindowsFormsApplication2
                 new ObjectParameter("Discription", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cproc_AddPayment", reservationIdParameter, receiptSerialParameter, amountParameter, discriptionParameter);
+        }
+    
+        public virtual int Cproc_Checkout(Nullable<int> reservationId, Nullable<System.DateTime> leaveDate, string discription)
+        {
+            var reservationIdParameter = reservationId.HasValue ?
+                new ObjectParameter("ReservationId", reservationId) :
+                new ObjectParameter("ReservationId", typeof(int));
+    
+            var leaveDateParameter = leaveDate.HasValue ?
+                new ObjectParameter("leaveDate", leaveDate) :
+                new ObjectParameter("leaveDate", typeof(System.DateTime));
+    
+            var discriptionParameter = discription != null ?
+                new ObjectParameter("discription", discription) :
+                new ObjectParameter("discription", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cproc_Checkout", reservationIdParameter, leaveDateParameter, discriptionParameter);
         }
     }
 }

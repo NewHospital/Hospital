@@ -35,11 +35,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Txt_FellowName
             // 
-            this.Txt_FellowName.Location = new System.Drawing.Point(41, 37);
+            this.Txt_FellowName.Location = new System.Drawing.Point(41, 53);
             this.Txt_FellowName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_FellowName.Name = "Txt_FellowName";
             this.Txt_FellowName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -66,7 +67,7 @@
             // 
             // But_AddFellow
             // 
-            this.But_AddFellow.Location = new System.Drawing.Point(125, 214);
+            this.But_AddFellow.Location = new System.Drawing.Point(128, 212);
             this.But_AddFellow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.But_AddFellow.Name = "But_AddFellow";
             this.But_AddFellow.Size = new System.Drawing.Size(116, 28);
@@ -78,7 +79,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(318, 37);
+            this.label1.Location = new System.Drawing.Point(318, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 5;
@@ -102,11 +103,23 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "رقم الهاتف";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Traditional Arabic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label4.Location = new System.Drawing.Point(145, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 32);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "إضافة مرافق";
+            // 
             // AddFellow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(413, 285);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -116,7 +129,7 @@
             this.Controls.Add(this.Txt_FellowName);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddFellow";
-            this.Text = "AddFellow";
+            this.Text = "إضافة مرافق";
             this.Load += new System.EventHandler(this.AddFellow_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -132,5 +145,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -132,6 +132,12 @@
     <Compile Include="BuyingInvoiceDetail.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Checkout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkout.Designer.cs">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectionClass.cs" />
     <Compile Include="Disease.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
@@ -153,6 +159,18 @@
     </Compile>
     <Compile Include="DrugUnit.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EditPatientData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPatientData.Designer.cs">
+      <DependentUpon>EditPatientData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExistingPatientReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExistingPatientReservation.Designer.cs">
+      <DependentUpon>ExistingPatientReservation.cs</DependentUpon>
     </Compile>
     <Compile Include="Fellow.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
@@ -258,6 +276,9 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="VW_Prescription.cs">
+      <DependentUpon>HospitalModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddBuyingInvoice.resx">
       <DependentUpon>AddBuyingInvoice.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,8 +309,17 @@
     <EmbeddedResource Include="AddSuppliers.resx">
       <DependentUpon>AddSuppliers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Checkout.resx">
+      <DependentUpon>Checkout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DocDegree.resx">
       <DependentUpon>DocDegree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPatientData.resx">
+      <DependentUpon>EditPatientData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExistingPatientReservation.resx">
+      <DependentUpon>ExistingPatientReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FollowUp.resx">
       <DependentUpon>FollowUp.cs</DependentUpon>

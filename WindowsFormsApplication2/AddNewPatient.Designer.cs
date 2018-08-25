@@ -48,6 +48,7 @@
             this.But_AddPatient = new System.Windows.Forms.Button();
             this.But_AddReservation = new System.Windows.Forms.Button();
             this.But_AddFellow = new System.Windows.Forms.Button();
+            this.But_EditPatient = new System.Windows.Forms.Button();
             this.GenderGroup.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -206,10 +207,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Traditional Arabic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label8.Location = new System.Drawing.Point(191, 12);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(233, 29);
+            this.label8.Size = new System.Drawing.Size(184, 37);
             this.label8.TabIndex = 13;
             this.label8.Text = "البيانات الأساسية للمريض";
             // 
@@ -246,11 +248,23 @@
             this.But_AddFellow.UseVisualStyleBackColor = true;
             this.But_AddFellow.Click += new System.EventHandler(this.But_AddFellow_Click);
             // 
+            // But_EditPatient
+            // 
+            this.But_EditPatient.Location = new System.Drawing.Point(232, 379);
+            this.But_EditPatient.Name = "But_EditPatient";
+            this.But_EditPatient.Size = new System.Drawing.Size(144, 36);
+            this.But_EditPatient.TabIndex = 18;
+            this.But_EditPatient.Text = "تعديل بيانات مريض";
+            this.But_EditPatient.UseVisualStyleBackColor = true;
+            this.But_EditPatient.Visible = false;
+            this.But_EditPatient.Click += new System.EventHandler(this.But_EditPatient_Click);
+            // 
             // AddNewPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 466);
+            this.Controls.Add(this.But_EditPatient);
             this.Controls.Add(this.But_AddFellow);
             this.Controls.Add(this.But_AddReservation);
             this.Controls.Add(this.But_AddPatient);
@@ -302,5 +316,6 @@
         private System.Windows.Forms.Button But_AddPatient;
         private System.Windows.Forms.Button But_AddReservation;
         private System.Windows.Forms.Button But_AddFellow;
+        private System.Windows.Forms.Button But_EditPatient;
     }
 }

@@ -71,7 +71,9 @@ namespace WindowsFormsApplication2
 
         private void Com_RoomNo_SelectedValueChanged(object sender, EventArgs u)
         {
-            object ss = new object();
+            if (Com_RoomNo.SelectedValue != null)
+            {
+                object ss = new object();
             ss = Com_RoomNo.SelectedItem;
             var rr = ss.GetType().GetProperty("RoomId").GetValue(ss).ToString();
             yy = Convert.ToInt32(rr); 
@@ -87,12 +89,14 @@ namespace WindowsFormsApplication2
                          where R.IsActive == true && o.RoomId == yy
                          select new { h.PatientName }).ToList();
                 Txt_PatientName.Text = (P[0]).PatientName.ToString();
-       }
+            }
+        }
 
         private void But_addMeasure_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty (Txt_result.Text))
             { 
+                try { 
             int D = ((Disease)Com_Diseases.SelectedItem).DiseaseId; 
             var patientId = ((Hospital.Reservations.ToList().FindAll(a => a.RoomID == y&& a.IsActive== true).ToList().Select(a => a.patientId)).ToList());
             int ss = int.Parse (patientId [0].ToString ());
@@ -103,6 +107,8 @@ namespace WindowsFormsApplication2
             
             Txt_result.Clear();
             MessageBox.Show("تم إضافة القياس بنجاح", "تأكيد الإضافة");
+                }
+                catch { MessageBox.Show("حدث خطأ يرجى مراجعة البيانات"); }
             }
             else { MessageBox.Show ("يرجى إدخال نتيجة القياس"); }
         }

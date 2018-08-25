@@ -200,5 +200,23 @@ namespace Hospital
             pay.ShowDialog();
             
         }
+
+        private void CheckoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Checkout Cout = new Checkout();
+            Cout.ShowDialog();
+        }
+
+        private void RoomReservationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExistingPatientReservation ExistReservation = new ExistingPatientReservation();
+            ExistReservation.ShowDialog();
+        }
+
+        private void EditPatientDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditPatientData EditData = new EditPatientData();
+            EditData.ShowDialog();
+        }
     }
 }

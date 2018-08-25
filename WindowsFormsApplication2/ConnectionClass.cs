@@ -18,6 +18,7 @@ namespace Hospital
         public static SqlCommand MyCommand;
 
         public static string Serial="";
+        public static int scalarReturn; 
 
 
         public static void Connection(string conn)
@@ -140,7 +141,11 @@ namespace Hospital
                             break;
 
                         case ExecuteReaderOrNonQuery.executeScalar:
-                            MyCommand.ExecuteScalar();
+                            try
+                            { 
+                            scalarReturn = Convert.ToInt32 (MyCommand.ExecuteScalar());
+                            }
+                            catch { scalarReturn = 0; }
                             break;
                     }
                     break;
@@ -156,7 +161,7 @@ namespace Hospital
                               MyDataTable.Load(DataReader);
                                 break;
                             case ExecuteReaderOrNonQuery.executeNonQuery:
-                                MyCommand.ExecuteNonQuery();
+                                 MyCommand.ExecuteNonQuery();
                                 break;
 
                             case ExecuteReaderOrNonQuery.executeScalar:

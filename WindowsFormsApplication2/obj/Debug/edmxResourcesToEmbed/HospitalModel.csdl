@@ -885,6 +885,12 @@
       <Parameter Name="amount" Mode="In" Type="Decimal" />
       <Parameter Name="Discription" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="Cproc_Checkout">
+      <Parameter Name="ReservationId" Mode="In" Type="Int32" />
+      <Parameter Name="leaveDate" Mode="In" Type="DateTime" />
+      <Parameter Name="discription" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="VW_Prescription" EntityType="hospitalModel.VW_Prescription" />
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -897,4 +903,16 @@
     <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
     <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
+  <EntityType Name="VW_Prescription">
+    <Key>
+      <PropertyRef Name="ReservationID" />
+      <PropertyRef Name="Qnty" />
+      <PropertyRef Name="PricePerUnit" />
+      <PropertyRef Name="IsReceived" />
+    </Key>
+    <Property Name="ReservationID" Type="Int32" Nullable="false" />
+    <Property Name="Qnty" Type="Int32" Nullable="false" />
+    <Property Name="PricePerUnit" Type="Decimal" Nullable="false" Precision="8" Scale="2" />
+    <Property Name="IsReceived" Type="Boolean" Nullable="false" />
+  </EntityType>
 </Schema>

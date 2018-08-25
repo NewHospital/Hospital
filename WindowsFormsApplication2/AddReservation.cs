@@ -14,7 +14,8 @@ namespace WindowsFormsApplication2
     public partial class AddReservation : Form
     {
         hospitalEntities Hospital = new hospitalEntities();
-        int Id = AddNewPatient.x;
+        public int Id = AddNewPatient.x;
+        
         public AddReservation()
         {
             InitializeComponent();
@@ -22,9 +23,8 @@ namespace WindowsFormsApplication2
 
         private void AddReservation_Load(object sender, EventArgs e)
         {
-     
             var PatientName = (from E in Hospital.Patients
-                              where E.PatientID == AddNewPatient.x
+                              where E.PatientID == Id
                               select new { E.PatientName }).ToList();
             Lbl_PatientName.Text = PatientName [0].PatientName;
 
@@ -44,31 +44,16 @@ namespace WindowsFormsApplication2
          
             Con.Close();
 
-          
-
-
-
-
-
-
-
-
-
             }
 
         private void But_Addreservation_Click(object sender, EventArgs e)
         {
-            
             ConnectionClass.Parameters(new SqlParameter("@patientId", Id), new SqlParameter("@RoomId",Com_Room.SelectedValue ), new SqlParameter("@ArriveDate", Convert.ToDateTime (Pick_arriveDate.Value) ), new SqlParameter ("@Discription", RTxt_Remarks.Text));
             ConnectionClass.SQLCommand("AddReservation", CommandType.StoredProcedure, ExecuteReaderOrNonQuery.executeNonQuery);
             MessageBox.Show("تم الحجز بنجاح");
             RTxt_Remarks.Clear();
             this.Close();
             this.Dispose();
-            
-           
-            
-            
         }
 
         private void Com_Room_SelectedIndexChanged(object sender, EventArgs e)

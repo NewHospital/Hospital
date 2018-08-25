@@ -312,5 +312,16 @@
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="hospitalModel.Store.sp_upgraddiagrams" />
     <FunctionImportMapping FunctionImportName="Cproc_AddMeasure" FunctionName="hospitalModel.Store.Cproc_AddMeasure" />
     <FunctionImportMapping FunctionImportName="Cproc_AddPayment" FunctionName="hospitalModel.Store.Cproc_AddPayment" />
+    <FunctionImportMapping FunctionImportName="Cproc_Checkout" FunctionName="hospitalModel.Store.Cproc_Checkout" />
+    <EntitySetMapping Name="VW_Prescription">
+      <EntityTypeMapping TypeName="hospitalModel.VW_Prescription">
+        <MappingFragment StoreEntitySet="VW_Prescription">
+          <ScalarProperty Name="IsReceived" ColumnName="IsReceived" />
+          <ScalarProperty Name="PricePerUnit" ColumnName="PricePerUnit" />
+          <ScalarProperty Name="Qnty" ColumnName="Qnty" />
+          <ScalarProperty Name="ReservationID" ColumnName="ReservationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

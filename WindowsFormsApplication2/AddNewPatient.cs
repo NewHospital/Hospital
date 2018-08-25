@@ -14,8 +14,13 @@ namespace Hospital
 {
     public partial class AddNewPatient : Form
     {
+        hospitalEntities Hospital = new hospitalEntities();
+
         public static SqlParameter PatientId = new SqlParameter("Id", SqlDbType.Int);
         public static int x;
+        public  int EditedPatient { set; get; } 
+        
+        
 
         public AddNewPatient()
         {
@@ -130,6 +135,88 @@ namespace Hospital
             reservation.ShowDialog();
             this.Close();
             this.Dispose();
+        }
+
+        private void But_EditPatient_Click(object sender, EventArgs e)
+        {
+            
+
+            if (!string.IsNullOrEmpty(Txt_PatientName.Text) && !string.IsNullOrEmpty(Txt_Mobile.Text) && !string.IsNullOrEmpty(Txt_Address.Text))
+            {
+                if (radioButton1.Checked == false && radioButton2.Checked == false)
+                { MessageBox.Show("برجاء تحديد نوع الجنس"); }
+                else
+                {
+                    if (!string.IsNullOrEmpty(Txt_SoSeNo.Text))
+                    {
+                        if (Txt_SoSeNo.Text.Length != 14)
+                        { MessageBox.Show("برجاء كتابة رقم البطاقة بشكل صحيح مكونة من 14 رقم"); }
+                        else
+                        {
+                            try
+                            {
+     ConnectionClass.Parameters(new SqlParameter("@patientID", EditedPatient), new SqlParameter("@patientname", Txt_PatientName.Text), new SqlParameter("@gender", radioButton1.Checked), new SqlParameter("@DoB", Convert.ToDateTime(Pik_DOB.Text)), new SqlParameter("@SoSeNo", Txt_SoSeNo.Text), new SqlParameter("@BloodGroup", Convert.ToInt32(Com_BloodGroups.SelectedValue)), new SqlParameter("@phoneNumber", Txt_Mobile.Text), new SqlParameter("@address",Txt_Address.Text));
+     ConnectionClass.SQLCommand("Cproc_UpdatePatientData", CommandType.StoredProcedure, ExecuteReaderOrNonQuery.executeNonQuery);
+                                MessageBox.Show("تم تحديث البيانات بنجاح");
+                                this.Close();
+                            }
+                            catch (SqlException SQLEx)
+                            {
+                                if (SQLEx.Number == 2627)
+                                {
+                                    MessageBox.Show("هذا المريض مسجل من قبل");
+                                    ConnectionClass.MyCommand.Parameters.Clear();
+                                    ConnectionClass.ParameterList.Clear();
+                                    ConnectionClass.MyCOnnection.Close();
+                                    this.Close();
+                                    this.Dispose();
+
+                                }
+                            }
+
+                        }
+                    }
+
+                    else { MessageBox.Show("يرجى إدخال الرقم القومي"); }
+                }
+
+            }
+            else { MessageBox.Show("برجاء ادخال اسم المريض ورقم تليفونه وعنوانه"); }
+
+
+
+
+
+
+
+        }
+
+        public void SetRadioButton (int x)
+        {
+            if (x==0)
+            {
+                radioButton2.Checked = true;
+                radioButton1.Checked = false;  
+            }
+            else if (x==1)
+            {
+                radioButton1.Checked = true;
+                radioButton2.Checked = false; 
+            }
+        }
+        public void SetBirthDay (string date)
+        {
+            Pik_DOB.Value= Convert.ToDateTime(date);
+        }
+        public void SetBloodCombo (int value)
+        {
+            var BloodGroupName = (from H in Hospital.bloodGroups
+                                  where H.BloodID == value
+                                  select new { H.BloodGroupName }.BloodGroupName).ToList();
+
+            int index = Com_BloodGroups.FindString(BloodGroupName[0].ToString());
+            Com_BloodGroups.SelectedIndex = index;
+            
         }
     }
 } 
