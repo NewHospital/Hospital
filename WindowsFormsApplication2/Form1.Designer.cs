@@ -48,11 +48,12 @@
             this.MeasuresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddPatientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PatientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.EditPatientDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.AccountsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CheckoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.EditPatientDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PrescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,7 +99,8 @@
             // 
             this.PharmacyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddDrugUnitToolStripMenuItem,
-            this.AddDrugToolStripMenuItem});
+            this.AddDrugToolStripMenuItem,
+            this.PrescriptionToolStripMenuItem});
             this.PharmacyToolStripMenuItem.Name = "PharmacyToolStripMenuItem";
             this.PharmacyToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.PharmacyToolStripMenuItem.Text = "الصيدلية";
@@ -203,6 +205,13 @@
             this.PatientsToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.PatientsToolStripMenuItem.Text = "المرضى";
             // 
+            // EditPatientDataToolStripMenuItem
+            // 
+            this.EditPatientDataToolStripMenuItem.Name = "EditPatientDataToolStripMenuItem";
+            this.EditPatientDataToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.EditPatientDataToolStripMenuItem.Text = "تعديل بيانات مريض";
+            this.EditPatientDataToolStripMenuItem.Click += new System.EventHandler(this.EditPatientDataToolStripMenuItem_Click);
+            // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -244,12 +253,12 @@
             this.CheckoutToolStripMenuItem.Text = "تسجيل خروج مريض";
             this.CheckoutToolStripMenuItem.Click += new System.EventHandler(this.CheckoutToolStripMenuItem_Click);
             // 
-            // EditPatientDataToolStripMenuItem
+            // PrescriptionToolStripMenuItem
             // 
-            this.EditPatientDataToolStripMenuItem.Name = "EditPatientDataToolStripMenuItem";
-            this.EditPatientDataToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.EditPatientDataToolStripMenuItem.Text = "تعديل بيانات مريض";
-            this.EditPatientDataToolStripMenuItem.Click += new System.EventHandler(this.EditPatientDataToolStripMenuItem_Click);
+            this.PrescriptionToolStripMenuItem.Name = "PrescriptionToolStripMenuItem";
+            this.PrescriptionToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.PrescriptionToolStripMenuItem.Text = "إضافة روشته";
+            this.PrescriptionToolStripMenuItem.Click += new System.EventHandler(this.PrescriptionToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -305,6 +314,7 @@
         private System.Windows.Forms.ToolStripMenuItem PaymentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem CheckoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem EditPatientDataToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PrescriptionToolStripMenuItem;
     }
 }
 

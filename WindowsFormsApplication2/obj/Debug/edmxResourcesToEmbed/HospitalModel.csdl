@@ -290,6 +290,7 @@
     <Property Name="IsReceived" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="Drug" Relationship="Self.FK_Drugs_PrescriptionDetail" FromRole="PrescriptionDetail" ToRole="Drugs" />
     <NavigationProperty Name="Prescription" Relationship="Self.FK_Prescription_PrescriptionDetail" FromRole="PrescriptionDetail" ToRole="Prescription" />
+    <Property Name="Dose" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <Association Name="FK_BillsTypes_Bills">
     <End Role="BillsTypes" Type="Self.BillsType" Multiplicity="1" />
@@ -891,6 +892,26 @@
       <Parameter Name="discription" Mode="In" Type="String" />
     </FunctionImport>
     <EntitySet Name="VW_Prescription" EntityType="hospitalModel.VW_Prescription" />
+    <FunctionImport Name="Cprco_AddNewPrescription">
+      <Parameter Name="DocId" Mode="In" Type="Int32" />
+      <Parameter Name="reservationid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Cproc_AddPrescriptionDetail">
+      <Parameter Name="PrescriptionId" Mode="In" Type="Int32" />
+      <Parameter Name="drugID" Mode="In" Type="Int32" />
+      <Parameter Name="Qnty" Mode="In" Type="Int32" />
+      <Parameter Name="dose" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Cproc_UpdatePatientData">
+      <Parameter Name="patientID" Mode="In" Type="Int32" />
+      <Parameter Name="patientname" Mode="In" Type="String" />
+      <Parameter Name="gender" Mode="In" Type="Boolean" />
+      <Parameter Name="DoB" Mode="In" Type="DateTime" />
+      <Parameter Name="SoSeNo" Mode="In" Type="String" />
+      <Parameter Name="BloodGroup" Mode="In" Type="Int32" />
+      <Parameter Name="phoneNumber" Mode="In" Type="String" />
+      <Parameter Name="address" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />

@@ -44,7 +44,7 @@
             // 
             this.Lbl_PatientName.AutoSize = true;
             this.Lbl_PatientName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_PatientName.Location = new System.Drawing.Point(95, 28);
+            this.Lbl_PatientName.Location = new System.Drawing.Point(63, 27);
             this.Lbl_PatientName.Name = "Lbl_PatientName";
             this.Lbl_PatientName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Lbl_PatientName.Size = new System.Drawing.Size(0, 19);

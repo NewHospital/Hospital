@@ -155,3 +155,41 @@ E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\Windows
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Checkout.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.ExistingPatientReservation.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.EditPatientData.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\bin\Debug\Properties\Settings.Designer.cs
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\bin\Debug\Properties\Settings.settings
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.dll
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.xml
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csprojResolveAssemblyReference.cache
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddBuyingInvoice.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddDrug.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddDrugUnits.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddFellow.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddNewDoctor.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddNewPatient.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddNewPrescription.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddReservation.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddRooms.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddSpecialization.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.AddSuppliers.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Checkout.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.DocDegree.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.EditPatientData.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.ExistingPatientReservation.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.FollowUp.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.MainForm.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Measures.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Payments.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.RoomDegrees.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.SearchSupplier.resources
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\Hospital.csproj.GenerateResource.Cache
+C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.NewPrescriptionDetail.resources
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddNewPrescription.resources
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.NewPrescriptionDetail.resources

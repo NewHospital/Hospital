@@ -218,5 +218,17 @@ namespace Hospital
             EditPatientData EditData = new EditPatientData();
             EditData.ShowDialog();
         }
+
+        private void AddprescriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddNewPrescription Pres = new AddNewPrescription();
+            Pres.ShowDialog();
+        }
+
+        private void PrescriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddNewPrescription Presc = new AddNewPrescription();
+            Presc.ShowDialog();
+        }
     }
 }

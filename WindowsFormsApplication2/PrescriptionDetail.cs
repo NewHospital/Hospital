@@ -18,6 +18,7 @@ namespace WindowsFormsApplication2
         public int DrugId { get; set; }
         public int Qnty { get; set; }
         public bool IsReceived { get; set; }
+        public string Dose { get; set; }
     
         public virtual Drug Drug { get; set; }
         public virtual Prescription Prescription { get; set; }

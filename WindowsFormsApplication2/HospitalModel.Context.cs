@@ -564,5 +564,76 @@ namespace WindowsFormsApplication2
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cproc_Checkout", reservationIdParameter, leaveDateParameter, discriptionParameter);
         }
+    
+        public virtual int Cprco_AddNewPrescription(Nullable<int> docId, Nullable<int> reservationid)
+        {
+            var docIdParameter = docId.HasValue ?
+                new ObjectParameter("DocId", docId) :
+                new ObjectParameter("DocId", typeof(int));
+    
+            var reservationidParameter = reservationid.HasValue ?
+                new ObjectParameter("reservationid", reservationid) :
+                new ObjectParameter("reservationid", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cprco_AddNewPrescription", docIdParameter, reservationidParameter);
+        }
+    
+        public virtual int Cproc_AddPrescriptionDetail(Nullable<int> prescriptionId, Nullable<int> drugID, Nullable<int> qnty, string dose)
+        {
+            var prescriptionIdParameter = prescriptionId.HasValue ?
+                new ObjectParameter("PrescriptionId", prescriptionId) :
+                new ObjectParameter("PrescriptionId", typeof(int));
+    
+            var drugIDParameter = drugID.HasValue ?
+                new ObjectParameter("drugID", drugID) :
+                new ObjectParameter("drugID", typeof(int));
+    
+            var qntyParameter = qnty.HasValue ?
+                new ObjectParameter("Qnty", qnty) :
+                new ObjectParameter("Qnty", typeof(int));
+    
+            var doseParameter = dose != null ?
+                new ObjectParameter("dose", dose) :
+                new ObjectParameter("dose", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cproc_AddPrescriptionDetail", prescriptionIdParameter, drugIDParameter, qntyParameter, doseParameter);
+        }
+    
+        public virtual int Cproc_UpdatePatientData(Nullable<int> patientID, string patientname, Nullable<bool> gender, Nullable<System.DateTime> doB, string soSeNo, Nullable<int> bloodGroup, string phoneNumber, string address)
+        {
+            var patientIDParameter = patientID.HasValue ?
+                new ObjectParameter("patientID", patientID) :
+                new ObjectParameter("patientID", typeof(int));
+    
+            var patientnameParameter = patientname != null ?
+                new ObjectParameter("patientname", patientname) :
+                new ObjectParameter("patientname", typeof(string));
+    
+            var genderParameter = gender.HasValue ?
+                new ObjectParameter("gender", gender) :
+                new ObjectParameter("gender", typeof(bool));
+    
+            var doBParameter = doB.HasValue ?
+                new ObjectParameter("DoB", doB) :
+                new ObjectParameter("DoB", typeof(System.DateTime));
+    
+            var soSeNoParameter = soSeNo != null ?
+                new ObjectParameter("SoSeNo", soSeNo) :
+                new ObjectParameter("SoSeNo", typeof(string));
+    
+            var bloodGroupParameter = bloodGroup.HasValue ?
+                new ObjectParameter("BloodGroup", bloodGroup) :
+                new ObjectParameter("BloodGroup", typeof(int));
+    
+            var phoneNumberParameter = phoneNumber != null ?
+                new ObjectParameter("phoneNumber", phoneNumber) :
+                new ObjectParameter("phoneNumber", typeof(string));
+    
+            var addressParameter = address != null ?
+                new ObjectParameter("address", address) :
+                new ObjectParameter("address", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Cproc_UpdatePatientData", patientIDParameter, patientnameParameter, genderParameter, doBParameter, soSeNoParameter, bloodGroupParameter, phoneNumberParameter, addressParameter);
+        }
     }
 }

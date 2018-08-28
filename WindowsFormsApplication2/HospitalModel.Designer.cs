@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\HospitalModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\HospitalModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

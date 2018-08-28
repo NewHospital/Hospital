@@ -102,6 +102,7 @@
             this.Controls.Add(this.Txt_patientName);
             this.Name = "EditPatientData";
             this.Text = "تعديل بيانات مريض";
+            this.Load += new System.EventHandler(this.EditPatientData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Grid_patient)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

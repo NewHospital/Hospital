@@ -34,8 +34,8 @@
             this.Lbl_PatientName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.RdBut_Reservation = new System.Windows.Forms.RadioButton();
             this.RdBut_Fellow = new System.Windows.Forms.RadioButton();
+            this.RdBut_Reservation = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.GridResult)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -108,17 +108,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "إضافة مرافق/حجز";
             // 
-            // RdBut_Reservation
-            // 
-            this.RdBut_Reservation.AutoSize = true;
-            this.RdBut_Reservation.Location = new System.Drawing.Point(163, 24);
-            this.RdBut_Reservation.Name = "RdBut_Reservation";
-            this.RdBut_Reservation.Size = new System.Drawing.Size(73, 17);
-            this.RdBut_Reservation.TabIndex = 0;
-            this.RdBut_Reservation.TabStop = true;
-            this.RdBut_Reservation.Text = "إضافة حجز";
-            this.RdBut_Reservation.UseVisualStyleBackColor = true;
-            // 
             // RdBut_Fellow
             // 
             this.RdBut_Fellow.AutoSize = true;
@@ -129,6 +118,17 @@
             this.RdBut_Fellow.TabStop = true;
             this.RdBut_Fellow.Text = "إضافة مرافق";
             this.RdBut_Fellow.UseVisualStyleBackColor = true;
+            // 
+            // RdBut_Reservation
+            // 
+            this.RdBut_Reservation.AutoSize = true;
+            this.RdBut_Reservation.Location = new System.Drawing.Point(163, 24);
+            this.RdBut_Reservation.Name = "RdBut_Reservation";
+            this.RdBut_Reservation.Size = new System.Drawing.Size(73, 17);
+            this.RdBut_Reservation.TabIndex = 0;
+            this.RdBut_Reservation.TabStop = true;
+            this.RdBut_Reservation.Text = "إضافة حجز";
+            this.RdBut_Reservation.UseVisualStyleBackColor = true;
             // 
             // ExistingPatientReservation
             // 
@@ -142,6 +142,7 @@
             this.Controls.Add(this.But_Search);
             this.Controls.Add(this.Txt_Search);
             this.Name = "ExistingPatientReservation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "بحث عن مريض";
             this.Load += new System.EventHandler(this.ExistingPatientReservation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridResult)).EndInit();

@@ -42,21 +42,39 @@ namespace WindowsFormsApplication2
 
         private void GridResult_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+
+
+            PatientId = Convert.ToInt32(GridResult.Rows[e.RowIndex].Cells["PatientID"].FormattedValue.ToString());
+
             if (RdBut_Reservation.Checked== true)
             { 
-            
-            PatientId = Convert.ToInt32 (GridResult.Rows[e.RowIndex].Cells["PatientID"].FormattedValue.ToString());
-            
+            var ExistOrNOt = (from H in Hospital.Reservations
+                                  where H.patientId == PatientId && H.IsActive == true
+                                  select new { H.patientId }).ToList();
+
+                if (ExistOrNOt.Count == 0)
+                { 
             AddReservation Reservation = new AddReservation();
             Reservation.Id = PatientId; 
             Reservation.ShowDialog();
             this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("هذا المريض مسجل له حجز حاليا، يرجى تسجيل خروجه قبل حجز الغرفة");
+                    this.Close();
+                    ExistingPatientReservation Exist = new ExistingPatientReservation();
+                    Exist.Show();
+                    Exist.WindowState = FormWindowState.Normal;
+                  
+                }
             }
+
+            
+
             else if (RdBut_Fellow.Checked== true)
             {
                 
-                PatientId = Convert.ToInt32(GridResult.Rows[e.RowIndex].Cells["PatientID"].FormattedValue.ToString());
-
                 AddFellow F = new AddFellow();
                 this.Close();
                 F.patientId = PatientId;

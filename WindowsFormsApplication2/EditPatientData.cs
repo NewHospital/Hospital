@@ -44,8 +44,10 @@ namespace WindowsFormsApplication2
             int BloodGroup = Convert.ToInt32 (Grid_patient.Rows[e.RowIndex].Cells["BloodGroup"].FormattedValue);
             AddNewPatient Patient = new AddNewPatient();
             Patient.EditedPatient = PatientId;
-            Patient.Controls["But_AddPatient"].Visible = false;
-            Patient.Controls["But_EditPatient"].Visible = true; 
+
+            HelpClass.VisibleOrNot(false, Patient.Controls["But_AddPatient"]);
+            HelpClass.VisibleOrNot(true, Patient.Controls["But_EditPatient"]);
+
             Patient.Text = "تعديل بيانات مريض";
             Patient.Controls["label8"].Text = "تعديل بيانات مريض";
             Patient.Controls["Txt_PatientName"].Text = (Grid_patient.Rows[e.RowIndex].Cells["PatientName"].FormattedValue).ToString();
@@ -59,8 +61,13 @@ namespace WindowsFormsApplication2
             Patient.WindowState = FormWindowState.Normal;
             Patient.TopMost = true;
 
-
+            
             
            }
+
+        private void EditPatientData_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

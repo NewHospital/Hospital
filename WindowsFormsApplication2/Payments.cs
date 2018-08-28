@@ -101,8 +101,7 @@ namespace WindowsFormsApplication2
                      where P.ReservationId == Reservation
                      select P.Amount).Sum();
             decimal total = Convert.ToDecimal(S);
-           
-                
+                        
                 }   
             catch { label7.Text="0"; }
          
@@ -170,12 +169,7 @@ namespace WindowsFormsApplication2
                
                 DSum = 0;
             }
-
-
-            DateTime D = DateTime.Now;
-            DateTime Now = D.Date;
-            string D1 = Now.ToString("yyyy-MM-dd");
-            ConnectionClass.SQLCommandWithoutParameters("update [PatientSector].[Reservations] set LeaveDate ='" + D1 + "' where ReservationID =" + Reservation + "", CommandType.Text, ExecuteReaderOrNonQuery.executeNonQuery);
+                      
             ConnectionClass.SQLCommandWithoutParameters("select publicSchema.CalculateHostingFees (" + Reservation + ")", CommandType.Text, ExecuteReaderOrNonQuery.executeScalar);
             int HostingamountDue = ConnectionClass.scalarReturn;
             
@@ -187,17 +181,13 @@ namespace WindowsFormsApplication2
             }
             catch { SumPrescription = 0; }
 
-             amountDue = SumPrescription + HostingamountDue;
+            amountDue = SumPrescription + HostingamountDue;
             label7.Text = amountDue.ToString();
             label7.Visible = true;
             label9.Text = DSum.ToString();
             label9.Visible = true;
             label8.Text = (amountDue - DSum).ToString();
             label8.Visible = true;
-
-
-            ConnectionClass.SQLCommandWithoutParameters("update [PatientSector].[Reservations] set LeaveDate = null where ReservationID =" + Reservation + "", CommandType.Text, ExecuteReaderOrNonQuery.executeNonQuery);
-
         }
     }
 }

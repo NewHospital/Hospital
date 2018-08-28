@@ -19,6 +19,8 @@ namespace WindowsFormsApplication2
             InitializeComponent();
         }
         public static int C;
+        public int fromAnotherForm = 0;
+        public int ComboSelected;
 
         public static List<ComboBox> DrugUnitList = new List<ComboBox>();
         public static List<string> DrugUnitValue = new List<string>();
@@ -63,15 +65,15 @@ namespace WindowsFormsApplication2
         {
             List<Supplier> SupList = Hospital.Suppliers.ToList();
 
-            if (!string.IsNullOrEmpty(SearchSupplier.x))
-            {
-                List<Supplier> filteredlist = (SupList.Where(a => a.SupplierName.ToString() == SearchSupplier.x)).ToList();
-                Com_Suppliers.DataSource = filteredlist;
-                Com_Suppliers.DisplayMember = "SupplierName";
-                Com_Suppliers.ValueMember = "SupplierId";
+            if (fromAnotherForm==1)
+            { 
+                            
+                    Com_Suppliers.DataSource = SupList;
+                    Com_Suppliers.DisplayMember = "SupplierName";
+                    Com_Suppliers.ValueMember = "SupplierId";
+                    Com_Suppliers.SelectedIndex = ComboSelected; 
+             }
 
-
-            }
             else
             {
                 Com_Suppliers.DataSource = SupList;
@@ -148,12 +150,7 @@ namespace WindowsFormsApplication2
             Value.Text = "";
             LblList.Add(Value);
 
-
-
-
-
             C++;
-
 
             DrugList = Hospital.Drugs.ToList();
             DrugId.DataSource = DrugList;

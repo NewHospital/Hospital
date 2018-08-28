@@ -13,7 +13,8 @@ namespace WindowsFormsApplication2
 {
     public partial class SearchSupplier : Form
     {
-        public static string x; 
+        public static string x;
+        public int Row; 
         public SearchSupplier()
         {
             InitializeComponent();
@@ -26,30 +27,23 @@ namespace WindowsFormsApplication2
             List<Supplier> SupList = Hospital.Suppliers.ToList ();
             var FilterList = (from s in SupList
                               where s.SupplierName.Contains("" + txt_SearchText.Text + "") 
-                              select new {s.SupplierName}).ToList();
+                              select new {s.SupplierName, s.SupplierId}).ToList();
                              
 
             dataGridView1.DataSource = FilterList;
-            
+            dataGridView1.Columns[1].Visible = false; 
             dataGridView1.Columns[0].HeaderText = "اسم المورد";
             
-            
-
-
-
-
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            var RowIndex = e.RowIndex;
-            DataGridViewRow Row = dataGridView1.Rows[RowIndex];
-             x = Row.Cells[0].Value.ToString ();
-            
+             Row = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[1].FormattedValue);
             this.Hide();
             AddBuyingInvoice BuyInvoice = new AddBuyingInvoice();
-          
-            BuyInvoice.Com_Suppliers.Enabled = false; 
+            BuyInvoice.fromAnotherForm = 1;
+            BuyInvoice.Com_Suppliers.Enabled = false;
+            BuyInvoice.ComboSelected = Row - 1; 
             BuyInvoice.ShowDialog();
              
             

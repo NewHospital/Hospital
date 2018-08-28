@@ -93,6 +93,12 @@
     <Compile Include="AddNewPatient.Designer.cs">
       <DependentUpon>AddNewPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddNewPrescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewPrescription.Designer.cs">
+      <DependentUpon>AddNewPrescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddReservation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelpClass.cs" />
     <Compile Include="HospitalModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -207,6 +214,12 @@
     </Compile>
     <Compile Include="Measures.Designer.cs">
       <DependentUpon>Measures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewPrescriptionDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPrescriptionDetail.Designer.cs">
+      <DependentUpon>NewPrescriptionDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
@@ -297,6 +310,9 @@
     <EmbeddedResource Include="AddNewPatient.resx">
       <DependentUpon>AddNewPatient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddNewPrescription.resx">
+      <DependentUpon>AddNewPrescription.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddReservation.resx">
       <DependentUpon>AddReservation.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Measures.resx">
       <DependentUpon>Measures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPrescriptionDetail.resx">
+      <DependentUpon>NewPrescriptionDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Payments.resx">
       <DependentUpon>Payments.cs</DependentUpon>

@@ -84,16 +84,8 @@ namespace Hospital
                                 else
                                 {
                                     ConnectionClass.ParameterList.Clear();
-                                    Txt_Address.Enabled = false;
-                                    Txt_Mobile.Enabled = false;
-                                    Txt_PatientName.Enabled = false;
-                                    Txt_SoSeNo.Enabled = false;
-                                    Pik_DOB.Enabled = false;
-                                    Com_BloodGroups.Enabled = false;
-                                    radioButton1.Enabled = false;
-                                    radioButton2.Enabled = false;
-
-
+                                    HelpClass.EnabledOrDisabled(false, Txt_Address, Txt_Mobile, Txt_PatientName, Txt_SoSeNo, Pik_DOB, Com_BloodGroups, radioButton1, radioButton2);
+                                                                        
                                     But_AddPatient.Location = new System.Drawing.Point(411, 396);
                                     But_AddPatient.Enabled = false;
                                     But_AddFellow.Location = new System.Drawing.Point(238, 396);

@@ -249,6 +249,7 @@
           <Property Name="DrugId" Type="int" Nullable="false" />
           <Property Name="Qnty" Type="int" Nullable="false" />
           <Property Name="IsReceived" Type="bit" Nullable="false" />
+          <Property Name="Dose" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'hospital.dbo.VW_Prescription' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -613,6 +614,10 @@ warning 6002: The table/view 'hospital.dbo.VW_Prescription' does not have a prim
           <Parameter Name="ArriveDate" Type="datetime" Mode="In" />
           <Parameter Name="Discription" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="Cprco_AddNewPrescription" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DocId" Type="int" Mode="In" />
+          <Parameter Name="reservationid" Type="int" Mode="In" />
+        </Function>
         <Function Name="Cproc_AddBillsType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Name" Type="nvarchar" Mode="In" />
         </Function>
@@ -684,6 +689,12 @@ warning 6002: The table/view 'hospital.dbo.VW_Prescription' does not have a prim
           <Parameter Name="amount" Type="decimal" Mode="In" />
           <Parameter Name="Discription" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="Cproc_AddPrescriptionDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PrescriptionId" Type="int" Mode="In" />
+          <Parameter Name="drugID" Type="int" Mode="In" />
+          <Parameter Name="Qnty" Type="int" Mode="In" />
+          <Parameter Name="dose" Type="nvarchar" Mode="In" />
+        </Function>
         <Function Name="cproc_AddRooms" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="RoomDegree" Type="int" Mode="In" />
           <Parameter Name="Roomfloor" Type="nvarchar" Mode="In" />
@@ -718,6 +729,16 @@ warning 6002: The table/view 'hospital.dbo.VW_Prescription' does not have a prim
         </Function>
         <Function Name="Cproc_DocDegrees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ScientificDegreeName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="Cproc_UpdatePatientData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="patientID" Type="int" Mode="In" />
+          <Parameter Name="patientname" Type="nvarchar" Mode="In" />
+          <Parameter Name="gender" Type="bit" Mode="In" />
+          <Parameter Name="DoB" Type="datetime" Mode="In" />
+          <Parameter Name="SoSeNo" Type="nvarchar" Mode="In" />
+          <Parameter Name="BloodGroup" Type="int" Mode="In" />
+          <Parameter Name="phoneNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="address" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -1195,6 +1216,7 @@ warning 6002: The table/view 'hospital.dbo.VW_Prescription' does not have a prim
           <Property Name="IsReceived" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Drug" Relationship="Self.FK_Drugs_PrescriptionDetail" FromRole="PrescriptionDetail" ToRole="Drugs" />
           <NavigationProperty Name="Prescription" Relationship="Self.FK_Prescription_PrescriptionDetail" FromRole="PrescriptionDetail" ToRole="Prescription" />
+          <Property Name="Dose" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_BillsTypes_Bills">
           <End Role="BillsTypes" Type="Self.BillsType" Multiplicity="1" />
@@ -1796,6 +1818,26 @@ warning 6002: The table/view 'hospital.dbo.VW_Prescription' does not have a prim
             <Parameter Name="discription" Mode="In" Type="String" />
           </FunctionImport>
           <EntitySet Name="VW_Prescription" EntityType="hospitalModel.VW_Prescription" />
+          <FunctionImport Name="Cprco_AddNewPrescription">
+            <Parameter Name="DocId" Mode="In" Type="Int32" />
+            <Parameter Name="reservationid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Cproc_AddPrescriptionDetail">
+            <Parameter Name="PrescriptionId" Mode="In" Type="Int32" />
+            <Parameter Name="drugID" Mode="In" Type="Int32" />
+            <Parameter Name="Qnty" Mode="In" Type="Int32" />
+            <Parameter Name="dose" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Cproc_UpdatePatientData">
+            <Parameter Name="patientID" Mode="In" Type="Int32" />
+            <Parameter Name="patientname" Mode="In" Type="String" />
+            <Parameter Name="gender" Mode="In" Type="Boolean" />
+            <Parameter Name="DoB" Mode="In" Type="DateTime" />
+            <Parameter Name="SoSeNo" Mode="In" Type="String" />
+            <Parameter Name="BloodGroup" Mode="In" Type="Int32" />
+            <Parameter Name="phoneNumber" Mode="In" Type="String" />
+            <Parameter Name="address" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -2075,6 +2117,7 @@ warning 6002: The table/view 'hospital.dbo.VW_Prescription' does not have a prim
           <EntitySetMapping Name="PrescriptionDetails">
             <EntityTypeMapping TypeName="hospitalModel.PrescriptionDetail">
               <MappingFragment StoreEntitySet="PrescriptionDetail">
+                <ScalarProperty Name="Dose" ColumnName="Dose" />
                 <ScalarProperty Name="PrescriptionId" ColumnName="PrescriptionId" />
                 <ScalarProperty Name="DrugId" ColumnName="DrugId" />
                 <ScalarProperty Name="Qnty" ColumnName="Qnty" />
@@ -2148,6 +2191,9 @@ warning 6002: The table/view 'hospital.dbo.VW_Prescription' does not have a prim
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Cprco_AddNewPrescription" FunctionName="hospitalModel.Store.Cprco_AddNewPrescription" />
+          <FunctionImportMapping FunctionImportName="Cproc_AddPrescriptionDetail" FunctionName="hospitalModel.Store.Cproc_AddPrescriptionDetail" />
+          <FunctionImportMapping FunctionImportName="Cproc_UpdatePatientData" FunctionName="hospitalModel.Store.Cproc_UpdatePatientData" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

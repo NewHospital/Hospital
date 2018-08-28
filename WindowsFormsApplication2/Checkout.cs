@@ -52,10 +52,7 @@ namespace WindowsFormsApplication2
 
         private void Com_RoomNo_SelectedValueChanged(object sender, EventArgs e)
         {
-            label7.Visible = false;
-            label9.Visible = false;
-            label8.Visible = false;
-            label10.Visible = false;
+            HelpClass.VisibleOrNot(false, label7, label9, label8, label10);
             if (fromAnotherForm==0)
             { 
             object S = new object();
@@ -93,10 +90,7 @@ namespace WindowsFormsApplication2
  private void button1_Click(object sender, EventArgs e)
         {
             
-            DateTime D = DateTime.Now;
-            DateTime Now = D.Date;
-            string D1 = Now.ToString("yyyy-MM-dd");
-            ConnectionClass.SQLCommandWithoutParameters("update [PatientSector].[Reservations] set LeaveDate ='" + D1 + "' where ReservationID =" + ReservationId + "", CommandType.Text, ExecuteReaderOrNonQuery.executeNonQuery);
+          
             ConnectionClass.SQLCommandWithoutParameters("select publicSchema.CalculateHostingFees (" + ReservationId + ")", CommandType.Text, ExecuteReaderOrNonQuery.executeScalar);
             int HostingamountDue = ConnectionClass.scalarReturn;
             decimal SumPrescription;    
@@ -110,7 +104,6 @@ namespace WindowsFormsApplication2
          amountDue=SumPrescription+HostingamountDue;
         if (amountDue > DSum)
             {
-                ConnectionClass.SQLCommandWithoutParameters("update [PatientSector].[Reservations] set LeaveDate =null where ReservationID =" + ReservationId + "", CommandType.Text, ExecuteReaderOrNonQuery.executeNonQuery);
                 var Result= MessageBox.Show("يجب استكمال المستحقات قبل تسجيل الخروج ، هل تريد سداد المستحقات الآن", "استكمال المستحقات", MessageBoxButtons.YesNo);
                 if (Result == System.Windows.Forms.DialogResult.Yes)
                 {
@@ -132,12 +125,7 @@ namespace WindowsFormsApplication2
                     Pay.Show();
                     Pay.WindowState = FormWindowState.Normal;
                     Pay.TopMost = true;
-                    //Pay.Controls["label7"].Visible = true;
-                    //Pay.Controls["label7"].Text = (DSum).ToString();
-                    //Pay.Controls["label8"].Visible = true;
-                    //Pay.Controls["label8"].Text = (amountDue- DSum ).ToString();
-                    //Pay.Controls["label9"].Text = amountDue.ToString();
-                    //Pay.Controls["label9"].Visible = true; 
+                    
 
                 }
                 else { this.Close(); }
@@ -161,14 +149,7 @@ namespace WindowsFormsApplication2
 
         private void But_CheckOut_MouseHover(object sender, EventArgs e)
         {
-            label7.Visible = true;
-            label9.Visible = true;
-            label8.Visible = true;
-            label10.Visible = true; 
-            DateTime D = DateTime.Now;
-            DateTime Now = D.Date;
-            string D1 = Now.ToString("yyyy-MM-dd");
-            ConnectionClass.SQLCommandWithoutParameters("update [PatientSector].[Reservations] set LeaveDate ='" + D1 + "' where ReservationID =" + ReservationId + "", CommandType.Text, ExecuteReaderOrNonQuery.executeNonQuery);
+            HelpClass.VisibleOrNot(true, label7, label9, label8, label10);
             ConnectionClass.SQLCommandWithoutParameters("select publicSchema.CalculateHostingFees (" + ReservationId + ")", CommandType.Text, ExecuteReaderOrNonQuery.executeScalar);
             int HostingamountDue = ConnectionClass.scalarReturn;
             decimal SumPrescription;
@@ -183,7 +164,6 @@ namespace WindowsFormsApplication2
             label8.Text = (amountDue).ToString();
             label10.Text = (amountDue-DSum).ToString();
 
-            ConnectionClass.SQLCommandWithoutParameters("update [PatientSector].[Reservations] set LeaveDate = null where ReservationID =" + ReservationId + "", CommandType.Text, ExecuteReaderOrNonQuery.executeNonQuery);
         }
     }
 }

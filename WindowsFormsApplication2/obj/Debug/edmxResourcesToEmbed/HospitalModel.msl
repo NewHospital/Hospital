@@ -250,6 +250,7 @@
     <EntitySetMapping Name="PrescriptionDetails">
       <EntityTypeMapping TypeName="hospitalModel.PrescriptionDetail">
         <MappingFragment StoreEntitySet="PrescriptionDetail">
+          <ScalarProperty Name="Dose" ColumnName="Dose" />
           <ScalarProperty Name="PrescriptionId" ColumnName="PrescriptionId" />
           <ScalarProperty Name="DrugId" ColumnName="DrugId" />
           <ScalarProperty Name="Qnty" ColumnName="Qnty" />
@@ -323,5 +324,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Cprco_AddNewPrescription" FunctionName="hospitalModel.Store.Cprco_AddNewPrescription" />
+    <FunctionImportMapping FunctionImportName="Cproc_AddPrescriptionDetail" FunctionName="hospitalModel.Store.Cproc_AddPrescriptionDetail" />
+    <FunctionImportMapping FunctionImportName="Cproc_UpdatePatientData" FunctionName="hospitalModel.Store.Cproc_UpdatePatientData" />
   </EntityContainerMapping>
 </Mapping>
