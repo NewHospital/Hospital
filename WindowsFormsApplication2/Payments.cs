@@ -45,7 +45,7 @@ namespace WindowsFormsApplication2
             var ActiveRooms = (from R in Hospital.Rooms
                                join Rs in Hospital.Reservations
                                on R.RoomId equals Rs.RoomID
-                               where Rs.IsActive == true 
+                               where Rs.IsActive == true  
                                select new { R.RoomId, R.RoomNo }).ToList();
 
             Com_RoomNo.DataSource = ActiveRooms;
@@ -98,7 +98,7 @@ namespace WindowsFormsApplication2
 
             try { 
             var S = (from P in Hospital.Payments
-                     where P.ReservationId == Reservation
+                     where P.ReservationId == Reservation 
                      select P.Amount).Sum();
             decimal total = Convert.ToDecimal(S);
                         
@@ -111,7 +111,7 @@ namespace WindowsFormsApplication2
         private void But_Receive_Click(object sender, EventArgs e)
         {
             decimal ValidAmount; 
-            if (!string.IsNullOrEmpty (Txt_amount.Text))
+            if (!string.IsNullOrEmpty (Txt_amount.Text) || Txt_amount.Text== "0")
             {
                 if (decimal.TryParse(Txt_amount.Text, out ValidAmount))
                 {
@@ -176,8 +176,8 @@ namespace WindowsFormsApplication2
             try
             {
                 SumPrescription = (from H in Hospital.VW_Prescription
-                                   where H.ReservationID == Reservation
-                                   select H.Qnty * H.PricePerUnit).Sum();
+                                   where H.ReservationID == Reservation && H.IsReceived==true
+                                   select (H.Qnty * H.PricePerUnit)).Sum();
             }
             catch { SumPrescription = 0; }
 

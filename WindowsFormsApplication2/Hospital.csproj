@@ -144,6 +144,12 @@
     <Compile Include="Checkout.Designer.cs">
       <DependentUpon>Checkout.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChooseReceive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseReceive.Designer.cs">
+      <DependentUpon>ChooseReceive.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectionClass.cs" />
     <Compile Include="Disease.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
@@ -244,6 +250,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReceivePrescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceivePrescription.Designer.cs">
+      <DependentUpon>ReceivePrescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reservation.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
@@ -328,6 +340,9 @@
     <EmbeddedResource Include="Checkout.resx">
       <DependentUpon>Checkout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChooseReceive.resx">
+      <DependentUpon>ChooseReceive.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DocDegree.resx">
       <DependentUpon>DocDegree.cs</DependentUpon>
     </EmbeddedResource>
@@ -361,6 +376,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReceivePrescription.resx">
+      <DependentUpon>ReceivePrescription.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RoomDegrees.resx">
       <DependentUpon>RoomDegrees.cs</DependentUpon>
     </EmbeddedResource>

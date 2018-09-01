@@ -193,3 +193,5 @@ C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debu
 C:\Users\A.El-khrashi\Desktop\Editing\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.NewPrescriptionDetail.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AddNewPrescription.resources
 E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.NewPrescriptionDetail.resources
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.ReceivePrescription.resources
+E:\Projects\Hospital project\Hospital\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.ChooseReceive.resources

@@ -230,5 +230,11 @@ namespace Hospital
             AddNewPrescription Presc = new AddNewPrescription();
             Presc.ShowDialog();
         }
+
+        private void ReceivePrescriptionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChooseReceive Rec = new ChooseReceive();
+            Rec.ShowDialog();
+        }
     }
 }

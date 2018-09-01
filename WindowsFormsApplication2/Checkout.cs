@@ -15,7 +15,7 @@ namespace WindowsFormsApplication2
     public partial class Checkout : Form
     {
         hospitalEntities Hospital = new hospitalEntities();
-        public decimal amountDue; 
+        public decimal amountDue=0; 
         public int fromAnotherForm = 0;
         public string PName;
         public int ReservationId;
@@ -40,6 +40,7 @@ namespace WindowsFormsApplication2
 
         private void Checkout_Load(object sender, EventArgs e)
         {
+            
             var Rooms = (from R in Hospital.Rooms
                          join RS in Hospital.Reservations
                          on R.RoomId equals RS.RoomID
@@ -89,14 +90,12 @@ namespace WindowsFormsApplication2
        
  private void button1_Click(object sender, EventArgs e)
         {
-            
-          
             ConnectionClass.SQLCommandWithoutParameters("select publicSchema.CalculateHostingFees (" + ReservationId + ")", CommandType.Text, ExecuteReaderOrNonQuery.executeScalar);
             int HostingamountDue = ConnectionClass.scalarReturn;
             decimal SumPrescription;    
             try {
                      SumPrescription = (from H in Hospital.VW_Prescription
-                     where H.ReservationID == ReservationId
+                     where H.ReservationID == ReservationId && H.IsReceived== true
                      select H.Qnty * H.PricePerUnit).Sum();
                 }
             catch { SumPrescription = 0; }
@@ -125,7 +124,6 @@ namespace WindowsFormsApplication2
                     Pay.Show();
                     Pay.WindowState = FormWindowState.Normal;
                     Pay.TopMost = true;
-                    
 
                 }
                 else { this.Close(); }
@@ -156,7 +154,7 @@ namespace WindowsFormsApplication2
             try
             {
                 SumPrescription = (from H in Hospital.VW_Prescription
-                                   where H.ReservationID == ReservationId
+                                   where H.ReservationID == ReservationId && H.IsReceived== true
                                    select H.Qnty * H.PricePerUnit).Sum();
             }
             catch { SumPrescription = 0; }

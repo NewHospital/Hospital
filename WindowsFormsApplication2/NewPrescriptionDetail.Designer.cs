@@ -95,7 +95,8 @@
             this.Controls.Add(this.But_send);
             this.Controls.Add(this.But_Save);
             this.Name = "NewPrescriptionDetail";
-            this.Text = "NewPrescriptionDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "تفاصيل روشته";
             this.Load += new System.EventHandler(this.NewPrescriptionDetail_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

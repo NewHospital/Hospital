@@ -125,7 +125,7 @@ namespace WindowsFormsApplication2
                          on RS.ReservationID equals D.ReservationID
                          join DS in Hospital.Doctors
                          on D.DoctorID equals DS.DoctorId
-                         where RS.RoomID == RId
+                         where RS.RoomID == RId && RS.IsActive== true
                           select new { DS.DoctorId, DS.DocName, RS.ReservationID }).ToList();
             Com_Doc.DataSource = ActiveDoc;
             Com_Doc.ValueMember = "DoctorId";

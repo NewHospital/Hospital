@@ -37,6 +37,7 @@
             this.PharmacyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddDrugUnitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddDrugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PrescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddRoomDegreeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.AddRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RoomsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +54,7 @@
             this.AccountsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CheckoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PrescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReceivePrescriptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,7 +101,8 @@
             this.PharmacyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddDrugUnitToolStripMenuItem,
             this.AddDrugToolStripMenuItem,
-            this.PrescriptionToolStripMenuItem});
+            this.PrescriptionToolStripMenuItem,
+            this.ReceivePrescriptionToolStripMenuItem});
             this.PharmacyToolStripMenuItem.Name = "PharmacyToolStripMenuItem";
             this.PharmacyToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.PharmacyToolStripMenuItem.Text = "الصيدلية";
@@ -118,6 +120,13 @@
             this.AddDrugToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.AddDrugToolStripMenuItem.Text = "إضافة صنف دواء ";
             this.AddDrugToolStripMenuItem.Click += new System.EventHandler(this.AddDrugToolStripMenuItem_Click);
+            // 
+            // PrescriptionToolStripMenuItem
+            // 
+            this.PrescriptionToolStripMenuItem.Name = "PrescriptionToolStripMenuItem";
+            this.PrescriptionToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.PrescriptionToolStripMenuItem.Text = "إضافة روشته";
+            this.PrescriptionToolStripMenuItem.Click += new System.EventHandler(this.PrescriptionToolStripMenuItem_Click);
             // 
             // AddRoomDegreeToolStripMenuItem1
             // 
@@ -253,12 +262,12 @@
             this.CheckoutToolStripMenuItem.Text = "تسجيل خروج مريض";
             this.CheckoutToolStripMenuItem.Click += new System.EventHandler(this.CheckoutToolStripMenuItem_Click);
             // 
-            // PrescriptionToolStripMenuItem
+            // ReceivePrescriptionToolStripMenuItem
             // 
-            this.PrescriptionToolStripMenuItem.Name = "PrescriptionToolStripMenuItem";
-            this.PrescriptionToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.PrescriptionToolStripMenuItem.Text = "إضافة روشته";
-            this.PrescriptionToolStripMenuItem.Click += new System.EventHandler(this.PrescriptionToolStripMenuItem_Click);
+            this.ReceivePrescriptionToolStripMenuItem.Name = "ReceivePrescriptionToolStripMenuItem";
+            this.ReceivePrescriptionToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.ReceivePrescriptionToolStripMenuItem.Text = "استلام روشته";
+            this.ReceivePrescriptionToolStripMenuItem.Click += new System.EventHandler(this.ReceivePrescriptionToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -315,6 +324,7 @@
         private System.Windows.Forms.ToolStripMenuItem CheckoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem EditPatientDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem PrescriptionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ReceivePrescriptionToolStripMenuItem;
     }
 }
 

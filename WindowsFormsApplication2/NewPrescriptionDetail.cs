@@ -89,7 +89,9 @@ namespace WindowsFormsApplication2
 
             for (int i = 6; i < Controls.Count; i+=3)
             {
-                if (!string.IsNullOrEmpty(Controls[i].Text) && !string.IsNullOrEmpty(Controls[(i + 1)].Text))
+                if (!string.IsNullOrEmpty(Controls[i].Text) && !string.IsNullOrEmpty(Controls[(i + 1)].Text) && Controls[i].Text!="0")
+
+
                 {
                    
                     X.Direction = ParameterDirection.ReturnValue; 
@@ -113,7 +115,7 @@ namespace WindowsFormsApplication2
                 }
                 else {
                     But_send.Visible = false;
-                    MessageBox.Show("يرجى استكمال بيانات الروشته");
+                    MessageBox.Show("يرجى استكمال بيانات الروشته مع التأكد بعدم وجود كمية تساوي صفر");
                     But_Save.Enabled = true;
                     QntyLis.Clear();
                     DoseList.Clear();
